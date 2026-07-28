@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import ForestHero from '../components/ForestHero';
 import ScrollReveal from '../components/ScrollReveal';
 
@@ -38,14 +39,27 @@ export default function Sponsors() {
             </div>
           </ScrollReveal>
 
-          {/* TODO: Add sponsor logos here when confirmed */}
+          {/* TODO: Swap placeholder cards for confirmed sponsor logos */}
           <ScrollReveal delay={0.4}>
             <div className="mt-20">
               <h3 className="font-display text-leaf text-3xl font-bold text-center mb-12">
                 Our Partners
               </h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-12">
+                {['Company One', 'Company Two', 'Company Three', 'Company Four', 'Company Five', 'Company Six'].map((name) => (
+                  <motion.div
+                    key={name}
+                    whileHover={{ y: -6, borderColor: 'rgba(90,140,82,0.5)' }}
+                    className="border-forest backdrop-blur-sm bg-forest-mid/30 rounded-xl h-28 flex items-center justify-center transition-all duration-300"
+                  >
+                    <span className="font-display text-cream-dim text-xl font-bold">
+                      {name}
+                    </span>
+                  </motion.div>
+                ))}
+              </div>
+
               <div className="text-center text-cream-dim">
-                <p className="mb-4">Sponsor announcements coming soon.</p>
                 <p className="text-sm">
                   Interested in sponsoring WEC 2026? Contact us at{' '}
                   <span className="text-sunlight">[sponsorship@wec.ca]</span>
