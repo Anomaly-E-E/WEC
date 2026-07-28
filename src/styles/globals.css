@@ -102,6 +102,19 @@ button {
   font-family: 'Syne', sans-serif;
 }
 
+@keyframes leaf-wobble {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(3deg); }
+  75% { transform: rotate(-3deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.leaf-wobble {
+  animation-name: leaf-wobble;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
 ::selection {
   background-color: var(--fern);
   color: var(--forest-dark);
