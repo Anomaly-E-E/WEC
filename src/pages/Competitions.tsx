@@ -18,7 +18,7 @@ export default function Competitions() {
             {competitions.map((comp, i) => (
               <ScrollReveal key={comp.id} delay={i * 0.05}>
                 <motion.div
-                  className="border-forest backdrop-blur-sm bg-forest-mid/30 rounded-xl p-8 h-full transition-all duration-300"
+                  className="border-forest bg-forest-mid/30 rounded-xl p-8 h-full transition-all duration-300"
                   whileHover={{ y: -6, borderColor: 'rgba(90,140,82,0.5)' }}
                 >
                   <div className="flex items-center gap-6 mb-4">

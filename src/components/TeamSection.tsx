@@ -40,7 +40,7 @@ export default function TeamSection() {
   const MemberCard = ({ member }: { member: TeamMember }) => (
     <motion.div
       whileHover={{ y: -6, borderColor: 'rgba(90,140,82,0.5)' }}
-      className="border-forest backdrop-blur-sm bg-forest-mid/30 rounded-xl p-6 text-center transition-all duration-300"
+      className="border-forest bg-forest-mid/30 rounded-xl p-6 text-center transition-all duration-300"
     >
       <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-to-br from-moss to-fern flex items-center justify-center">
         <span className="font-display text-cream text-2xl font-bold">

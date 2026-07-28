@@ -163,7 +163,7 @@ export default function Home() {
                   <motion.div
                     key={i}
                     whileHover={{ y: -6, borderColor: 'rgba(90,140,82,0.5)' }}
-                    className="border-forest backdrop-forest rounded-lg p-6 text-center transition-all duration-300"
+                    className="border-forest bg-forest-mid/40 rounded-lg p-6 text-center transition-all duration-300"
                   >
                     <p className="font-display text-sunlight text-5xl font-black mb-2">{stat.number}</p>
                     <p className="font-sans text-cream-dim text-sm">{stat.label}</p>
@@ -204,7 +204,7 @@ export default function Home() {
               <ScrollReveal key={i} delay={i * 0.15}>
                 <motion.div
                   whileHover={{ y: -8, borderColor: 'rgba(90,140,82,0.6)' }}
-                  className="relative border-forest backdrop-forest rounded-xl p-8 transition-all duration-300"
+                  className="relative border-forest bg-forest-mid/40 rounded-xl p-8 transition-all duration-300"
                 >
                   <p className="absolute top-4 right-4 font-display text-moss-dark text-8xl font-black opacity-10">
                     {level.step}
@@ -238,7 +238,7 @@ export default function Home() {
                 <Link to="/competitions">
                   <motion.div
                     whileHover={{ y: -6, borderColor: 'rgba(90,140,82,0.5)' }}
-                    className="border-forest backdrop-blur-sm bg-forest-mid/30 rounded-lg p-6 text-center transition-all duration-300 group cursor-pointer relative overflow-hidden"
+                    className="border-forest bg-forest-mid/30 rounded-lg p-6 text-center transition-all duration-300 group cursor-pointer relative overflow-hidden"
                   >
                     <Icon name={comp.icon} className="w-10 h-10 mx-auto mb-3 text-leaf" />
                     <h3 className="font-sans text-cream font-bold text-base mb-2 group-hover:text-sunlight transition-colors">

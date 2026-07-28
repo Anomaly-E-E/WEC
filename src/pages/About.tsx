@@ -34,7 +34,7 @@ export default function About() {
                 The Competition Pathway
               </h2>
               <div className="space-y-8">
-                <div className="border-forest backdrop-blur-sm bg-forest-mid/30 rounded-lg p-8">
+                <div className="border-forest bg-forest-mid/30 rounded-lg p-8">
                   <h3 className="font-sans text-sunlight text-2xl font-bold mb-3">
                     WEC → Western Engineering Competition
                   </h3>
@@ -43,7 +43,7 @@ export default function About() {
                   </p>
                 </div>
 
-                <div className="border-forest backdrop-blur-sm bg-forest-mid/30 rounded-lg p-8">
+                <div className="border-forest bg-forest-mid/30 rounded-lg p-8">
                   <h3 className="font-sans text-sunlight text-2xl font-bold mb-3">
                     OEC → Ontario Engineering Competition
                   </h3>
@@ -52,7 +52,7 @@ export default function About() {
                   </p>
                 </div>
 
-                <div className="border-forest backdrop-blur-sm bg-forest-mid/30 rounded-lg p-8">
+                <div className="border-forest bg-forest-mid/30 rounded-lg p-8">
                   <h3 className="font-sans text-sunlight text-2xl font-bold mb-3">
                     CEC → Canadian Engineering Competition
                   </h3>
