@@ -1,3 +1,5 @@
+import type { ReactNode } from 'react';
+
 export type IconName =
   | 'sprout'
   | 'compass'
@@ -37,7 +39,7 @@ export default function Icon({ name, className = 'w-6 h-6' }: IconProps) {
   );
 }
 
-const paths: Record<IconName, React.ReactNode> = {
+const paths: Record<IconName, ReactNode> = {
   sprout: (
     <>
       <path d="M12 21V11" />
