@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import ScrollReveal from '../components/ScrollReveal';
+import SectionDivider from '../components/SectionDivider';
+import Icon from '../components/Icon';
 import { competitions } from '../data/competitions';
 import { bonusMarkCourses } from '../data/bonusMarks';
 
@@ -161,6 +163,8 @@ export default function Home() {
         </div>
       </section>
 
+      <SectionDivider />
+
       <section className="py-24 px-6 relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-30"
@@ -203,6 +207,8 @@ export default function Home() {
         </div>
       </section>
 
+      <SectionDivider />
+
       <section className="py-24 px-6 bg-forest-dark">
         <div className="max-w-7xl mx-auto">
           <ScrollReveal>
@@ -222,7 +228,7 @@ export default function Home() {
                     whileHover={{ y: -6, borderColor: 'rgba(90,140,82,0.5)' }}
                     className="border-forest backdrop-blur-sm bg-forest-mid/30 rounded-lg p-6 text-center transition-all duration-300 group cursor-pointer relative overflow-hidden"
                   >
-                    <div className="text-5xl mb-3">{comp.emoji}</div>
+                    <Icon name={comp.icon} className="w-10 h-10 mx-auto mb-3 text-leaf" />
                     <h3 className="font-sans text-cream font-bold text-base mb-2 group-hover:text-sunlight transition-colors">
                       {comp.name}
                     </h3>
@@ -247,39 +253,40 @@ export default function Home() {
         </div>
       </section>
 
+      <SectionDivider />
+
       <section className="py-24 px-6 relative overflow-hidden">
         <div className="max-w-5xl mx-auto">
           <ScrollReveal>
             <div className="text-center mb-12">
               <p className="font-mono text-fern text-xs tracking-[0.3em] uppercase mb-4">Compete & Earn</p>
               <h2 className="font-display text-cream text-4xl md:text-5xl font-bold mb-4">
-                WEC Participation Counts
+                WEC Bonus Marks
               </h2>
               <p className="text-cream-dim text-lg">
-                WEC participation counts toward these courses
+                These courses count WEC participation toward bonus marks.
               </p>
             </div>
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
-            <div className="flex flex-wrap gap-3 justify-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {bonusMarkCourses.map((course, i) => (
                 <motion.div
                   key={i}
-                  whileHover={{ scale: 1.05, borderColor: 'rgba(90,140,82,0.5)' }}
-                  className="border-forest bg-forest-mid/40 backdrop-blur-sm rounded-full px-5 py-2.5 transition-all duration-200"
+                  whileHover={{ y: -6, borderColor: 'rgba(90,140,82,0.5)' }}
+                  className="border-forest bg-forest-mid/20 rounded-lg px-5 py-3 transition-all duration-300"
                 >
-                  <p className="font-mono text-cream text-sm">
-                    <span className="font-bold text-sunlight">{course.code}</span>
-                    <span className="text-moss mx-2">—</span>
-                    <span className="text-cream-dim">{course.competition}</span>
-                  </p>
+                  <p className="font-mono text-sunlight font-bold text-base">{course.code}</p>
+                  <p className="text-cream-dim text-sm">{course.competition}</p>
                 </motion.div>
               ))}
             </div>
           </ScrollReveal>
         </div>
       </section>
+
+      <SectionDivider />
 
       <section className="py-32 px-6 bg-forest-dark relative overflow-hidden">
         <div
