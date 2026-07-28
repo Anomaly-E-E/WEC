@@ -1,18 +1,75 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import ForestHero from '../components/ForestHero';
 import ScrollReveal from '../components/ScrollReveal';
-import Icon from '../components/Icon';
+import { winners2024_2025, winners2023_2024, winnersOEC2024, type WinnerEntry } from '../data/winners';
 
-type WinnersTab = '2025-2026' | '2024-2025' | 'oec-2025';
+type WinnersTab = '2025-2026' | '2024-2025' | '2023-2024' | 'oec-2025' | 'oec-2024';
+
+const isWinnersTab = (value: string | undefined): value is WinnersTab =>
+  value === '2025-2026' || value === '2024-2025' || value === '2023-2024' || value === 'oec-2025' || value === 'oec-2024';
+
+function WinnerCard({ entry }: { entry: WinnerEntry }) {
+  const placeColor = entry.place.startsWith('1st')
+    ? 'text-sunlight'
+    : entry.place.startsWith('2nd')
+    ? 'text-leaf'
+    : entry.place.startsWith('3rd')
+    ? 'text-fern'
+    : 'text-gold';
+
+  return (
+    <div className="border-forest bg-forest-mid/30 rounded-lg p-5">
+      <p className={`font-mono text-xs uppercase tracking-wider font-bold mb-1 ${placeColor}`}>
+        {entry.place}
+      </p>
+      <p className="font-mono text-fern text-xs uppercase tracking-wider mb-3">
+        {entry.category}
+      </p>
+      {entry.teamName ? (
+        <>
+          <h4 className="font-sans text-cream font-bold text-lg mb-1">{entry.teamName}</h4>
+          <p className="text-cream-dim text-sm">{entry.members.join(', ')}</p>
+        </>
+      ) : (
+        <p className="text-cream-dim text-sm">{entry.members.join(', ')}</p>
+      )}
+      {entry.note && (
+        <p className="text-cream-dim/60 text-xs mt-2 italic">{entry.note}</p>
+      )}
+    </div>
+  );
+}
+
+function WinnersGrid({ entries }: { entries: WinnerEntry[] }) {
+  return (
+    <ScrollReveal>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {entries.map((entry, i) => (
+          <WinnerCard key={i} entry={entry} />
+        ))}
+      </div>
+    </ScrollReveal>
+  );
+}
 
 export default function Winners() {
-  const [activeTab, setActiveTab] = useState<WinnersTab>('2025-2026');
+  const { year } = useParams<{ year: string }>();
+  const [activeTab, setActiveTab] = useState<WinnersTab>(isWinnersTab(year) ? year : '2025-2026');
+
+  useEffect(() => {
+    if (isWinnersTab(year)) {
+      setActiveTab(year);
+    }
+  }, [year]);
 
   const tabs: { id: WinnersTab; label: string }[] = [
     { id: '2025-2026', label: '2025–2026 Winners' },
     { id: '2024-2025', label: '2024–2025 Winners' },
+    { id: '2023-2024', label: '2023–2024 Winners' },
     { id: 'oec-2025', label: 'OEC 2025 Winners' },
+    { id: 'oec-2024', label: 'OEC 2024 Winners' },
   ];
 
   return (
@@ -72,34 +129,19 @@ export default function Winners() {
 
             {activeTab === '2024-2025' && (
               <div>
-                <ScrollReveal>
-                  <div className="mb-8">
-                    <h3 className="font-display text-sunlight text-2xl font-bold mb-6 text-center">
-                      WEC 2024–2025 Winners
-                    </h3>
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div className="border-forest backdrop-blur-sm bg-forest-mid/30 rounded-lg p-8">
-                        <Icon name="chart" className="w-9 h-9 text-leaf mb-4" />
-                        <h4 className="font-sans text-cream text-xl font-bold mb-2">
-                          Consulting
-                        </h4>
-                        <p className="text-cream-dim mb-2">
-                          <strong className="text-leaf">Nicholas Crees</strong>
-                        </p>
-                        <p className="text-cream-dim">
-                          <strong className="text-leaf">Mike Botelho</strong>
-                        </p>
-                      </div>
+                <h3 className="font-display text-sunlight text-2xl font-bold mb-8 text-center">
+                  WEC 2024–2025 Winners
+                </h3>
+                <WinnersGrid entries={winners2024_2025} />
+              </div>
+            )}
 
-                      {/* TODO: Add other 2024-2025 winners when data is available */}
-                      <div className="border-forest backdrop-blur-sm bg-forest-mid/20 rounded-lg p-8 flex items-center justify-center">
-                        <p className="text-cream-dim text-center">
-                          Additional winners to be added
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </ScrollReveal>
+            {activeTab === '2023-2024' && (
+              <div>
+                <h3 className="font-display text-sunlight text-2xl font-bold mb-8 text-center">
+                  WEC 2023–2024 Winners
+                </h3>
+                <WinnersGrid entries={winners2023_2024} />
               </div>
             )}
 
@@ -110,10 +152,21 @@ export default function Winners() {
                     OEC 2025 Results
                   </h2>
                   <p className="text-cream-dim text-lg">
-                    {/* TODO: Add OEC 2025 results when available */}
                     Results will be added once the competition concludes.
                   </p>
                 </div>
+              </div>
+            )}
+
+            {activeTab === 'oec-2024' && (
+              <div>
+                <h3 className="font-display text-sunlight text-2xl font-bold mb-2 text-center">
+                  Ontario Engineering Competition 2024
+                </h3>
+                <p className="font-mono text-fern text-xs tracking-wider uppercase text-center mb-8">
+                  Western Engineering Winners
+                </p>
+                <WinnersGrid entries={winnersOEC2024} />
               </div>
             )}
           </motion.div>

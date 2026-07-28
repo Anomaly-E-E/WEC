@@ -34,7 +34,9 @@ export default function Nav() {
   const moreLinks = [
     { to: '/winners/2025-2026', label: '2025–2026 Winners' },
     { to: '/winners/2024-2025', label: '2024–2025 Winners' },
+    { to: '/winners/2023-2024', label: '2023–2024 Winners' },
     { to: '/winners/oec-2025', label: 'OEC 2025 Winners' },
+    { to: '/winners/oec-2024', label: 'OEC 2024 Winners' },
   ];
 
   return (
