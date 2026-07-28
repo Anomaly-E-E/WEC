@@ -120,38 +120,6 @@ export default function TeamSection() {
             </div>
           </div>
         </ScrollReveal>
-
-        <ScrollReveal delay={0.5}>
-          <div id="join" className="mt-20 text-center">
-            <div className="border-forest backdrop-blur-sm bg-forest-mid/30 rounded-xl p-12 max-w-3xl mx-auto">
-              <h3 className="font-display text-cream text-3xl font-bold mb-4">
-                Interested in Joining?
-              </h3>
-              <p className="text-cream-dim text-lg mb-8">
-                Applications for WEC 2027 organizing team will open in Spring 2026. Follow us on social media for updates.
-              </p>
-              <div className="flex gap-4 justify-center">
-                <a
-                  href="https://www.instagram.com/ues_wec/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-cream-dim hover:text-sunlight transition-colors text-lg"
-                >
-                  Instagram
-                </a>
-                <span className="text-moss">·</span>
-                <a
-                  href="https://ca.linkedin.com/company/western-engineering-competition"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-cream-dim hover:text-sunlight transition-colors text-lg"
-                >
-                  LinkedIn
-                </a>
-              </div>
-            </div>
-          </div>
-        </ScrollReveal>
       </div>
     </section>
   );

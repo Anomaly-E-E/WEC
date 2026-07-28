@@ -10,7 +10,7 @@ export default function Sponsors() {
         subtitle="Making WEC 2026 Possible"
       />
 
-      <section className="py-24 px-6">
+      <section className="pt-8 pb-24 px-6">
         <div className="max-w-5xl mx-auto">
           <ScrollReveal>
             <div className="border-forest backdrop-blur-sm bg-forest-mid/30 rounded-xl p-8 text-center">
