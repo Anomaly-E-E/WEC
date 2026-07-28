@@ -16,10 +16,21 @@ export default function TeamSection() {
       whileHover={{ y: -6, borderColor: 'rgba(90,140,82,0.5)' }}
       className="border-forest bg-forest-mid/20 rounded-xl overflow-hidden transition-all duration-300 flex"
     >
-      <div className="w-2/5 bg-gradient-to-br from-moss to-fern flex items-center justify-center py-10">
-        <span className="font-display text-cream text-5xl font-bold">
-          {member.initials}
-        </span>
+      <div className="w-2/5 flex-shrink-0">
+        {member.photo ? (
+          <img
+            src={member.photo}
+            alt={member.name}
+            className="w-full h-full object-cover"
+            style={member.photoPosition ? { objectPosition: member.photoPosition } : undefined}
+          />
+        ) : (
+          <div className="w-full h-full bg-gradient-to-br from-moss to-fern flex items-center justify-center py-10">
+            <span className="font-display text-cream text-5xl font-bold">
+              {member.initials}
+            </span>
+          </div>
+        )}
       </div>
       <div className="w-3/5 p-6 flex flex-col justify-center">
         <p className="font-mono text-sunlight text-xs tracking-wider uppercase mb-2">
@@ -42,11 +53,20 @@ export default function TeamSection() {
       whileHover={{ y: -6, borderColor: 'rgba(90,140,82,0.5)' }}
       className="border-forest bg-forest-mid/30 rounded-xl p-6 text-center transition-all duration-300"
     >
-      <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-to-br from-moss to-fern flex items-center justify-center">
-        <span className="font-display text-cream text-2xl font-bold">
-          {member.initials}
-        </span>
-      </div>
+      {member.photo ? (
+        <img
+          src={member.photo}
+          alt={member.name}
+          className="w-24 h-24 mx-auto mb-4 rounded-full object-cover"
+          style={member.photoPosition ? { objectPosition: member.photoPosition } : undefined}
+        />
+      ) : (
+        <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-to-br from-moss to-fern flex items-center justify-center">
+          <span className="font-display text-cream text-2xl font-bold">
+            {member.initials}
+          </span>
+        </div>
+      )}
       <h3 className="font-sans text-cream font-bold text-lg mb-1">
         {member.name}
       </h3>
