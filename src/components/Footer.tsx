@@ -56,14 +56,6 @@ export default function Footer() {
                 <Icon name="instagram" className="w-5 h-5" /> Instagram
               </a>
               <a
-                href="https://www.facebook.com/UES.WEC/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-cream-dim hover:text-sunlight transition-colors text-sm flex items-center gap-2"
-              >
-                <Icon name="facebook" className="w-5 h-5" /> Facebook
-              </a>
-              <a
                 href="https://ca.linkedin.com/company/western-engineering-competition"
                 target="_blank"
                 rel="noopener noreferrer"

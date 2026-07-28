@@ -141,15 +141,6 @@ export default function TeamSection() {
                 </a>
                 <span className="text-moss">·</span>
                 <a
-                  href="https://www.facebook.com/UES.WEC/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-cream-dim hover:text-sunlight transition-colors text-lg"
-                >
-                  Facebook
-                </a>
-                <span className="text-moss">·</span>
-                <a
                   href="https://ca.linkedin.com/company/western-engineering-competition"
                   target="_blank"
                   rel="noopener noreferrer"
