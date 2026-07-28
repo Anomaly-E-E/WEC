@@ -30,7 +30,7 @@ export default function Footer() {
               <Link to="/sponsors" className="text-cream-dim hover:text-sunlight transition-colors text-sm">
                 Sponsors
               </Link>
-              <Link to="/team" className="text-cream-dim hover:text-sunlight transition-colors text-sm">
+              <Link to="/#team" className="text-cream-dim hover:text-sunlight transition-colors text-sm">
                 Team
               </Link>
               <a

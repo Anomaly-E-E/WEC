@@ -10,7 +10,7 @@ interface ForestHeroProps {
 
 export default function ForestHero({ title, subtitle, children, size = 'normal' }: ForestHeroProps) {
   return (
-    <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-center justify-center overflow-hidden pt-24 pb-16">
+    <section className="relative flex items-center justify-center overflow-hidden pt-28 pb-10">
       <div
         className="absolute inset-0"
         style={{

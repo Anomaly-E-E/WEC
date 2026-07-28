@@ -28,7 +28,7 @@ export default function Nav() {
     { to: '/about', label: 'About' },
     { to: '/sponsors', label: 'Sponsors' },
     { to: '/competitions', label: 'Competitions' },
-    { to: '/team', label: 'Team' },
+    { to: '/#team', label: 'Team' },
   ];
 
   const moreLinks = [
@@ -101,22 +101,14 @@ export default function Nav() {
             </div>
           </div>
 
-          <div className="hidden lg:flex items-center gap-3">
-            <Link
-              to="/team#join"
-              className="border border-fern text-leaf px-6 py-2.5 rounded-full font-sans font-bold text-sm hover:bg-fern hover:text-forest-dark transition-colors duration-300"
-            >
-              Apply Now
-            </Link>
-            <a
-              href="https://forms.office.com/Pages/ResponsePage.aspx?id=TaaTrQ2tzU6y_eU84Vllvojv0C3AKvxMnZrNlCc3fx9URDdYS1FaN0lFMDM2UklUNkRVS1ZVSTVPVy4u"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-sunlight text-forest-dark px-6 py-2.5 rounded-full font-sans font-bold text-sm hover:scale-105 transition-transform duration-200"
-            >
-              Register Now
-            </a>
-          </div>
+          <a
+            href="https://forms.office.com/Pages/ResponsePage.aspx?id=TaaTrQ2tzU6y_eU84Vllvojv0C3AKvxMnZrNlCc3fx9URDdYS1FaN0lFMDM2UklUNkRVS1ZVSTVPVy4u"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden lg:block bg-sunlight text-forest-dark px-6 py-2.5 rounded-full font-sans font-bold text-sm hover:scale-105 transition-transform duration-200"
+          >
+            Register Now
+          </a>
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
@@ -160,18 +152,11 @@ export default function Nav() {
                 </Link>
               ))}
 
-              <Link
-                to="/team#join"
-                className="border border-fern text-leaf px-8 py-3 rounded-full font-sans font-bold text-lg mt-4"
-              >
-                Apply Now
-              </Link>
-
               <a
                 href="https://forms.office.com/Pages/ResponsePage.aspx?id=TaaTrQ2tzU6y_eU84Vllvojv0C3AKvxMnZrNlCc3fx9URDdYS1FaN0lFMDM2UklUNkRVS1ZVSTVPVy4u"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-sunlight text-forest-dark px-8 py-3 rounded-full font-sans font-bold text-lg"
+                className="bg-sunlight text-forest-dark px-8 py-3 rounded-full font-sans font-bold text-lg mt-4"
               >
                 Register Now
               </a>
