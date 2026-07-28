@@ -92,7 +92,7 @@ export default function Nav() {
                       <Link
                         key={link.to}
                         to={link.to}
-                        className="block px-4 py-2 font-sans text-sm text-cream hover:text-sunlight hover:bg-[#0f1c10] transition-colors duration-200"
+                        className="block px-4 py-2 font-sans text-sm text-cream hover:text-sunlight hover:bg-forest-mid transition-colors duration-200"
                       >
                         {link.label}
                       </Link>
@@ -129,7 +129,7 @@ export default function Nav() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-[8999] bg-[#080f09] lg:hidden pt-20"
+            className="fixed inset-0 z-[8999] bg-forest-dark lg:hidden pt-20"
           >
             <div className="flex flex-col items-center justify-center gap-8 h-full">
               {navLinks.map((link) => (
