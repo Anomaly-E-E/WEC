@@ -13,19 +13,11 @@ export default function Sponsors() {
       <section className="py-24 px-6">
         <div className="max-w-5xl mx-auto">
           <ScrollReveal>
-            <div className="text-center mb-16">
-              <p className="text-cream-dim text-lg max-w-3xl mx-auto leading-relaxed">
-                WEC relies on industry partners to make this event possible. Sponsors gain direct access to top engineering talent at Western University through judging, networking, and brand visibility.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal delay={0.2}>
-            <div className="border-forest backdrop-blur-sm bg-forest-mid/30 rounded-xl p-16 text-center">
-              <h2 className="font-display text-cream text-4xl font-bold mb-8">
+            <div className="border-forest backdrop-blur-sm bg-forest-mid/30 rounded-xl p-8 text-center">
+              <h2 className="font-display text-cream text-3xl font-bold mb-4">
                 Become a Sponsor
               </h2>
-              <p className="text-cream-dim text-lg mb-10 max-w-2xl mx-auto">
+              <p className="text-cream-dim text-base mb-6 max-w-2xl mx-auto">
                 Partner with WEC 2026 to connect with the next generation of engineers. Download our sponsorship package to learn about opportunities and benefits.
               </p>
               <a
