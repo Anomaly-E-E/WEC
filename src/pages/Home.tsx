@@ -33,21 +33,21 @@ export default function Home() {
         <div
           className="absolute inset-0"
           style={{
-            background: `linear-gradient(160deg, rgba(251,250,245,0.88) 0%, rgba(230,240,220,0.92) 50%, rgba(251,250,245,0.88) 100%)`,
+            background: `linear-gradient(160deg, var(--hero-overlay-1) 0%, var(--hero-overlay-2) 50%, var(--hero-overlay-1) 100%)`,
           }}
         ></div>
 
         <div
           className="absolute inset-0 opacity-40"
           style={{
-            background: `radial-gradient(ellipse 70% 80% at 65% 40%, rgba(220,234,208,0.55), transparent)`,
+            background: `radial-gradient(ellipse 70% 80% at 65% 40%, var(--hero-glow-1), transparent)`,
           }}
         ></div>
 
         <div
           className="absolute inset-0 opacity-30"
           style={{
-            background: `radial-gradient(ellipse 40% 50% at 15% 85%, rgba(47,145,66,0.18), transparent)`,
+            background: `radial-gradient(ellipse 40% 50% at 15% 85%, var(--hero-glow-2), transparent)`,
           }}
         ></div>
 
@@ -59,12 +59,12 @@ export default function Home() {
         >
           <path
             d="M0 250 L100 220 Q150 200 200 210 L300 180 Q400 160 500 200 L700 230 L900 210 L1200 240 L1200 300 L0 300 Z"
-            fill="var(--moss-dark)"
+            fill="rgb(var(--moss-dark))"
             opacity="0.3"
           />
-          <ellipse cx="150" cy="220" rx="25" ry="60" fill="var(--moss-dark)" opacity="0.25" />
-          <ellipse cx="500" cy="180" rx="30" ry="80" fill="var(--moss-dark)" opacity="0.25" />
-          <ellipse cx="850" cy="210" rx="20" ry="50" fill="var(--moss-dark)" opacity="0.25" />
+          <ellipse cx="150" cy="220" rx="25" ry="60" fill="rgb(var(--moss-dark))" opacity="0.25" />
+          <ellipse cx="500" cy="180" rx="30" ry="80" fill="rgb(var(--moss-dark))" opacity="0.25" />
+          <ellipse cx="850" cy="210" rx="20" ry="50" fill="rgb(var(--moss-dark))" opacity="0.25" />
         </svg>
 
         <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
@@ -179,7 +179,7 @@ export default function Home() {
         <div
           className="absolute inset-0 opacity-30"
           style={{
-            background: `radial-gradient(ellipse 60% 70% at 50% 50%, rgba(47,145,66,0.12), transparent)`,
+            background: `radial-gradient(ellipse 60% 70% at 50% 50%, var(--ambient-glow), transparent)`,
           }}
         ></div>
 

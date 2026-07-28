@@ -27,3 +27,6 @@ dist-ssr
 .claude/
 settings.json
 statusline-command.sh
+
+# Raw source photos (web-ready copies live in public/team)
+/team/

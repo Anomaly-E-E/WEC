@@ -29,7 +29,7 @@ export default function TeamSection() {
           {member.name}
         </h3>
         {member.yearDiscipline && (
-          <p className="font-mono text-cream-dim/70 text-xs tracking-wide">
+          <p className="font-mono text-cream-dim text-xs tracking-wide">
             {member.yearDiscipline}
           </p>
         )}
@@ -54,7 +54,7 @@ export default function TeamSection() {
         {member.role}
       </p>
       {member.yearDiscipline && (
-        <p className="font-mono text-cream-dim/70 text-xs tracking-wide mt-1">
+        <p className="font-mono text-cream-dim text-xs tracking-wide mt-1">
           {member.yearDiscipline}
         </p>
       )}

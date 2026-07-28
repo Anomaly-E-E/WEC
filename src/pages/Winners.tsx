@@ -36,7 +36,7 @@ function WinnerCard({ entry }: { entry: WinnerEntry }) {
         <p className="text-cream-dim text-sm">{entry.members.join(', ')}</p>
       )}
       {entry.note && (
-        <p className="text-cream-dim/60 text-xs mt-2 italic">{entry.note}</p>
+        <p className="text-cream-dim text-xs mt-2 italic">{entry.note}</p>
       )}
     </div>
   );

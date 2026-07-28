@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Icon from './Icon';
+import ThemeToggle from './ThemeToggle';
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -103,12 +104,15 @@ export default function Nav() {
             </div>
           </div>
 
-          <Link
-            to="/register"
-            className="hidden lg:block bg-sunlight text-cream px-6 py-2.5 rounded-full font-sans font-bold text-sm hover:scale-105 transition-transform duration-200"
-          >
-            Register Now
-          </Link>
+          <div className="hidden lg:flex items-center gap-3">
+            <ThemeToggle />
+            <Link
+              to="/register"
+              className="bg-sunlight text-cream px-6 py-2.5 rounded-full font-sans font-bold text-sm hover:scale-105 transition-transform duration-200"
+            >
+              Register Now
+            </Link>
+          </div>
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
@@ -158,6 +162,8 @@ export default function Nav() {
               >
                 Register Now
               </Link>
+
+              <ThemeToggle />
             </div>
           </motion.div>
         )}

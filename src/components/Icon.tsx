@@ -16,7 +16,9 @@ export type IconName =
   | 'linkedin'
   | 'menu'
   | 'close'
-  | 'chevronDown';
+  | 'chevronDown'
+  | 'sun'
+  | 'moon';
 
 interface IconProps {
   name: IconName;
@@ -120,4 +122,11 @@ const paths: Record<IconName, ReactNode> = {
   menu: <path d="M4 7h16M4 12h16M4 17h16" />,
   close: <path d="M6 6l12 12M18 6L6 18" />,
   chevronDown: <path d="M6 9l6 6 6-6" />,
+  sun: (
+    <>
+      <circle cx="12" cy="12" r="4.2" />
+      <path d="M12 2.5v2.6M12 18.9v2.6M4.6 4.6l1.85 1.85M17.55 17.55l1.85 1.85M2.5 12h2.6M18.9 12h2.6M4.6 19.4l1.85-1.85M17.55 6.45l1.85-1.85" />
+    </>
+  ),
+  moon: <path d="M20 13.5A8.5 8.5 0 1 1 10.5 4a7 7 0 0 0 9.5 9.5z" />,
 };

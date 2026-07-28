@@ -4,22 +4,67 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --forest-black: #fbfaf5;
-  --forest-dark: #e6f0dc;
-  --forest-mid: #ffffff;
-  --forest-canopy: #dcead0;
-  --moss-dark: #1f3d28;
-  --moss: #2d5c3a;
-  --fern: #3d7a45;
-  --leaf: #2f9142;
-  --sunlight: #4caf1f;
-  --gold: #c9971a;
-  --bark: #3a2210;
-  --bark-light: #5c3d1e;
-  --cream: #12241a;
+:root,
+[data-theme='light'] {
+  --forest-black: 251 250 245;
+  --forest-dark: 230 240 220;
+  --forest-mid: 255 255 255;
+  --forest-canopy: 220 234 208;
+  --moss-dark: 31 61 40;
+  --moss: 45 92 58;
+  --fern: 61 122 69;
+  --leaf: 47 145 66;
+  --sunlight: 76 175 31;
+  --gold: 201 151 26;
+  --bark: 58 34 16;
+  --bark-light: 92 61 30;
+  --cream: 18 36 26;
   --cream-dim: rgba(18, 36, 26, 0.68);
   --fog: rgba(76, 175, 31, 0.06);
+  --border-forest-rgba: rgba(45, 92, 58, 0.25);
+  --backdrop-forest-rgba: rgba(251, 250, 245, 0.85);
+  --glow-green-rgba: rgba(45, 92, 58, 0.15);
+  --hero-overlay-1: rgba(251, 250, 245, 0.88);
+  --hero-overlay-2: rgba(230, 240, 220, 0.92);
+  --hero-glow-1: rgba(220, 234, 208, 0.55);
+  --hero-glow-2: rgba(47, 145, 66, 0.18);
+  --banner-1: #fbfaf5;
+  --banner-2: #dcead0;
+  --banner-3: #e6f0dc;
+  --banner-glow-1: rgba(220, 234, 208, 0.6);
+  --banner-glow-2: rgba(47, 145, 66, 0.15);
+  --ambient-glow: rgba(47, 145, 66, 0.12);
+}
+
+[data-theme='dark'] {
+  --forest-black: 6 13 7;
+  --forest-dark: 8 15 9;
+  --forest-mid: 15 28 16;
+  --forest-canopy: 21 40 23;
+  --moss-dark: 36 61 38;
+  --moss: 61 107 66;
+  --fern: 90 140 82;
+  --leaf: 122 184 112;
+  --sunlight: 200 232 122;
+  --gold: 212 168 50;
+  --bark: 58 34 16;
+  --bark-light: 92 61 30;
+  --cream: 240 234 214;
+  --cream-dim: rgba(240, 234, 214, 0.6);
+  --fog: rgba(200, 232, 122, 0.06);
+  --border-forest-rgba: rgba(90, 140, 82, 0.15);
+  --backdrop-forest-rgba: rgba(8, 15, 9, 0.85);
+  --glow-green-rgba: rgba(90, 140, 82, 0.2);
+  --hero-overlay-1: rgba(6, 13, 7, 0.85);
+  --hero-overlay-2: rgba(15, 28, 16, 0.9);
+  --hero-glow-1: rgba(26, 58, 32, 0.4);
+  --hero-glow-2: rgba(61, 107, 66, 0.15);
+  --banner-1: #060d07;
+  --banner-2: #0f1c10;
+  --banner-3: #080f09;
+  --banner-glow-1: rgba(26, 58, 32, 0.55);
+  --banner-glow-2: rgba(61, 107, 66, 0.18);
+  --ambient-glow: rgba(61, 107, 66, 0.15);
 }
 
 * {
@@ -30,11 +75,12 @@
 
 body {
   font-family: 'Syne', sans-serif;
-  background-color: var(--forest-black);
-  color: var(--cream);
+  background-color: rgb(var(--forest-black));
+  color: rgb(var(--cream));
   line-height: 1.75;
   overflow-x: hidden;
   position: relative;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body::after {
@@ -68,23 +114,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .text-gradient-sunlight {
-  background: linear-gradient(135deg, var(--sunlight) 0%, var(--gold) 100%);
+  background: linear-gradient(135deg, rgb(var(--sunlight)) 0%, rgb(var(--gold)) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .border-forest {
-  border: 1px solid rgba(45, 92, 58, 0.25);
+  border: 1px solid var(--border-forest-rgba);
 }
 
 .backdrop-forest {
   backdrop-filter: blur(16px);
-  background: rgba(251, 250, 245, 0.85);
+  background: var(--backdrop-forest-rgba);
 }
 
 .glow-green {
-  box-shadow: 0 0 30px rgba(45, 92, 58, 0.15);
+  box-shadow: 0 0 30px var(--glow-green-rgba);
 }
 
 @layer utilities {
@@ -116,8 +162,8 @@ button {
 }
 
 ::selection {
-  background-color: var(--fern);
-  color: var(--forest-dark);
+  background-color: rgb(var(--fern));
+  color: rgb(var(--forest-dark));
 }
 
 ::-webkit-scrollbar {
@@ -125,16 +171,16 @@ button {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--forest-dark);
+  background: rgb(var(--forest-dark));
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--moss-dark);
+  background: rgb(var(--moss-dark));
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--moss);
+  background: rgb(var(--moss));
 }
 
 @keyframes dino-float {

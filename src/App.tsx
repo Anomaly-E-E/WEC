@@ -10,6 +10,7 @@ import Competitions from './pages/Competitions';
 import Sponsors from './pages/Sponsors';
 import Winners from './pages/Winners';
 import RegistrationComingSoon from './pages/RegistrationComingSoon';
+import { ThemeProvider } from './context/ThemeContext';
 import './styles/globals.css';
 
 function AnimatedRoutes() {
@@ -40,12 +41,14 @@ function AnimatedRoutes() {
 
 function App() {
   return (
-    <Router>
-      <IntroOverlay />
-      <Nav />
-      <AnimatedRoutes />
-      <Footer />
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <IntroOverlay />
+        <Nav />
+        <AnimatedRoutes />
+        <Footer />
+      </Router>
+    </ThemeProvider>
   );
 }
 
