@@ -119,14 +119,12 @@ export default function About() {
                 >
                   View Competitions
                 </Link>
-                <a
-                  href="https://forms.office.com/Pages/ResponsePage.aspx?id=TaaTrQ2tzU6y_eU84Vllvojv0C3AKvxMnZrNlCc3fx9URDdYS1FaN0lFMDM2UklUNkRVS1ZVSTVPVy4u"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/register"
                   className="border-2 border-fern text-leaf px-8 py-4 rounded-full font-sans font-bold text-lg hover:bg-fern hover:text-cream transition-colors duration-300"
                 >
                   Register Now
-                </a>
+                </Link>
               </div>
             </div>
           </ScrollReveal>

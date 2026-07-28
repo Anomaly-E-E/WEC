@@ -15,7 +15,7 @@ export default function ForestHero({ title, subtitle, children, size = 'normal' 
         className="absolute inset-0"
         style={{
           background: `
-            linear-gradient(160deg, #faf8f2 0%, #e3ead6 50%, #eef1e5 100%)
+            linear-gradient(160deg, #fbfaf5 0%, #dcead0 50%, #e6f0dc 100%)
           `,
         }}
       ></div>
@@ -24,7 +24,7 @@ export default function ForestHero({ title, subtitle, children, size = 'normal' 
         className="absolute inset-0 opacity-55"
         style={{
           background: `
-            radial-gradient(ellipse 70% 80% at 65% 40%, rgba(180,210,160,0.55), transparent)
+            radial-gradient(ellipse 70% 80% at 65% 40%, rgba(220,234,208,0.6), transparent)
           `,
         }}
       ></div>
@@ -33,7 +33,7 @@ export default function ForestHero({ title, subtitle, children, size = 'normal' 
         className="absolute inset-0 opacity-40"
         style={{
           background: `
-            radial-gradient(ellipse 40% 50% at 15% 85%, rgba(150,190,130,0.22), transparent)
+            radial-gradient(ellipse 40% 50% at 15% 85%, rgba(47,145,66,0.15), transparent)
           `,
         }}
       ></div>

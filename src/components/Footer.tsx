@@ -33,14 +33,12 @@ export default function Footer() {
               <Link to="/#team" className="text-cream-dim hover:text-sunlight transition-colors text-sm">
                 Team
               </Link>
-              <a
-                href="https://forms.office.com/Pages/ResponsePage.aspx?id=TaaTrQ2tzU6y_eU84Vllvojv0C3AKvxMnZrNlCc3fx9URDdYS1FaN0lFMDM2UklUNkRVS1ZVSTVPVy4u"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/register"
                 className="text-sunlight hover:text-gold transition-colors text-sm font-semibold"
               >
                 Register
-              </a>
+              </Link>
             </div>
           </div>
 

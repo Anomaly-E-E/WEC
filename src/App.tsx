@@ -9,6 +9,7 @@ import About from './pages/About';
 import Competitions from './pages/Competitions';
 import Sponsors from './pages/Sponsors';
 import Winners from './pages/Winners';
+import RegistrationComingSoon from './pages/RegistrationComingSoon';
 import './styles/globals.css';
 
 function AnimatedRoutes() {
@@ -31,6 +32,7 @@ function AnimatedRoutes() {
         <Route path="/winners/2025-2026" element={<Winners />} />
         <Route path="/winners/2024-2025" element={<Winners />} />
         <Route path="/winners/oec-2025" element={<Winners />} />
+        <Route path="/register" element={<RegistrationComingSoon />} />
       </Routes>
     </AnimatePresence>
   );

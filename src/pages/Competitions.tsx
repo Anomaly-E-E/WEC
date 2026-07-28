@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import ForestHero from '../components/ForestHero';
 import Icon from '../components/Icon';
 import { competitions } from '../data/competitions';
@@ -69,14 +70,12 @@ export default function Competitions() {
               Ready to Register?
             </h3>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="https://forms.office.com/Pages/ResponsePage.aspx?id=TaaTrQ2tzU6y_eU84Vllvojv0C3AKvxMnZrNlCc3fx9URDdYS1FaN0lFMDM2UklUNkRVS1ZVSTVPVy4u"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/register"
                 className="bg-sunlight text-cream px-8 py-4 rounded-full font-sans font-bold text-lg hover:scale-105 transition-transform duration-200"
               >
                 Register Now
-              </a>
+              </Link>
             </div>
           </div>
         </div>

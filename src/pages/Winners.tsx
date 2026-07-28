@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import ForestHero from '../components/ForestHero';
 import ScrollReveal from '../components/ScrollReveal';
@@ -115,14 +115,12 @@ export default function Winners() {
                   <p className="text-cream-dim text-lg mb-8">
                     Winners will be announced after the competition on November 21–23, 2026.
                   </p>
-                  <a
-                    href="https://forms.office.com/Pages/ResponsePage.aspx?id=TaaTrQ2tzU6y_eU84Vllvojv0C3AKvxMnZrNlCc3fx9URDdYS1FaN0lFMDM2UklUNkRVS1ZVSTVPVy4u"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    to="/register"
                     className="inline-block bg-sunlight text-cream px-8 py-3 rounded-full font-sans font-bold hover:scale-105 transition-transform duration-200"
                   >
                     Register for WEC 2026
-                  </a>
+                  </Link>
                 </div>
               </div>
             )}

@@ -5,21 +5,21 @@
 @tailwind utilities;
 
 :root {
-  --forest-black: #faf8f2;
-  --forest-dark: #eef1e5;
+  --forest-black: #fbfaf5;
+  --forest-dark: #e6f0dc;
   --forest-mid: #ffffff;
-  --forest-canopy: #e3ead6;
-  --moss-dark: #2f4a35;
-  --moss: #3d6b42;
-  --fern: #4a7a42;
-  --leaf: #3f7d38;
-  --sunlight: #4f8a2a;
-  --gold: #b8860a;
+  --forest-canopy: #dcead0;
+  --moss-dark: #1f3d28;
+  --moss: #2d5c3a;
+  --fern: #3d7a45;
+  --leaf: #2f9142;
+  --sunlight: #4caf1f;
+  --gold: #c9971a;
   --bark: #3a2210;
   --bark-light: #5c3d1e;
-  --cream: #1a2e1f;
-  --cream-dim: rgba(26, 46, 31, 0.62);
-  --fog: rgba(79, 138, 42, 0.06);
+  --cream: #12241a;
+  --cream-dim: rgba(18, 36, 26, 0.68);
+  --fog: rgba(76, 175, 31, 0.06);
 }
 
 * {
@@ -75,16 +75,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .border-forest {
-  border: 1px solid rgba(74, 122, 66, 0.22);
+  border: 1px solid rgba(45, 92, 58, 0.25);
 }
 
 .backdrop-forest {
   backdrop-filter: blur(16px);
-  background: rgba(250, 248, 242, 0.85);
+  background: rgba(251, 250, 245, 0.85);
 }
 
 .glow-green {
-  box-shadow: 0 0 30px rgba(74, 122, 66, 0.15);
+  box-shadow: 0 0 30px rgba(45, 92, 58, 0.15);
 }
 
 @layer utilities {
@@ -135,4 +135,15 @@ button {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--moss);
+}
+
+@keyframes dino-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.dino-float {
+  animation-name: dino-float;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
