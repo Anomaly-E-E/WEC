@@ -5,21 +5,21 @@
 @tailwind utilities;
 
 :root {
-  --forest-black: #060d07;
-  --forest-dark: #080f09;
-  --forest-mid: #0f1c10;
-  --forest-canopy: #152817;
-  --moss-dark: #243d26;
+  --forest-black: #faf8f2;
+  --forest-dark: #eef1e5;
+  --forest-mid: #ffffff;
+  --forest-canopy: #e3ead6;
+  --moss-dark: #2f4a35;
   --moss: #3d6b42;
-  --fern: #5a8c52;
-  --leaf: #7ab870;
-  --sunlight: #c8e87a;
-  --gold: #d4a832;
+  --fern: #4a7a42;
+  --leaf: #3f7d38;
+  --sunlight: #4f8a2a;
+  --gold: #b8860a;
   --bark: #3a2210;
   --bark-light: #5c3d1e;
-  --cream: #f0ead6;
-  --cream-dim: rgba(240, 234, 214, 0.6);
-  --fog: rgba(200, 232, 122, 0.06);
+  --cream: #1a2e1f;
+  --cream-dim: rgba(26, 46, 31, 0.62);
+  --fog: rgba(79, 138, 42, 0.06);
 }
 
 * {
@@ -75,16 +75,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .border-forest {
-  border: 1px solid rgba(90, 140, 82, 0.15);
+  border: 1px solid rgba(74, 122, 66, 0.22);
 }
 
 .backdrop-forest {
   backdrop-filter: blur(16px);
-  background: rgba(8, 15, 9, 0.85);
+  background: rgba(250, 248, 242, 0.85);
 }
 
 .glow-green {
-  box-shadow: 0 0 30px rgba(90, 140, 82, 0.2);
+  box-shadow: 0 0 30px rgba(74, 122, 66, 0.15);
 }
 
 @layer utilities {

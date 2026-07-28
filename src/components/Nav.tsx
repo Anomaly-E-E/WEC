@@ -107,7 +107,7 @@ export default function Nav() {
             href="https://forms.office.com/Pages/ResponsePage.aspx?id=TaaTrQ2tzU6y_eU84Vllvojv0C3AKvxMnZrNlCc3fx9URDdYS1FaN0lFMDM2UklUNkRVS1ZVSTVPVy4u"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden lg:block bg-sunlight text-forest-dark px-6 py-2.5 rounded-full font-sans font-bold text-sm hover:scale-105 transition-transform duration-200"
+            className="hidden lg:block bg-sunlight text-cream px-6 py-2.5 rounded-full font-sans font-bold text-sm hover:scale-105 transition-transform duration-200"
           >
             Register Now
           </a>
@@ -158,7 +158,7 @@ export default function Nav() {
                 href="https://forms.office.com/Pages/ResponsePage.aspx?id=TaaTrQ2tzU6y_eU84Vllvojv0C3AKvxMnZrNlCc3fx9URDdYS1FaN0lFMDM2UklUNkRVS1ZVSTVPVy4u"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-sunlight text-forest-dark px-8 py-3 rounded-full font-sans font-bold text-lg mt-4"
+                className="bg-sunlight text-cream px-8 py-3 rounded-full font-sans font-bold text-lg mt-4"
               >
                 Register Now
               </a>

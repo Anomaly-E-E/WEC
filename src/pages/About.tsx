@@ -115,7 +115,7 @@ export default function About() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/competitions"
-                  className="bg-sunlight text-forest-dark px-8 py-4 rounded-full font-sans font-bold text-lg hover:scale-105 transition-transform duration-200"
+                  className="bg-sunlight text-cream px-8 py-4 rounded-full font-sans font-bold text-lg hover:scale-105 transition-transform duration-200"
                 >
                   View Competitions
                 </Link>
@@ -123,7 +123,7 @@ export default function About() {
                   href="https://forms.office.com/Pages/ResponsePage.aspx?id=TaaTrQ2tzU6y_eU84Vllvojv0C3AKvxMnZrNlCc3fx9URDdYS1FaN0lFMDM2UklUNkRVS1ZVSTVPVy4u"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="border-2 border-fern text-leaf px-8 py-4 rounded-full font-sans font-bold text-lg hover:bg-fern hover:text-forest-dark transition-colors duration-300"
+                  className="border-2 border-fern text-leaf px-8 py-4 rounded-full font-sans font-bold text-lg hover:bg-fern hover:text-cream transition-colors duration-300"
                 >
                   Register Now
                 </a>

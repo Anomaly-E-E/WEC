@@ -33,21 +33,21 @@ export default function Home() {
         <div
           className="absolute inset-0"
           style={{
-            background: `linear-gradient(160deg, rgba(6,13,7,0.85) 0%, rgba(15,28,16,0.9) 50%, rgba(8,15,9,0.85) 100%)`,
+            background: `linear-gradient(160deg, rgba(250,248,242,0.88) 0%, rgba(238,241,229,0.92) 50%, rgba(250,248,242,0.88) 100%)`,
           }}
         ></div>
 
         <div
           className="absolute inset-0 opacity-40"
           style={{
-            background: `radial-gradient(ellipse 70% 80% at 65% 40%, rgba(26,58,32,0.4), transparent)`,
+            background: `radial-gradient(ellipse 70% 80% at 65% 40%, rgba(200,220,180,0.5), transparent)`,
           }}
         ></div>
 
         <div
           className="absolute inset-0 opacity-30"
           style={{
-            background: `radial-gradient(ellipse 40% 50% at 15% 85%, rgba(61,107,66,0.15), transparent)`,
+            background: `radial-gradient(ellipse 40% 50% at 15% 85%, rgba(150,190,130,0.25), transparent)`,
           }}
         ></div>
 
@@ -105,13 +105,13 @@ export default function Home() {
               href="https://forms.office.com/Pages/ResponsePage.aspx?id=TaaTrQ2tzU6y_eU84Vllvojv0C3AKvxMnZrNlCc3fx9URDdYS1FaN0lFMDM2UklUNkRVS1ZVSTVPVy4u"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-sunlight text-forest-dark px-8 py-4 rounded-full font-sans font-bold text-lg hover:scale-105 transition-transform duration-200"
+              className="bg-sunlight text-cream px-8 py-4 rounded-full font-sans font-bold text-lg hover:scale-105 transition-transform duration-200"
             >
               Register Now
             </a>
             <Link
               to="/competitions"
-              className="border border-fern text-leaf px-8 py-4 rounded-full font-sans font-semibold text-lg hover:bg-fern hover:text-forest-dark transition-colors duration-300"
+              className="border border-fern text-leaf px-8 py-4 rounded-full font-sans font-semibold text-lg hover:bg-fern hover:text-cream transition-colors duration-300"
             >
               Explore Events
             </Link>
@@ -328,7 +328,7 @@ export default function Home() {
                 href="https://forms.office.com/Pages/ResponsePage.aspx?id=TaaTrQ2tzU6y_eU84Vllvojv0C3AKvxMnZrNlCc3fx9URDdYS1FaN0lFMDM2UklUNkRVS1ZVSTVPVy4u"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-sunlight text-forest-dark px-10 py-5 rounded-full font-sans font-bold text-xl hover:scale-105 transition-transform duration-200 inline-block"
+                className="bg-sunlight text-cream px-10 py-5 rounded-full font-sans font-bold text-xl hover:scale-105 transition-transform duration-200 inline-block"
               >
                 Participant Registration
               </a>

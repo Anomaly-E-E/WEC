@@ -89,7 +89,7 @@ export default function Winners() {
                   onClick={() => setActiveTab(tab.id)}
                   className={`px-8 py-3 rounded-full font-sans font-semibold text-lg transition-all duration-300 ${
                     activeTab === tab.id
-                      ? 'bg-sunlight text-forest-dark'
+                      ? 'bg-sunlight text-cream'
                       : 'border border-forest text-cream hover:border-fern hover:text-fern'
                   }`}
                 >
@@ -119,7 +119,7 @@ export default function Winners() {
                     href="https://forms.office.com/Pages/ResponsePage.aspx?id=TaaTrQ2tzU6y_eU84Vllvojv0C3AKvxMnZrNlCc3fx9URDdYS1FaN0lFMDM2UklUNkRVS1ZVSTVPVy4u"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-sunlight text-forest-dark px-8 py-3 rounded-full font-sans font-bold hover:scale-105 transition-transform duration-200"
+                    className="inline-block bg-sunlight text-cream px-8 py-3 rounded-full font-sans font-bold hover:scale-105 transition-transform duration-200"
                   >
                     Register for WEC 2026
                   </a>

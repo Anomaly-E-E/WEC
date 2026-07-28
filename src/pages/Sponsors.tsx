@@ -24,7 +24,7 @@ export default function Sponsors() {
                 href="https://www.westernengineeringcompetition.ca/_files/ugd/a0d860_61bcb40f0b2e4e8789b565b7b3da607c.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-sunlight text-forest-dark px-10 py-4 rounded-full font-sans font-bold text-lg hover:scale-105 transition-transform duration-200"
+                className="inline-block bg-sunlight text-cream px-10 py-4 rounded-full font-sans font-bold text-lg hover:scale-105 transition-transform duration-200"
               >
                 Download Sponsorship Package
               </a>
