@@ -1,9 +1,21 @@
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import ForestHero from '../components/ForestHero';
 import ScrollReveal from '../components/ScrollReveal';
 import { teamMembers } from '../data/team';
 
 export default function Team() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === '#join') {
+      setTimeout(() => {
+        document.getElementById('join')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 100);
+    }
+  }, [location]);
+
   const coChairs = teamMembers.filter(m => m.role === 'Co-Chair');
   const vpCompetitions = teamMembers.filter(m => m.department === 'Competitions');
   const vpTechnical = teamMembers.filter(m => m.department === 'Technical');
@@ -28,6 +40,11 @@ export default function Team() {
       <p className="font-mono text-sunlight text-xs tracking-wider uppercase">
         {member.role}
       </p>
+      {member.yearDiscipline && (
+        <p className="font-mono text-cream-dim/70 text-xs tracking-wide mt-1">
+          {member.yearDiscipline}
+        </p>
+      )}
       <p className="text-cream-dim text-xs mt-3">
         {/* TODO: Add email when available */}
         [email@uwo.ca]
@@ -100,7 +117,7 @@ export default function Team() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.5}>
-            <div className="mt-20 text-center">
+            <div id="join" className="mt-20 text-center">
               <div className="border-forest backdrop-blur-sm bg-forest-mid/30 rounded-xl p-12 max-w-3xl mx-auto">
                 <h3 className="font-display text-cream text-3xl font-bold mb-4">
                   Interested in Joining?
