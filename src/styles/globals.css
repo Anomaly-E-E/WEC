@@ -5,10 +5,10 @@
 @tailwind utilities;
 
 :root {
-  --forest-black: #060d07;
-  --forest-dark: #080f09;
-  --forest-mid: #0f1c10;
-  --forest-canopy: #152817;
+  --forest-black: #ffffff;
+  --forest-dark: #ffffff;
+  --forest-mid: #ffffff;
+  --forest-canopy: #ffffff;
   --moss-dark: #243d26;
   --moss: #3d6b42;
   --fern: #5a8c52;
