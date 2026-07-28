@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import ForestHero from '../components/ForestHero';
 import ScrollReveal from '../components/ScrollReveal';
+import Icon from '../components/Icon';
 
 type WinnersTab = '2025-2026' | '2024-2025' | 'oec-2025';
 
@@ -78,7 +79,7 @@ export default function Winners() {
                     </h3>
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="border-forest backdrop-blur-sm bg-forest-mid/30 rounded-lg p-8">
-                        <div className="text-4xl mb-4">📊</div>
+                        <Icon name="chart" className="w-9 h-9 text-leaf mb-4" />
                         <h4 className="font-sans text-cream text-xl font-bold mb-2">
                           Consulting
                         </h4>

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import Icon from './Icon';
 
 export default function Footer() {
   return (
@@ -52,7 +53,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="text-cream-dim hover:text-sunlight transition-colors text-sm flex items-center gap-2"
               >
-                <span className="text-lg">📷</span> Instagram
+                <Icon name="instagram" className="w-5 h-5" /> Instagram
               </a>
               <a
                 href="https://www.facebook.com/UES.WEC/"
@@ -60,7 +61,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="text-cream-dim hover:text-sunlight transition-colors text-sm flex items-center gap-2"
               >
-                <span className="text-lg">👍</span> Facebook
+                <Icon name="facebook" className="w-5 h-5" /> Facebook
               </a>
               <a
                 href="https://ca.linkedin.com/company/western-engineering-competition"
@@ -68,7 +69,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="text-cream-dim hover:text-sunlight transition-colors text-sm flex items-center gap-2"
               >
-                <span className="text-lg">💼</span> LinkedIn
+                <Icon name="linkedin" className="w-5 h-5" /> LinkedIn
               </a>
             </div>
           </div>
