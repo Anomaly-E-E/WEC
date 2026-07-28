@@ -1,12 +1,24 @@
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import ScrollReveal from '../components/ScrollReveal';
 import SectionDivider from '../components/SectionDivider';
 import Icon from '../components/Icon';
+import TeamSection from '../components/TeamSection';
 import { competitions } from '../data/competitions';
 import { bonusMarkCourses } from '../data/bonusMarks';
 
 export default function Home() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      setTimeout(() => {
+        document.getElementById(location.hash.slice(1))?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    }
+  }, [location]);
+
   return (
     <div className="min-h-screen">
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -288,6 +300,10 @@ export default function Home() {
 
       <SectionDivider />
 
+      <TeamSection />
+
+      <SectionDivider />
+
       <section className="py-32 px-6 bg-forest-dark relative overflow-hidden">
         <div
           className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none"
@@ -307,7 +323,7 @@ export default function Home() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <div className="flex justify-center">
               <a
                 href="https://forms.office.com/Pages/ResponsePage.aspx?id=TaaTrQ2tzU6y_eU84Vllvojv0C3AKvxMnZrNlCc3fx9URDdYS1FaN0lFMDM2UklUNkRVS1ZVSTVPVy4u"
                 target="_blank"
@@ -315,14 +331,6 @@ export default function Home() {
                 className="bg-sunlight text-forest-dark px-10 py-5 rounded-full font-sans font-bold text-xl hover:scale-105 transition-transform duration-200 inline-block"
               >
                 Participant Registration
-              </a>
-              <a
-                href="https://docs.google.com/forms/d/1oMXIz9xTFOJ-nJJoY0hgHjJ50xDEVPjlFYiM0W87TFo/viewform"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border-2 border-fern text-leaf px-10 py-5 rounded-full font-sans font-bold text-xl hover:bg-fern hover:text-forest-dark transition-colors duration-300 inline-block"
-              >
-                Mini Design Registration
               </a>
             </div>
           </ScrollReveal>
