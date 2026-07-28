@@ -14,12 +14,6 @@ export default function Competitions() {
 
       <section className="py-24 px-6">
         <div className="max-w-6xl mx-auto">
-          <ScrollReveal>
-            <p className="text-cream-dim text-lg text-center mb-16 max-w-3xl mx-auto">
-              Choose your competition based on your discipline, interests, and year level. Each category offers unique challenges designed to test different engineering skills.
-            </p>
-          </ScrollReveal>
-
           <div className="grid md:grid-cols-2 gap-6">
             {competitions.map((comp, i) => (
               <ScrollReveal key={comp.id} delay={i * 0.05}>
@@ -39,7 +33,7 @@ export default function Competitions() {
                     </div>
                   </div>
 
-                  <p className="text-cream-dim leading-relaxed mb-6">
+                  <p className="text-cream-dim leading-relaxed text-lg mb-6">
                     {comp.description}
                   </p>
 
