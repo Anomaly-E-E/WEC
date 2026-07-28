@@ -1,12 +1,10 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import ForestHero from '../components/ForestHero';
 import ScrollReveal from '../components/ScrollReveal';
+import Icon from '../components/Icon';
 import { competitions } from '../data/competitions';
 
 export default function Competitions() {
-  const [expandedId, setExpandedId] = useState<string | null>(null);
-
   return (
     <div className="min-h-screen">
       <ForestHero
@@ -15,98 +13,60 @@ export default function Competitions() {
       />
 
       <section className="py-24 px-6">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <ScrollReveal>
             <p className="text-cream-dim text-lg text-center mb-16 max-w-3xl mx-auto">
               Choose your competition based on your discipline, interests, and year level. Each category offers unique challenges designed to test different engineering skills.
             </p>
           </ScrollReveal>
 
-          <div className="space-y-4">
+          <div className="grid md:grid-cols-2 gap-6">
             {competitions.map((comp, i) => (
               <ScrollReveal key={comp.id} delay={i * 0.05}>
                 <motion.div
-                  className="border-forest backdrop-blur-sm bg-forest-mid/30 rounded-xl overflow-hidden transition-all duration-300"
-                  whileHover={{ borderColor: 'rgba(90,140,82,0.4)' }}
+                  className="border-forest backdrop-blur-sm bg-forest-mid/30 rounded-xl p-8 h-full transition-all duration-300"
+                  whileHover={{ y: -6, borderColor: 'rgba(90,140,82,0.5)' }}
                 >
-                  <button
-                    onClick={() => setExpandedId(expandedId === comp.id ? null : comp.id)}
-                    className="w-full px-8 py-6 flex items-center justify-between text-left hover:bg-forest-canopy/30 transition-colors duration-200"
-                  >
-                    <div className="flex items-center gap-6">
-                      <span className="text-5xl">{comp.emoji}</span>
-                      <div>
-                        <h3 className="font-sans text-cream font-bold text-2xl mb-1">
-                          {comp.name}
-                        </h3>
-                        <p className="font-mono text-fern text-xs tracking-wider uppercase">
-                          {comp.tag}
-                        </p>
-                      </div>
+                  <div className="flex items-center gap-6 mb-4">
+                    <Icon name={comp.icon} className="w-10 h-10 text-leaf" />
+                    <div>
+                      <h3 className="font-sans text-cream font-bold text-2xl mb-1">
+                        {comp.name}
+                      </h3>
+                      <p className="font-mono text-fern text-xs tracking-wider uppercase">
+                        {comp.tag}
+                      </p>
                     </div>
-                    <motion.span
-                      animate={{ rotate: expandedId === comp.id ? 180 : 0 }}
-                      transition={{ duration: 0.3 }}
-                      className="text-sunlight text-3xl"
-                    >
-                      ▾
-                    </motion.span>
-                  </button>
+                  </div>
 
-                  <AnimatePresence>
-                    {expandedId === comp.id && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="overflow-hidden"
-                      >
-                        <div className="px-8 pb-8 pt-4 border-t border-forest">
-                          <div className="space-y-6">
-                            <div>
-                              <h4 className="font-sans text-sunlight font-semibold text-sm uppercase tracking-wider mb-2">
-                                About
-                              </h4>
-                              <p className="text-cream-dim leading-relaxed">
-                                {comp.description}
-                              </p>
-                            </div>
+                  <p className="text-cream-dim leading-relaxed mb-6">
+                    {comp.description}
+                  </p>
 
-                            <div className="grid md:grid-cols-2 gap-6">
-                              <div>
-                                <h4 className="font-sans text-sunlight font-semibold text-sm uppercase tracking-wider mb-2">
-                                  Eligibility
-                                </h4>
-                                <p className="text-cream-dim">{comp.eligibility}</p>
-                              </div>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="font-sans text-sunlight font-semibold text-xs uppercase tracking-wider mb-1">
+                        Eligibility
+                      </h4>
+                      <p className="text-cream-dim text-sm">{comp.eligibility}</p>
+                    </div>
 
-                              <div>
-                                <h4 className="font-sans text-sunlight font-semibold text-sm uppercase tracking-wider mb-2">
-                                  Team Size
-                                </h4>
-                                <p className="text-cream-dim">{comp.teamSize}</p>
-                              </div>
-                            </div>
+                    <div>
+                      <h4 className="font-sans text-sunlight font-semibold text-xs uppercase tracking-wider mb-1">
+                        Team Size
+                      </h4>
+                      <p className="text-cream-dim text-sm">{comp.teamSize}</p>
+                    </div>
+                  </div>
 
-                            <div>
-                              <h4 className="font-sans text-sunlight font-semibold text-sm uppercase tracking-wider mb-3">
-                                Judging Criteria
-                              </h4>
-                              <ul className="space-y-2">
-                                {comp.judgingCriteria.map((criteria, idx) => (
-                                  <li key={idx} className="flex items-start gap-3">
-                                    <span className="text-fern mt-1">▸</span>
-                                    <span className="text-cream-dim">{criteria}</span>
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                  <div>
+                    <h4 className="font-sans text-sunlight font-semibold text-xs uppercase tracking-wider mb-1">
+                      Judged on
+                    </h4>
+                    <p className="text-cream-dim text-sm">
+                      {comp.judgingCriteria.join(', ')}
+                    </p>
+                  </div>
                 </motion.div>
               </ScrollReveal>
             ))}

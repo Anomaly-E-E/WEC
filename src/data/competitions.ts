@@ -1,7 +1,9 @@
+import type { IconName } from '../components/Icon';
+
 export interface Competition {
   id: string;
   name: string;
-  emoji: string;
+  icon: IconName;
   tag: string;
   teaser: string;
   description: string;
@@ -14,7 +16,7 @@ export const competitions: Competition[] = [
   {
     id: 'junior-design',
     name: 'Junior Design',
-    emoji: '🌱',
+    icon: 'sprout',
     tag: 'Year 1–2',
     teaser: 'Design challenge for first and second-year engineering students',
     description: 'Junior Design tests the creativity and problem-solving skills of early-year engineering students. Teams are given a design problem and must create a functional prototype within the competition timeframe using limited materials and tools.',
@@ -31,7 +33,7 @@ export const competitions: Competition[] = [
   {
     id: 'senior-design',
     name: 'Senior Design',
-    emoji: '🏗️',
+    icon: 'compass',
     tag: 'All Years',
     teaser: 'Advanced engineering design challenge for all students',
     description: 'Senior Design is an intensive engineering design competition where teams tackle complex, real-world problems. Competitors must demonstrate advanced technical skills, innovative thinking, and professional presentation abilities.',
@@ -48,7 +50,7 @@ export const competitions: Competition[] = [
   {
     id: 'programming',
     name: 'Programming',
-    emoji: '💻',
+    icon: 'code',
     tag: 'All Years',
     teaser: 'Algorithmic problem-solving and software development',
     description: 'The Programming competition challenges students to solve complex algorithmic problems and develop working software solutions under time pressure. Teams must demonstrate strong coding skills, debugging abilities, and software engineering best practices.',
@@ -65,7 +67,7 @@ export const competitions: Competition[] = [
   {
     id: 'innovative-design',
     name: 'Innovative Design',
-    emoji: '💡',
+    icon: 'bulb',
     tag: 'All Years',
     teaser: 'Push the boundaries of creativity and invention',
     description: 'Innovative Design challenges teams to develop completely original solutions to open-ended problems. This competition emphasizes creativity, out-of-the-box thinking, and the ability to develop novel approaches that haven\'t been tried before.',
@@ -82,7 +84,7 @@ export const competitions: Competition[] = [
   {
     id: 'civil-design',
     name: 'Civil Design',
-    emoji: '🏛️',
+    icon: 'column',
     tag: 'Civil Eng',
     teaser: 'Infrastructure and structural engineering challenges',
     description: 'Civil Design focuses on infrastructure, structural analysis, and construction challenges. Teams must apply civil engineering principles to design and potentially build scaled models of structures, considering factors like load distribution, materials, and environmental impact.',
@@ -99,7 +101,7 @@ export const competitions: Competition[] = [
   {
     id: 'chemical-design',
     name: 'Chemical Design',
-    emoji: '⚗️',
+    icon: 'flask',
     tag: 'Chem Eng',
     teaser: 'Process design and chemical engineering solutions',
     description: 'Chemical Design tests knowledge of chemical processes, reactor design, and process optimization. Teams develop solutions to problems involving chemical reactions, separation processes, or process control while considering safety, efficiency, and environmental impact.',
@@ -116,7 +118,7 @@ export const competitions: Competition[] = [
   {
     id: 'bio-engineering',
     name: 'Bio-Engineering',
-    emoji: '🧬',
+    icon: 'pulse',
     tag: 'BME',
     teaser: 'Medical devices and biomedical innovation',
     description: 'Bio-Engineering challenges teams to develop solutions at the intersection of engineering and medicine. Projects may involve medical device design, biomaterials, tissue engineering, or healthcare technology while considering biocompatibility, safety, and regulatory requirements.',
@@ -133,7 +135,7 @@ export const competitions: Competition[] = [
   {
     id: 'debate',
     name: 'Debate',
-    emoji: '🗣️',
+    icon: 'chat',
     tag: 'All Years',
     teaser: 'Engineering policy, ethics, and argumentation',
     description: 'The Debate competition tests students\' ability to analyze engineering ethics, policy, and societal issues. Competitors must research topics, build persuasive arguments, and think critically about the broader implications of engineering decisions.',
@@ -150,7 +152,7 @@ export const competitions: Competition[] = [
   {
     id: 'consulting',
     name: 'Consulting',
-    emoji: '📊',
+    icon: 'chart',
     tag: 'All Years',
     teaser: 'Business analysis and engineering consulting',
     description: 'Consulting simulates real-world engineering consulting scenarios. Teams analyze business problems, develop strategic recommendations, and present professional consulting deliverables. This competition emphasizes business acumen, communication, and practical problem-solving.',
@@ -167,7 +169,7 @@ export const competitions: Competition[] = [
   {
     id: 'mini-design',
     name: 'Mini Design',
-    emoji: '🔬',
+    icon: 'cap',
     tag: 'Grade 11–12',
     teaser: 'High school engineering design challenge',
     description: 'Mini Design introduces high school students to engineering design competitions. This category provides a supportive environment for younger students to experience hands-on engineering challenges and develop foundational problem-solving skills.',
