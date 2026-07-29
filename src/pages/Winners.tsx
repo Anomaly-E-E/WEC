@@ -82,10 +82,16 @@ export default function Winners() {
 
       <section className="py-24 px-6 relative overflow-hidden">
         <div
-          className="hidden lg:block absolute top-10 left-8 w-20 h-20 opacity-90 pointer-events-none critter-bob"
+          className="hidden lg:block absolute top-12 left-12 w-28 h-28 opacity-90 pointer-events-none critter-bob"
           style={{ animationDuration: '5.7s', animationDelay: '0.4s' }}
         >
           <ForestCritter variant="deer" className="w-full h-full" />
+        </div>
+        <div
+          className="hidden lg:block absolute bottom-1/4 right-10 w-24 h-24 opacity-90 pointer-events-none critter-bob"
+          style={{ animationDuration: '5s', animationDelay: '1.2s' }}
+        >
+          <ForestCritter variant="squirrel" className="w-full h-full" />
         </div>
 
         <div className="max-w-6xl mx-auto">

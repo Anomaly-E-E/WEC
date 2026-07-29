@@ -13,10 +13,16 @@ export default function Sponsors() {
 
       <section className="pt-8 pb-24 px-6 relative overflow-hidden">
         <div
-          className="hidden lg:block absolute bottom-12 left-8 w-20 h-20 opacity-90 pointer-events-none critter-bob"
+          className="hidden lg:block absolute bottom-16 left-12 w-28 h-28 opacity-90 pointer-events-none critter-bob"
           style={{ animationDuration: '6.1s', animationDelay: '0.8s' }}
         >
           <ForestCritter variant="squirrel" className="w-full h-full" />
+        </div>
+        <div
+          className="hidden lg:block absolute top-8 right-1/4 w-24 h-24 opacity-90 pointer-events-none critter-bob"
+          style={{ animationDuration: '4.8s', animationDelay: '1.4s' }}
+        >
+          <ForestCritter variant="owl" className="w-full h-full" />
         </div>
 
         <div className="max-w-5xl mx-auto">

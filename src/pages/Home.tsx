@@ -133,10 +133,16 @@ export default function Home() {
 
       <section className="py-24 px-6 bg-forest-dark relative overflow-hidden">
         <div
-          className="hidden lg:block absolute top-8 right-6 w-20 h-20 opacity-90 pointer-events-none critter-bob"
+          className="hidden lg:block absolute top-10 right-10 w-28 h-28 opacity-90 pointer-events-none critter-bob"
           style={{ animationDuration: '5.4s', animationDelay: '0.2s' }}
         >
           <ForestCritter variant="owl" className="w-full h-full" />
+        </div>
+        <div
+          className="hidden lg:block absolute bottom-12 left-1/3 w-24 h-24 opacity-90 pointer-events-none critter-bob"
+          style={{ animationDuration: '4.9s', animationDelay: '1.3s' }}
+        >
+          <ForestCritter variant="squirrel" className="w-full h-full" />
         </div>
 
         <div className="max-w-6xl mx-auto">
@@ -229,10 +235,16 @@ export default function Home() {
 
       <section className="py-24 px-6 bg-forest-dark relative overflow-hidden">
         <div
-          className="hidden lg:block absolute bottom-10 left-6 w-24 h-24 opacity-90 pointer-events-none critter-bob"
+          className="hidden lg:block absolute bottom-14 left-10 w-32 h-32 opacity-90 pointer-events-none critter-bob"
           style={{ animationDuration: '6.2s', animationDelay: '1s' }}
         >
           <ForestCritter variant="squirrel" className="w-full h-full" />
+        </div>
+        <div
+          className="hidden lg:block absolute top-1/2 right-12 w-24 h-24 opacity-90 pointer-events-none critter-bob"
+          style={{ animationDuration: '5.3s', animationDelay: '0.6s' }}
+        >
+          <ForestCritter variant="deer" className="w-full h-full" />
         </div>
 
         <div className="max-w-7xl mx-auto">
@@ -326,10 +338,16 @@ export default function Home() {
         </div>
 
         <div
-          className="hidden lg:block absolute top-12 right-8 w-20 h-20 opacity-90 pointer-events-none critter-bob"
+          className="hidden lg:block absolute top-14 right-12 w-28 h-28 opacity-90 pointer-events-none critter-bob"
           style={{ animationDuration: '5.8s', animationDelay: '0.6s' }}
         >
           <ForestCritter variant="deer" className="w-full h-full" />
+        </div>
+        <div
+          className="hidden lg:block absolute bottom-16 left-16 w-24 h-24 opacity-90 pointer-events-none critter-bob"
+          style={{ animationDuration: '4.7s', animationDelay: '1.5s' }}
+        >
+          <ForestCritter variant="owl" className="w-full h-full" />
         </div>
 
         <div className="max-w-4xl mx-auto relative z-10 text-center">
@@ -338,7 +356,7 @@ export default function Home() {
               Ready to Compete?
             </h2>
             <p className="text-cream-dim text-xl mb-12 max-w-2xl mx-auto">
-              Register now for WEC 2026 and take the first step toward provincial and national competition.
+              Register now for WEC 2026 and take the first step toward provincial competition.
             </p>
           </ScrollReveal>
 

@@ -13,10 +13,22 @@ export default function About() {
 
       <section className="py-24 px-6 relative overflow-hidden">
         <div
-          className="hidden lg:block absolute top-16 right-8 w-20 h-20 opacity-90 pointer-events-none critter-bob"
+          className="hidden lg:block absolute top-20 right-14 w-28 h-28 opacity-90 pointer-events-none critter-bob"
           style={{ animationDuration: '5.6s', animationDelay: '0.3s' }}
         >
           <ForestCritter variant="deer" className="w-full h-full" />
+        </div>
+        <div
+          className="hidden lg:block absolute top-1/2 left-6 w-24 h-24 opacity-90 pointer-events-none critter-bob"
+          style={{ animationDuration: '5.1s', animationDelay: '1.1s' }}
+        >
+          <ForestCritter variant="owl" className="w-full h-full" />
+        </div>
+        <div
+          className="hidden lg:block absolute bottom-10 right-1/4 w-24 h-24 opacity-90 pointer-events-none critter-bob"
+          style={{ animationDuration: '4.6s', animationDelay: '0.9s' }}
+        >
+          <ForestCritter variant="squirrel" className="w-full h-full" />
         </div>
 
         <div className="max-w-4xl mx-auto">
