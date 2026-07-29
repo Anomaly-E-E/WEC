@@ -324,7 +324,7 @@ export default function Home() {
             <div className="flex justify-center">
               <Link
                 to="/register"
-                className="bg-sunlight text-cream px-10 py-5 rounded-full font-sans font-bold text-xl hover:scale-105 transition-transform duration-200 inline-block"
+                className="bg-cta-green text-cream px-10 py-5 rounded-full font-sans font-bold text-xl hover:scale-105 transition-transform duration-200 inline-block"
               >
                 Participant Registration
               </Link>

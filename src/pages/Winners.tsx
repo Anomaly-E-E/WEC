@@ -117,7 +117,7 @@ export default function Winners() {
                   </p>
                   <Link
                     to="/register"
-                    className="inline-block bg-sunlight text-cream px-8 py-3 rounded-full font-sans font-bold hover:scale-105 transition-transform duration-200"
+                    className="inline-block bg-cta-green text-cream px-8 py-3 rounded-full font-sans font-bold hover:scale-105 transition-transform duration-200"
                   >
                     Register for WEC 2026
                   </Link>
