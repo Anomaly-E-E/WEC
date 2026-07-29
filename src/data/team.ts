@@ -66,21 +66,20 @@ export const teamMembers: TeamMember[] = [
     photo: '/team/arshan-shareef.jpg'
   },
   {
-    name: 'Olga Duvnjak',
-    role: 'VP Logistics',
-    department: 'Logistics',
-    initials: 'OD',
+    name: 'Kevin McGillicuddy',
+    role: 'VP Finance',
+    department: 'Finance',
+    initials: 'KM',
     yearDiscipline: 'Year · Discipline',
-    photo: '/team/olga-duvnjak.jpg'
+    photo: '/team/kevin-mcgillicuddy.jpg'
   },
   {
-    name: 'Kaitlyn Ivanoff',
-    role: 'VP Logistics',
-    department: 'Logistics',
-    initials: 'KI',
+    name: 'Bridget Shin',
+    role: 'VP Publications',
+    department: 'Publications',
+    initials: 'BS',
     yearDiscipline: 'Year · Discipline',
-    photo: '/team/kaitlyn-ivanoff.jpg',
-    photoPosition: 'center 28%'
+    photo: '/team/bridget-shin.jpg'
   },
   {
     name: 'Michael Amos',
@@ -99,19 +98,20 @@ export const teamMembers: TeamMember[] = [
     photo: '/team/king-zhang.jpg'
   },
   {
-    name: 'Kevin McGillicuddy',
-    role: 'VP Finance',
-    department: 'Finance',
-    initials: 'KM',
+    name: 'Olga Duvnjak',
+    role: 'VP Logistics',
+    department: 'Logistics',
+    initials: 'OD',
     yearDiscipline: 'Year · Discipline',
-    photo: '/team/kevin-mcgillicuddy.jpg'
+    photo: '/team/olga-duvnjak.jpg'
   },
   {
-    name: 'Bridget Shin',
-    role: 'VP Publications',
-    department: 'Publications',
-    initials: 'BS',
+    name: 'Kaitlyn Ivanoff',
+    role: 'VP Logistics',
+    department: 'Logistics',
+    initials: 'KI',
     yearDiscipline: 'Year · Discipline',
-    photo: '/team/bridget-shin.jpg'
+    photo: '/team/kaitlyn-ivanoff.jpg',
+    photoPosition: 'center 28%'
   }
 ];
