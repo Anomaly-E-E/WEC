@@ -45,7 +45,7 @@ export default function TeamSection() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`${member.name} on LinkedIn`}
-              className="text-[#f2ecd8]/60 hover:text-[#c8e87a] transition-colors"
+              className="text-[#f2ecd8]/60 hover:text-[#c8e87a] transition-colors flex items-center"
             >
               <Icon name="linkedin" className="w-5 h-5" />
             </a>
@@ -55,7 +55,7 @@ export default function TeamSection() {
           {member.name}
         </h3>
         {member.yearDiscipline && (
-          <p className="font-mono text-[#f2ecd8]/70 text-xs tracking-wide">
+          <p className="font-mono text-[#f2ecd8]/70 text-xs whitespace-nowrap">
             {member.yearDiscipline}
           </p>
         )}
@@ -95,14 +95,14 @@ export default function TeamSection() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`${member.name} on LinkedIn`}
-            className="text-[#f2ecd8]/60 hover:text-[#c8e87a] transition-colors"
+            className="text-[#f2ecd8]/60 hover:text-[#c8e87a] transition-colors flex items-center"
           >
             <Icon name="linkedin" className="w-5 h-5" />
           </a>
         )}
       </div>
       {member.yearDiscipline && (
-        <p className="font-mono text-[#f2ecd8]/70 text-xs tracking-wide mt-1">
+        <p className="font-mono text-[#f2ecd8]/70 text-xs whitespace-nowrap mt-1">
           {member.yearDiscipline}
         </p>
       )}
