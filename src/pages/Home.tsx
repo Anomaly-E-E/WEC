@@ -281,33 +281,33 @@ export default function Home() {
       <SectionDivider />
 
       <section className="py-24 px-6 relative overflow-hidden">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <ScrollReveal>
-            <div className="text-center mb-12">
-              <p className="font-mono text-fern text-xs tracking-[0.3em] uppercase mb-4">Compete & Earn</p>
-              <h2 className="font-display text-cream text-4xl md:text-5xl font-bold mb-4">
+            <div className="text-center mb-16">
+              <p className="font-mono text-fern text-sm tracking-[0.3em] uppercase mb-4">Compete & Earn</p>
+              <h2 className="font-display text-cream text-5xl md:text-6xl font-bold mb-4">
                 WEC Bonus Marks
               </h2>
-              <p className="text-cream-dim text-lg">
+              <p className="text-cream-dim text-xl">
                 These courses count WEC participation toward bonus marks.
               </p>
             </div>
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {bonusMarkGroups.map((group, i) => (
                 <motion.div
                   key={i}
                   whileHover={{ y: -6, borderColor: 'rgba(76,131,76,0.5)' }}
-                  className="border-forest bg-forest-mid/20 rounded-lg px-5 py-4 transition-all duration-300"
+                  className="border-forest bg-forest-mid/20 rounded-xl px-7 py-6 transition-all duration-300"
                 >
-                  <p className="font-sans text-cream font-bold text-sm mb-2">{group.discipline}</p>
-                  <div className="space-y-1">
+                  <p className="font-sans text-cream font-bold text-lg mb-4">{group.discipline}</p>
+                  <div className="space-y-2.5">
                     {group.entries.map((entry) => (
-                      <div key={entry.code} className="flex items-baseline justify-between gap-3">
-                        <p className="font-mono text-sunlight font-bold text-sm whitespace-nowrap">{entry.code}</p>
-                        <p className="text-cream-dim text-xs text-right">{entry.note}</p>
+                      <div key={entry.code} className="flex items-baseline justify-between gap-4">
+                        <p className="font-mono text-sunlight font-bold text-lg whitespace-nowrap">{entry.code}</p>
+                        <p className="text-cream-dim text-sm text-right">{entry.note}</p>
                       </div>
                     ))}
                   </div>
