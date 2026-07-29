@@ -21,8 +21,7 @@ export const teamMembers: TeamMember[] = [
     role: 'Co-Chair',
     initials: 'NM',
     yearDiscipline: 'Year · Discipline',
-    photo: '/team/natalie-mcgillicuddy.jpg',
-    photoPosition: 'center 25%'
+    photo: '/team/natalie-mcgillicuddy.jpg'
   },
   {
     name: 'Shrey Mahida',
@@ -39,7 +38,7 @@ export const teamMembers: TeamMember[] = [
     initials: 'VA',
     yearDiscipline: 'Year · Discipline',
     photo: '/team/violet-angellotti.jpg',
-    photoPosition: 'center 30%'
+    photoPosition: 'center 40%'
   },
   {
     name: 'Estela Katchen',
@@ -56,8 +55,7 @@ export const teamMembers: TeamMember[] = [
     department: 'Technical',
     initials: 'TR',
     yearDiscipline: 'Year · Discipline',
-    photo: '/team/turner-reucassel.jpg',
-    photoPosition: 'center 14%'
+    photo: '/team/turner-reucassel.jpg'
   },
   {
     name: 'Arshan Shareef',
@@ -106,8 +104,7 @@ export const teamMembers: TeamMember[] = [
     department: 'Finance',
     initials: 'KM',
     yearDiscipline: 'Year · Discipline',
-    photo: '/team/kevin-mcgillicuddy.jpg',
-    photoPosition: 'center 65%'
+    photo: '/team/kevin-mcgillicuddy.jpg'
   },
   {
     name: 'Bridget Shin',
