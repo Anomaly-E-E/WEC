@@ -47,7 +47,7 @@ export default function TeamSection() {
               aria-label={`${member.name} on LinkedIn`}
               className="text-[#f2ecd8]/60 hover:text-[#c8e87a] transition-colors"
             >
-              <Icon name="linkedin" className="w-3.5 h-3.5" />
+              <Icon name="linkedin" className="w-5 h-5" />
             </a>
           )}
         </div>
@@ -97,7 +97,7 @@ export default function TeamSection() {
             aria-label={`${member.name} on LinkedIn`}
             className="text-[#f2ecd8]/60 hover:text-[#c8e87a] transition-colors"
           >
-            <Icon name="linkedin" className="w-3.5 h-3.5" />
+            <Icon name="linkedin" className="w-5 h-5" />
           </a>
         )}
       </div>
