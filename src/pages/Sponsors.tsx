@@ -41,7 +41,7 @@ export default function Sponsors() {
                 {['Company One', 'Company Two', 'Company Three', 'Company Four', 'Company Five', 'Company Six'].map((name) => (
                   <motion.div
                     key={name}
-                    whileHover={{ y: -6, borderColor: 'rgba(90,140,82,0.5)' }}
+                    whileHover={{ y: -6, borderColor: 'rgba(76,131,76,0.5)' }}
                     className="border-forest bg-forest-mid/30 rounded-xl h-28 flex items-center justify-center transition-all duration-300"
                   >
                     <span className="font-display text-cream-dim text-xl font-bold">

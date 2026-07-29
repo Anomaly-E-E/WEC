@@ -6,35 +6,35 @@
 
 :root,
 [data-theme='light'] {
-  --forest-black: 251 250 245;
-  --forest-dark: 230 240 220;
-  --forest-mid: 255 255 255;
-  --forest-canopy: 220 234 208;
-  --moss-dark: 31 61 40;
-  --moss: 45 92 58;
+  --forest-black: 248 241 220;
+  --forest-dark: 240 228 196;
+  --forest-mid: 253 248 236;
+  --forest-canopy: 232 220 182;
+  --moss-dark: 30 58 40;
+  --moss: 46 96 58;
   --fern: 61 122 69;
-  --leaf: 47 145 66;
-  --sunlight: 76 175 31;
-  --cta-green: 63 148 30;
-  --gold: 201 151 26;
+  --leaf: 32 128 55;
+  --sunlight: 54 150 24;
+  --cta-green: 40 120 26;
+  --gold: 145 105 8;
   --bark: 58 34 16;
   --bark-light: 92 61 30;
-  --cream: 18 36 26;
-  --cream-dim: rgba(18, 36, 26, 0.68);
-  --fog: rgba(76, 175, 31, 0.06);
-  --border-forest-rgba: rgba(45, 92, 58, 0.25);
-  --backdrop-forest-rgba: rgba(251, 250, 245, 0.85);
-  --glow-green-rgba: rgba(45, 92, 58, 0.15);
-  --hero-overlay-1: rgba(251, 250, 245, 0.88);
-  --hero-overlay-2: rgba(230, 240, 220, 0.92);
-  --hero-glow-1: rgba(220, 234, 208, 0.55);
-  --hero-glow-2: rgba(47, 145, 66, 0.18);
-  --banner-1: #fbfaf5;
-  --banner-2: #dcead0;
-  --banner-3: #e6f0dc;
-  --banner-glow-1: rgba(220, 234, 208, 0.6);
-  --banner-glow-2: rgba(47, 145, 66, 0.15);
-  --ambient-glow: rgba(47, 145, 66, 0.12);
+  --cream: 24 24 22;
+  --cream-dim: rgba(24, 24, 22, 0.68);
+  --fog: rgba(54, 150, 24, 0.06);
+  --border-forest-rgba: rgba(46, 96, 58, 0.22);
+  --backdrop-forest-rgba: rgba(248, 241, 220, 0.85);
+  --glow-green-rgba: rgba(46, 96, 58, 0.15);
+  --hero-overlay-1: rgba(248, 241, 220, 0.88);
+  --hero-overlay-2: rgba(240, 228, 196, 0.92);
+  --hero-glow-1: rgba(232, 220, 182, 0.55);
+  --hero-glow-2: rgba(32, 128, 55, 0.18);
+  --banner-1: #f8f1dc;
+  --banner-2: #e8dcb6;
+  --banner-3: #f4ecd4;
+  --banner-glow-1: rgba(232, 220, 182, 0.6);
+  --banner-glow-2: rgba(32, 128, 55, 0.15);
+  --ambient-glow: rgba(32, 128, 55, 0.12);
 }
 
 [data-theme='dark'] {
@@ -192,6 +192,19 @@ button {
 
 .dino-float {
   animation-name: dino-float;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes critter-bob {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-4px) rotate(2deg); }
+  50% { transform: translateY(-7px) rotate(0deg); }
+  75% { transform: translateY(-4px) rotate(-2deg); }
+}
+
+.critter-bob {
+  animation-name: critter-bob;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }

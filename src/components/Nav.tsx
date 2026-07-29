@@ -51,7 +51,7 @@ export default function Nav() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link to="/" className="font-display italic text-sunlight text-2xl md:text-3xl font-black relative">
             <span className="relative" style={{
-              textShadow: '2px 2px 0px rgba(0,0,0,0.3), -1px -1px 0px rgba(200,232,122,0.3)'
+              textShadow: '2px 2px 0px rgba(0,0,0,0.3), -1px -1px 0px rgb(var(--sunlight) / 0.3)'
             }}>
               WEC
             </span>
@@ -108,7 +108,7 @@ export default function Nav() {
             <ThemeToggle />
             <Link
               to="/register"
-              className="bg-cta-green text-white cursor-pointer px-6 py-2.5 rounded-full font-sans font-bold text-sm hover:scale-105 transition-transform duration-200"
+              className="text-white cursor-pointer px-6 py-2.5 rounded-full font-sans font-bold text-sm hover:scale-105 transition-transform duration-200"
               style={{ backgroundColor: 'rgb(var(--cta-green))' }}
             >
               Register Now
@@ -159,7 +159,7 @@ export default function Nav() {
 
               <Link
                 to="/register"
-                className="bg-cta-green text-white cursor-pointer px-8 py-3 rounded-full font-sans font-bold text-lg mt-4"
+                className="text-white cursor-pointer px-8 py-3 rounded-full font-sans font-bold text-lg mt-4"
                 style={{ backgroundColor: 'rgb(var(--cta-green))' }}
               >
                 Register Now

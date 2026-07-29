@@ -5,6 +5,7 @@ import ScrollReveal from '../components/ScrollReveal';
 import SectionDivider from '../components/SectionDivider';
 import Icon from '../components/Icon';
 import TeamSection from '../components/TeamSection';
+import ForestCritterDoodle from '../components/ForestCritterDoodle';
 import { competitions } from '../data/competitions';
 import { bonusMarkCourses } from '../data/bonusMarks';
 
@@ -67,6 +68,13 @@ export default function Home() {
           <ellipse cx="850" cy="210" rx="20" ry="50" fill="rgb(var(--moss-dark))" opacity="0.25" />
         </svg>
 
+        <div
+          className="hidden md:block absolute critter-bob text-moss"
+          style={{ top: '20%', left: '4%', animationDuration: '4.6s', animationDelay: '0.4s' }}
+        >
+          <ForestCritterDoodle variant="squirrel" className="w-10 h-10" />
+        </div>
+
         <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
@@ -103,7 +111,7 @@ export default function Home() {
           >
             <Link
               to="/register"
-              className="bg-cta-green text-white cursor-pointer px-8 py-4 rounded-full font-sans font-bold text-lg hover:scale-105 transition-transform duration-200"
+              className="text-white cursor-pointer px-8 py-4 rounded-full font-sans font-bold text-lg hover:scale-105 transition-transform duration-200"
               style={{ backgroundColor: 'rgb(var(--cta-green))' }}
             >
               Register Now
@@ -130,7 +138,14 @@ export default function Home() {
         </motion.div>
       </section>
 
-      <section className="py-24 px-6 bg-forest-dark">
+      <section className="py-24 px-6 bg-forest-dark relative overflow-hidden">
+        <div
+          className="hidden lg:block absolute critter-bob text-leaf"
+          style={{ top: '38%', right: '3%', animationDuration: '4.2s', animationDelay: '0.8s' }}
+        >
+          <ForestCritterDoodle variant="deer" className="w-14 h-14" />
+        </div>
+
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16">
             <ScrollReveal>
@@ -161,7 +176,7 @@ export default function Home() {
                 ].map((stat, i) => (
                   <motion.div
                     key={i}
-                    whileHover={{ y: -6, borderColor: 'rgba(90,140,82,0.5)' }}
+                    whileHover={{ y: -6, borderColor: 'rgba(76,131,76,0.5)' }}
                     className="border-forest bg-forest-mid/40 rounded-lg p-6 text-center transition-all duration-300"
                   >
                     <p className="font-display text-sunlight text-5xl font-black mb-2">{stat.number}</p>
@@ -184,6 +199,13 @@ export default function Home() {
           }}
         ></div>
 
+        <div
+          className="hidden lg:block absolute critter-bob text-fern"
+          style={{ top: '8%', right: '6%', animationDuration: '3.8s', animationDelay: '1.1s' }}
+        >
+          <ForestCritterDoodle variant="owl" className="w-11 h-11" />
+        </div>
+
         <div className="max-w-6xl mx-auto relative z-10">
           <ScrollReveal>
             <div className="text-center mb-16">
@@ -202,7 +224,7 @@ export default function Home() {
             ].map((level, i) => (
               <ScrollReveal key={i} delay={i * 0.15}>
                 <motion.div
-                  whileHover={{ y: -8, borderColor: 'rgba(90,140,82,0.6)' }}
+                  whileHover={{ y: -8, borderColor: 'rgba(76,131,76,0.6)' }}
                   className="relative border-forest bg-forest-mid/40 rounded-xl p-8 transition-all duration-300"
                 >
                   <p className="absolute top-4 right-4 font-display text-moss-dark text-8xl font-black opacity-10">
@@ -236,7 +258,7 @@ export default function Home() {
               <ScrollReveal key={comp.id} delay={i * 0.05}>
                 <Link to="/competitions">
                   <motion.div
-                    whileHover={{ y: -6, borderColor: 'rgba(90,140,82,0.5)' }}
+                    whileHover={{ y: -6, borderColor: 'rgba(76,131,76,0.5)' }}
                     className="border-forest bg-forest-mid/30 rounded-lg p-6 text-center transition-all duration-300 group cursor-pointer relative overflow-hidden"
                   >
                     <Icon name={comp.icon} className="w-10 h-10 mx-auto mb-3 text-leaf" />
@@ -285,7 +307,7 @@ export default function Home() {
               {bonusMarkCourses.map((course, i) => (
                 <motion.div
                   key={i}
-                  whileHover={{ y: -6, borderColor: 'rgba(90,140,82,0.5)' }}
+                  whileHover={{ y: -6, borderColor: 'rgba(76,131,76,0.5)' }}
                   className="border-forest bg-forest-mid/20 rounded-lg px-5 py-3 transition-all duration-300"
                 >
                   <p className="font-mono text-sunlight font-bold text-base">{course.code}</p>
@@ -311,6 +333,13 @@ export default function Home() {
           <p className="font-display font-black text-moss-dark">WEC</p>
         </div>
 
+        <div
+          className="hidden md:block absolute critter-bob text-leaf"
+          style={{ bottom: '10%', left: '6%', animationDuration: '4.4s', animationDelay: '0.5s' }}
+        >
+          <ForestCritterDoodle variant="squirrel" className="w-12 h-12" />
+        </div>
+
         <div className="max-w-4xl mx-auto relative z-10 text-center">
           <ScrollReveal>
             <h2 className="font-display text-cream text-5xl md:text-7xl font-bold mb-8">
@@ -325,7 +354,7 @@ export default function Home() {
             <div className="flex justify-center">
               <Link
                 to="/register"
-                className="bg-cta-green text-white cursor-pointer px-10 py-5 rounded-full font-sans font-bold text-xl hover:scale-105 transition-transform duration-200 inline-block"
+                className="text-white cursor-pointer px-10 py-5 rounded-full font-sans font-bold text-xl hover:scale-105 transition-transform duration-200 inline-block"
                 style={{ backgroundColor: 'rgb(var(--cta-green))' }}
               >
                 Participant Registration

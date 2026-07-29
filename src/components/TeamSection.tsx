@@ -13,7 +13,7 @@ export default function TeamSection() {
 
   const CoChairCard = ({ member }: { member: TeamMember }) => (
     <motion.div
-      whileHover={{ y: -6, borderColor: 'rgba(90,140,82,0.5)' }}
+      whileHover={{ y: -6, borderColor: 'rgba(76,131,76,0.5)' }}
       className="border-forest bg-forest-mid/20 rounded-xl overflow-hidden transition-all duration-300 flex"
     >
       <div className="w-2/5 flex-shrink-0">
@@ -50,7 +50,7 @@ export default function TeamSection() {
 
   const MemberCard = ({ member }: { member: TeamMember }) => (
     <motion.div
-      whileHover={{ y: -6, borderColor: 'rgba(90,140,82,0.5)' }}
+      whileHover={{ y: -6, borderColor: 'rgba(76,131,76,0.5)' }}
       className="border-forest bg-forest-mid/30 rounded-xl p-6 text-center transition-all duration-300"
     >
       {member.photo ? (

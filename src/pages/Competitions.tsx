@@ -19,7 +19,7 @@ export default function Competitions() {
               <motion.div
                 key={comp.id}
                 className="border-forest bg-forest-mid/30 rounded-xl p-8 h-full transition-all duration-300"
-                whileHover={{ y: -6, borderColor: 'rgba(90,140,82,0.5)' }}
+                whileHover={{ y: -6, borderColor: 'rgba(76,131,76,0.5)' }}
               >
                 <div className="flex items-center gap-6 mb-4">
                   <Icon name={comp.icon} className="w-10 h-10 text-leaf" />
@@ -72,7 +72,7 @@ export default function Competitions() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/register"
-                className="bg-cta-green text-white cursor-pointer px-8 py-4 rounded-full font-sans font-bold text-lg hover:scale-105 transition-transform duration-200"
+                className="text-white cursor-pointer px-8 py-4 rounded-full font-sans font-bold text-lg hover:scale-105 transition-transform duration-200"
                 style={{ backgroundColor: 'rgb(var(--cta-green))' }}
               >
                 Register Now
