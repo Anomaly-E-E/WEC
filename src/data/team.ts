@@ -63,8 +63,9 @@ export const teamMembers: TeamMember[] = [
     role: 'VP Technical',
     department: 'Technical',
     initials: 'AS',
-    yearDiscipline: 'Year · Discipline',
-    photo: '/team/arshan-shareef.jpg'
+    yearDiscipline: '3rd Year · Software Engineering',
+    photo: '/team/arshan-shareef.jpg',
+    linkedin: 'https://www.linkedin.com/in/arshan-shareef-mohammed-4ab94b330/?skipRedirect=true'
   },
   {
     name: 'Kevin McGillicuddy',
