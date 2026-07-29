@@ -103,7 +103,7 @@ export default function Home() {
           >
             <Link
               to="/register"
-              className="bg-cta-green text-cream px-8 py-4 rounded-full font-sans font-bold text-lg hover:scale-105 transition-transform duration-200"
+              className="bg-cta-green text-cream cursor-pointer px-8 py-4 rounded-full font-sans font-bold text-lg hover:scale-105 transition-transform duration-200"
             >
               Register Now
             </Link>
@@ -324,7 +324,7 @@ export default function Home() {
             <div className="flex justify-center">
               <Link
                 to="/register"
-                className="bg-cta-green text-cream px-10 py-5 rounded-full font-sans font-bold text-xl hover:scale-105 transition-transform duration-200 inline-block"
+                className="bg-cta-green text-cream cursor-pointer px-10 py-5 rounded-full font-sans font-bold text-xl hover:scale-105 transition-transform duration-200 inline-block"
               >
                 Participant Registration
               </Link>
