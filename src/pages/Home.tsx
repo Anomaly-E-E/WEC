@@ -7,7 +7,7 @@ import Icon from '../components/Icon';
 import ForestCritter from '../components/ForestCritter';
 import TeamSection from '../components/TeamSection';
 import { competitions } from '../data/competitions';
-import { bonusMarkCourses } from '../data/bonusMarks';
+import { bonusMarkGroups } from '../data/bonusMarks';
 
 export default function Home() {
   const location = useLocation();
@@ -296,14 +296,21 @@ export default function Home() {
 
           <ScrollReveal delay={0.2}>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {bonusMarkCourses.map((course, i) => (
+              {bonusMarkGroups.map((group, i) => (
                 <motion.div
                   key={i}
                   whileHover={{ y: -6, borderColor: 'rgba(76,131,76,0.5)' }}
-                  className="border-forest bg-forest-mid/20 rounded-lg px-5 py-3 transition-all duration-300"
+                  className="border-forest bg-forest-mid/20 rounded-lg px-5 py-4 transition-all duration-300"
                 >
-                  <p className="font-mono text-sunlight font-bold text-base">{course.code}</p>
-                  <p className="text-cream-dim text-sm">{course.competition}</p>
+                  <p className="font-sans text-cream font-bold text-sm mb-2">{group.discipline}</p>
+                  <div className="space-y-1">
+                    {group.entries.map((entry) => (
+                      <div key={entry.code} className="flex items-baseline justify-between gap-3">
+                        <p className="font-mono text-sunlight font-bold text-sm whitespace-nowrap">{entry.code}</p>
+                        <p className="text-cream-dim text-xs text-right">{entry.note}</p>
+                      </div>
+                    ))}
+                  </div>
                 </motion.div>
               ))}
             </div>
