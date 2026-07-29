@@ -21,6 +21,7 @@ export default {
         'fern': 'rgb(var(--fern) / <alpha-value>)',
         'leaf': 'rgb(var(--leaf) / <alpha-value>)',
         'sunlight': 'rgb(var(--sunlight) / <alpha-value>)',
+        'cta-green': 'rgb(var(--cta-green) / <alpha-value>)',
         'gold': 'rgb(var(--gold) / <alpha-value>)',
         'bark': 'rgb(var(--bark) / <alpha-value>)',
         'bark-light': 'rgb(var(--bark-light) / <alpha-value>)',

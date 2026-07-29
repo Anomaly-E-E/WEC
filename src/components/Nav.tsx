@@ -108,7 +108,7 @@ export default function Nav() {
             <ThemeToggle />
             <Link
               to="/register"
-              className="bg-sunlight text-cream px-6 py-2.5 rounded-full font-sans font-bold text-sm hover:scale-105 transition-transform duration-200"
+              className="bg-cta-green text-cream px-6 py-2.5 rounded-full font-sans font-bold text-sm hover:scale-105 transition-transform duration-200"
             >
               Register Now
             </Link>
@@ -158,7 +158,7 @@ export default function Nav() {
 
               <Link
                 to="/register"
-                className="bg-sunlight text-cream px-8 py-3 rounded-full font-sans font-bold text-lg mt-4"
+                className="bg-cta-green text-cream px-8 py-3 rounded-full font-sans font-bold text-lg mt-4"
               >
                 Register Now
               </Link>

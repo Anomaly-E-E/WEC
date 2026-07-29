@@ -103,7 +103,7 @@ export default function Home() {
           >
             <Link
               to="/register"
-              className="bg-sunlight text-cream px-8 py-4 rounded-full font-sans font-bold text-lg hover:scale-105 transition-transform duration-200"
+              className="bg-cta-green text-cream px-8 py-4 rounded-full font-sans font-bold text-lg hover:scale-105 transition-transform duration-200"
             >
               Register Now
             </Link>
