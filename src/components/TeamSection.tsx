@@ -117,12 +117,6 @@ export default function TeamSection() {
       >
         <ForestCritter variant="squirrel" className="w-full h-full" />
       </div>
-      <div
-        className="hidden lg:block absolute bottom-8 left-1/4 w-24 h-24 opacity-90 pointer-events-none critter-bob"
-        style={{ animationDuration: '4.9s', animationDelay: '1.3s' }}
-      >
-        <ForestCritter variant="deer" className="w-full h-full" />
-      </div>
 
       <div className="max-w-7xl mx-auto">
         <ScrollReveal>

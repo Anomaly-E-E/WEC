@@ -18,12 +18,6 @@ export default function Sponsors() {
         >
           <ForestCritter variant="squirrel" className="w-full h-full" />
         </div>
-        <div
-          className="hidden lg:block absolute top-8 right-1/4 w-24 h-24 opacity-90 pointer-events-none critter-bob"
-          style={{ animationDuration: '4.8s', animationDelay: '1.4s' }}
-        >
-          <ForestCritter variant="owl" className="w-full h-full" />
-        </div>
 
         <div className="max-w-5xl mx-auto">
           <ScrollReveal>

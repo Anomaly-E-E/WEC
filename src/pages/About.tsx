@@ -18,18 +18,6 @@ export default function About() {
         >
           <ForestCritter variant="deer" className="w-full h-full" />
         </div>
-        <div
-          className="hidden lg:block absolute top-1/2 left-6 w-24 h-24 opacity-90 pointer-events-none critter-bob"
-          style={{ animationDuration: '5.1s', animationDelay: '1.1s' }}
-        >
-          <ForestCritter variant="owl" className="w-full h-full" />
-        </div>
-        <div
-          className="hidden lg:block absolute bottom-10 right-1/4 w-24 h-24 opacity-90 pointer-events-none critter-bob"
-          style={{ animationDuration: '4.6s', animationDelay: '0.9s' }}
-        >
-          <ForestCritter variant="squirrel" className="w-full h-full" />
-        </div>
 
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>

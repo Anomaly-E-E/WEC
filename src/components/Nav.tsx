@@ -50,9 +50,7 @@ export default function Nav() {
       >
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link to="/" className="font-display italic text-sunlight text-2xl md:text-3xl font-black relative">
-            <span className="relative" style={{
-              textShadow: '2px 2px 0px rgba(0,0,0,0.3), -1px -1px 0px rgb(var(--sunlight) / 0.3)'
-            }}>
+            <span className="relative">
               WEC
             </span>
           </Link>

@@ -138,12 +138,6 @@ export default function Home() {
         >
           <ForestCritter variant="owl" className="w-full h-full" />
         </div>
-        <div
-          className="hidden lg:block absolute bottom-12 left-1/3 w-24 h-24 opacity-90 pointer-events-none critter-bob"
-          style={{ animationDuration: '4.9s', animationDelay: '1.3s' }}
-        >
-          <ForestCritter variant="squirrel" className="w-full h-full" />
-        </div>
 
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16">
@@ -239,12 +233,6 @@ export default function Home() {
           style={{ animationDuration: '6.2s', animationDelay: '1s' }}
         >
           <ForestCritter variant="squirrel" className="w-full h-full" />
-        </div>
-        <div
-          className="hidden lg:block absolute top-1/2 right-12 w-24 h-24 opacity-90 pointer-events-none critter-bob"
-          style={{ animationDuration: '5.3s', animationDelay: '0.6s' }}
-        >
-          <ForestCritter variant="deer" className="w-full h-full" />
         </div>
 
         <div className="max-w-7xl mx-auto">
@@ -342,12 +330,6 @@ export default function Home() {
           style={{ animationDuration: '5.8s', animationDelay: '0.6s' }}
         >
           <ForestCritter variant="deer" className="w-full h-full" />
-        </div>
-        <div
-          className="hidden lg:block absolute bottom-16 left-16 w-24 h-24 opacity-90 pointer-events-none critter-bob"
-          style={{ animationDuration: '4.7s', animationDelay: '1.5s' }}
-        >
-          <ForestCritter variant="owl" className="w-full h-full" />
         </div>
 
         <div className="max-w-4xl mx-auto relative z-10 text-center">

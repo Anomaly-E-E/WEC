@@ -20,12 +20,6 @@ export default function Competitions() {
         >
           <ForestCritter variant="owl" className="w-full h-full" />
         </div>
-        <div
-          className="hidden lg:block absolute bottom-1/3 left-10 w-24 h-24 opacity-90 pointer-events-none critter-bob"
-          style={{ animationDuration: '5.2s', animationDelay: '1.2s' }}
-        >
-          <ForestCritter variant="deer" className="w-full h-full" />
-        </div>
 
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-6">

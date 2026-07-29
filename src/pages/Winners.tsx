@@ -87,12 +87,6 @@ export default function Winners() {
         >
           <ForestCritter variant="deer" className="w-full h-full" />
         </div>
-        <div
-          className="hidden lg:block absolute bottom-1/4 right-10 w-24 h-24 opacity-90 pointer-events-none critter-bob"
-          style={{ animationDuration: '5s', animationDelay: '1.2s' }}
-        >
-          <ForestCritter variant="squirrel" className="w-full h-full" />
-        </div>
 
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
