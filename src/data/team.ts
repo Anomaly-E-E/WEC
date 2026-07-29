@@ -6,6 +6,7 @@ export interface TeamMember {
   yearDiscipline?: string;
   photo?: string;
   photoPosition?: string;
+  linkedin?: string;
 }
 
 export const teamMembers: TeamMember[] = [

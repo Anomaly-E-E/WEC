@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import ForestHero from '../components/ForestHero';
 import ScrollReveal from '../components/ScrollReveal';
+import ForestCritter from '../components/ForestCritter';
 
 export default function Sponsors() {
   return (
@@ -10,7 +11,14 @@ export default function Sponsors() {
         subtitle="Making WEC 2026 Possible"
       />
 
-      <section className="pt-8 pb-24 px-6">
+      <section className="pt-8 pb-24 px-6 relative overflow-hidden">
+        <div
+          className="hidden lg:block absolute bottom-12 left-8 w-20 h-20 opacity-90 pointer-events-none critter-bob"
+          style={{ animationDuration: '6.1s', animationDelay: '0.8s' }}
+        >
+          <ForestCritter variant="squirrel" className="w-full h-full" />
+        </div>
+
         <div className="max-w-5xl mx-auto">
           <ScrollReveal>
             <div className="border-forest backdrop-blur-sm bg-forest-mid/30 rounded-xl p-8 text-center">

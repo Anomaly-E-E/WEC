@@ -4,8 +4,8 @@ import { Link, useLocation } from 'react-router-dom';
 import ScrollReveal from '../components/ScrollReveal';
 import SectionDivider from '../components/SectionDivider';
 import Icon from '../components/Icon';
+import ForestCritter from '../components/ForestCritter';
 import TeamSection from '../components/TeamSection';
-import ForestCritterDoodle from '../components/ForestCritterDoodle';
 import { competitions } from '../data/competitions';
 import { bonusMarkCourses } from '../data/bonusMarks';
 
@@ -68,13 +68,6 @@ export default function Home() {
           <ellipse cx="850" cy="210" rx="20" ry="50" fill="rgb(var(--moss-dark))" opacity="0.25" />
         </svg>
 
-        <div
-          className="hidden md:block absolute critter-bob text-moss"
-          style={{ top: '20%', left: '4%', animationDuration: '4.6s', animationDelay: '0.4s' }}
-        >
-          <ForestCritterDoodle variant="squirrel" className="w-10 h-10" />
-        </div>
-
         <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
@@ -100,7 +93,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-cream-dim text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed"
           >
-            Compete in 10 engineering challenges. Win your way from WEC to OEC to CEC. One weekend to prove your skills.
+            Compete in 10 engineering challenges. Win your way from WEC to OEC. One weekend to prove your skills.
           </motion.p>
 
           <motion.div
@@ -140,10 +133,10 @@ export default function Home() {
 
       <section className="py-24 px-6 bg-forest-dark relative overflow-hidden">
         <div
-          className="hidden lg:block absolute critter-bob text-leaf"
-          style={{ top: '38%', right: '3%', animationDuration: '4.2s', animationDelay: '0.8s' }}
+          className="hidden lg:block absolute top-8 right-6 w-20 h-20 opacity-90 pointer-events-none critter-bob"
+          style={{ animationDuration: '5.4s', animationDelay: '0.2s' }}
         >
-          <ForestCritterDoodle variant="deer" className="w-14 h-14" />
+          <ForestCritter variant="owl" className="w-full h-full" />
         </div>
 
         <div className="max-w-6xl mx-auto">
@@ -158,7 +151,7 @@ export default function Home() {
                   WEC is Western University's premier engineering competition, bringing together students from all disciplines to compete in design, technical, and communication challenges.
                 </p>
                 <p className="text-cream-dim leading-relaxed mb-4">
-                  Winners advance to the <strong className="text-leaf">Ontario Engineering Competition (OEC)</strong>, and top performers from OEC compete nationally at the <strong className="text-leaf">Canadian Engineering Competition (CEC)</strong>.
+                  Winners advance to the <strong className="text-leaf">Ontario Engineering Competition (OEC)</strong>, competing against the best from universities across the province.
                 </p>
                 <p className="text-cream-dim leading-relaxed">
                   Whether you're a first-year student or a graduating senior, WEC offers opportunities to test your skills, network with industry professionals, and earn bonus marks in select courses.
@@ -171,7 +164,7 @@ export default function Home() {
                 {[
                   { number: '10', label: 'Competition Categories' },
                   { number: '40+', label: 'Years of WEC' },
-                  { number: '3', label: 'Levels (WEC→OEC→CEC)' },
+                  { number: '2', label: 'Levels (WEC→OEC)' },
                   { number: '1', label: 'Weekend to Prove It' }
                 ].map((stat, i) => (
                   <motion.div
@@ -199,13 +192,6 @@ export default function Home() {
           }}
         ></div>
 
-        <div
-          className="hidden lg:block absolute critter-bob text-fern"
-          style={{ top: '8%', right: '6%', animationDuration: '3.8s', animationDelay: '1.1s' }}
-        >
-          <ForestCritterDoodle variant="owl" className="w-11 h-11" />
-        </div>
-
         <div className="max-w-6xl mx-auto relative z-10">
           <ScrollReveal>
             <div className="text-center mb-16">
@@ -216,16 +202,15 @@ export default function Home() {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
             {[
               { step: '01', name: 'WEC', full: 'Western Engineering Competition', location: 'London, ON' },
-              { step: '02', name: 'OEC', full: 'Ontario Engineering Competition', location: 'Provincial' },
-              { step: '03', name: 'CEC', full: 'Canadian Engineering Competition', location: 'National' }
+              { step: '02', name: 'OEC', full: 'Ontario Engineering Competition', location: 'Provincial' }
             ].map((level, i) => (
               <ScrollReveal key={i} delay={i * 0.15}>
                 <motion.div
                   whileHover={{ y: -8, borderColor: 'rgba(76,131,76,0.6)' }}
-                  className="relative border-forest bg-forest-mid/40 rounded-xl p-8 transition-all duration-300"
+                  className="relative border-forest bg-forest-mid/40 rounded-xl p-8 transition-all duration-300 h-full"
                 >
                   <p className="absolute top-4 right-4 font-display text-moss-dark text-8xl font-black opacity-10">
                     {level.step}
@@ -242,7 +227,14 @@ export default function Home() {
 
       <SectionDivider />
 
-      <section className="py-24 px-6 bg-forest-dark">
+      <section className="py-24 px-6 bg-forest-dark relative overflow-hidden">
+        <div
+          className="hidden lg:block absolute bottom-10 left-6 w-24 h-24 opacity-90 pointer-events-none critter-bob"
+          style={{ animationDuration: '6.2s', animationDelay: '1s' }}
+        >
+          <ForestCritter variant="squirrel" className="w-full h-full" />
+        </div>
+
         <div className="max-w-7xl mx-auto">
           <ScrollReveal>
             <div className="text-center mb-16">
@@ -279,7 +271,7 @@ export default function Home() {
                 to="/competitions"
                 className="inline-block text-sunlight hover:text-gold font-sans font-semibold text-lg transition-colors duration-200"
               >
-                View All Events →
+                See All Competition Details →
               </Link>
             </div>
           </ScrollReveal>
@@ -334,10 +326,10 @@ export default function Home() {
         </div>
 
         <div
-          className="hidden md:block absolute critter-bob text-leaf"
-          style={{ bottom: '10%', left: '6%', animationDuration: '4.4s', animationDelay: '0.5s' }}
+          className="hidden lg:block absolute top-12 right-8 w-20 h-20 opacity-90 pointer-events-none critter-bob"
+          style={{ animationDuration: '5.8s', animationDelay: '0.6s' }}
         >
-          <ForestCritterDoodle variant="squirrel" className="w-12 h-12" />
+          <ForestCritter variant="deer" className="w-full h-full" />
         </div>
 
         <div className="max-w-4xl mx-auto relative z-10 text-center">

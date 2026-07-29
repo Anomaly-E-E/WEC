@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import ForestHero from '../components/ForestHero';
 import ScrollReveal from '../components/ScrollReveal';
+import ForestCritter from '../components/ForestCritter';
 
 export default function About() {
   return (
@@ -10,7 +11,14 @@ export default function About() {
         subtitle="Western's Premier Engineering Competition"
       />
 
-      <section className="py-24 px-6">
+      <section className="py-24 px-6 relative overflow-hidden">
+        <div
+          className="hidden lg:block absolute top-16 right-8 w-20 h-20 opacity-90 pointer-events-none critter-bob"
+          style={{ animationDuration: '5.6s', animationDelay: '0.3s' }}
+        >
+          <ForestCritter variant="deer" className="w-full h-full" />
+        </div>
+
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
             <div className="mb-16">
@@ -48,16 +56,7 @@ export default function About() {
                     OEC → Ontario Engineering Competition
                   </h3>
                   <p className="text-cream-dim leading-relaxed">
-                    Represent Western against teams from universities across Ontario. Top performers advance to nationals.
-                  </p>
-                </div>
-
-                <div className="border-forest bg-forest-mid/30 rounded-lg p-8">
-                  <h3 className="font-sans text-sunlight text-2xl font-bold mb-3">
-                    CEC → Canadian Engineering Competition
-                  </h3>
-                  <p className="text-cream-dim leading-relaxed">
-                    Compete on the national stage against Canada's best engineering students.
+                    Represent Western against teams from universities across Ontario.
                   </p>
                 </div>
               </div>
