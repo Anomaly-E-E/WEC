@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import DinosaurDoodle from '../components/DinosaurDoodle';
 
 interface FloatingDino {
@@ -73,18 +72,9 @@ export default function RegistrationComingSoon() {
           <DinosaurDoodle variant={cardDinos[2].variant} className={cardDinos[2].size} />
         </div>
 
-        <h1 className="font-display text-cream text-3xl md:text-4xl font-bold mb-4">
+        <h1 className="font-doodle text-cream text-5xl md:text-6xl font-bold">
           Registration Opening Soon :)
         </h1>
-        <p className="text-cream-dim mb-8">
-          We're putting the finishing touches on registration for WEC 2026. Check back soon.
-        </p>
-        <Link
-          to="/"
-          className="inline-block border border-fern text-leaf px-6 py-3 rounded-full font-sans font-semibold hover:bg-fern hover:text-cream transition-colors duration-300"
-        >
-          Back to Home
-        </Link>
       </div>
     </section>
   );
