@@ -63,7 +63,7 @@ export const teamMembers: TeamMember[] = [
     role: 'VP Technical',
     department: 'Technical',
     initials: 'AS',
-    yearDiscipline: '3rd Year · Software Eng',
+    yearDiscipline: '3rd Year · Software',
     photo: '/team/arshan-shareef.jpg',
     linkedin: 'https://www.linkedin.com/in/arshan-shareef-mohammed-4ab94b330/?skipRedirect=true'
   },
