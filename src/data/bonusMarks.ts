@@ -23,7 +23,7 @@ export const bonusMarkGroups: BonusMarkGroup[] = [
     ],
   },
   {
-    discipline: 'Electrical & Computer Engineering',
+    discipline: 'Electrical Engineering',
     entries: [
       { code: 'ELI4100', note: 'Any Competition (Besides Junior)' },
       { code: 'ECE3399', note: 'Senior Design (Besides Junior)' },
@@ -61,7 +61,7 @@ export const bonusMarkGroups: BonusMarkGroup[] = [
     ],
   },
   {
-    discipline: 'Civil & Environmental Engineering',
+    discipline: 'Civil Engineering',
     entries: [
       { code: 'CCE2202', note: 'Civil' },
       { code: 'CCE3369', note: 'Civil' },
