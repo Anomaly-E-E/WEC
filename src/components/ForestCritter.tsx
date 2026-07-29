@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 
 interface ForestCritterProps {
-  variant?: 'deer' | 'owl' | 'squirrel';
+  variant?: 'deer' | 'owl' | 'squirrel' | 'rabbit' | 'fox' | 'hedgehog';
   className?: string;
 }
 
@@ -66,6 +66,59 @@ const critters: Record<NonNullable<ForestCritterProps['variant']>, ReactNode> = 
       <ellipse cx="37" cy="44" rx="2.6" ry="2" fill="rgb(var(--moss-dark))" />
       <ellipse cx="35" cy="80" rx="7" ry="3.8" fill="rgb(var(--moss))" />
       <ellipse cx="35" cy="86" rx="6.3" ry="7.3" fill="rgb(var(--gold))" />
+    </>
+  ),
+  rabbit: (
+    <>
+      <ellipse cx="36" cy="20" rx="7.5" ry="23" transform="rotate(-14 36 20)" fill="rgb(var(--fern))" />
+      <ellipse cx="64" cy="20" rx="7.5" ry="23" transform="rotate(14 64 20)" fill="rgb(var(--fern))" />
+      <ellipse cx="36.5" cy="23" rx="4" ry="17" transform="rotate(-14 36.5 23)" fill="rgb(var(--leaf))" />
+      <ellipse cx="63.5" cy="23" rx="4" ry="17" transform="rotate(14 63.5 23)" fill="rgb(var(--leaf))" />
+      <circle cx="50" cy="60" r="25" fill="rgb(var(--fern))" />
+      <ellipse cx="50" cy="71" rx="13" ry="10" fill="rgb(var(--leaf))" />
+      <circle cx="41" cy="55" r="4.2" fill="rgb(var(--moss-dark))" />
+      <circle cx="59" cy="55" r="4.2" fill="rgb(var(--moss-dark))" />
+      <circle cx="42.3" cy="53.3" r="1.2" fill={HIGHLIGHT} />
+      <circle cx="60.3" cy="53.3" r="1.2" fill={HIGHLIGHT} />
+      <ellipse cx="50" cy="68" rx="3" ry="2.3" fill="rgb(var(--gold))" />
+    </>
+  ),
+  fox: (
+    <>
+      <ellipse cx="78" cy="70" rx="11" ry="25" transform="rotate(35 78 70)" fill="rgb(var(--fern))" />
+      <ellipse cx="76" cy="68" rx="5" ry="19" transform="rotate(35 76 68)" fill="rgb(var(--leaf))" />
+      <ellipse cx="89" cy="46" rx="7" ry="8" transform="rotate(35 89 46)" fill="rgb(var(--gold))" />
+      <ellipse cx="44" cy="78" rx="22" ry="18" fill="rgb(var(--fern))" />
+      <ellipse cx="44" cy="82" rx="12" ry="11" fill="rgb(var(--leaf))" />
+      <circle cx="42" cy="42" r="18" fill="rgb(var(--fern))" />
+      <path d="M26 40 L39 34 L24 10 Z" fill="rgb(var(--fern))" />
+      <path d="M58 40 L45 34 L60 10 Z" fill="rgb(var(--fern))" />
+      <path d="M27.65 34.6 L34.8 31.3 L26.55 18.1 Z" fill="rgb(var(--leaf))" />
+      <path d="M56.35 34.6 L49.2 31.3 L57.45 18.1 Z" fill="rgb(var(--leaf))" />
+      <path d="M34 50 L50 50 L42 68 Z" fill="rgb(var(--leaf))" />
+      <ellipse cx="42" cy="66" rx="2.6" ry="2.1" fill="rgb(var(--moss-dark))" />
+      <circle cx="34" cy="42" r="4" fill="rgb(var(--moss-dark))" />
+      <circle cx="50" cy="42" r="4" fill="rgb(var(--moss-dark))" />
+      <circle cx="35.3" cy="40.3" r="1.1" fill={HIGHLIGHT} />
+      <circle cx="51.3" cy="40.3" r="1.1" fill={HIGHLIGHT} />
+    </>
+  ),
+  hedgehog: (
+    <>
+      <circle cx="50" cy="60" r="27" fill="rgb(var(--fern))" />
+      <path d="M22.9 56.9 L24.9 49.1 L10.4 49.4 Z" fill="rgb(var(--moss))" />
+      <path d="M26.7 45.7 L31.9 39.5 L18.6 33.6 Z" fill="rgb(var(--moss))" />
+      <path d="M35 37.2 L42.2 33.8 L32.7 22.8 Z" fill="rgb(var(--moss))" />
+      <path d="M46 33 L54 33 L50 19 Z" fill="rgb(var(--moss))" />
+      <path d="M65 37.2 L57.8 33.8 L67.3 22.8 Z" fill="rgb(var(--moss))" />
+      <path d="M73.3 45.7 L68.1 39.5 L81.4 33.6 Z" fill="rgb(var(--moss))" />
+      <path d="M77.1 56.9 L75.1 49.1 L89.6 49.4 Z" fill="rgb(var(--moss))" />
+      <ellipse cx="50" cy="70" rx="15" ry="13" fill="rgb(var(--leaf))" />
+      <circle cx="41" cy="55" r="4.3" fill="rgb(var(--moss-dark))" />
+      <circle cx="59" cy="55" r="4.3" fill="rgb(var(--moss-dark))" />
+      <circle cx="42.3" cy="53.3" r="1.2" fill={HIGHLIGHT} />
+      <circle cx="60.3" cy="53.3" r="1.2" fill={HIGHLIGHT} />
+      <ellipse cx="50" cy="72" rx="3.4" ry="2.7" fill="rgb(var(--gold))" />
     </>
   ),
 };

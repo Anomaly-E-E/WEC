@@ -15,7 +15,7 @@ export default function TeamSection() {
 
   const CoChairCard = ({ member }: { member: TeamMember }) => (
     <motion.div
-      whileHover={{ y: -6, borderColor: 'rgba(76,131,76,0.5)' }}
+      whileHover={{ y: -6 }}
       className="border-forest bg-moss-dark rounded-xl overflow-hidden transition-all duration-300 flex"
     >
       <div className="w-2/5 flex-shrink-0">
@@ -65,7 +65,7 @@ export default function TeamSection() {
 
   const MemberCard = ({ member }: { member: TeamMember }) => (
     <motion.div
-      whileHover={{ y: -6, borderColor: 'rgba(76,131,76,0.5)' }}
+      whileHover={{ y: -6 }}
       className="border-forest bg-moss-dark rounded-xl p-6 text-center transition-all duration-300"
     >
       {member.photo ? (
@@ -115,7 +115,7 @@ export default function TeamSection() {
         className="hidden lg:block absolute top-12 right-12 w-28 h-28 opacity-90 pointer-events-none critter-bob"
         style={{ animationDuration: '6s', animationDelay: '0.7s' }}
       >
-        <ForestCritter variant="squirrel" className="w-full h-full" />
+        <ForestCritter variant="rabbit" className="w-full h-full" />
       </div>
 
       <div className="max-w-7xl mx-auto">

@@ -16,7 +16,7 @@ export default function About() {
           className="hidden lg:block absolute top-20 right-14 w-28 h-28 opacity-90 pointer-events-none critter-bob"
           style={{ animationDuration: '5.6s', animationDelay: '0.3s' }}
         >
-          <ForestCritter variant="deer" className="w-full h-full" />
+          <ForestCritter variant="rabbit" className="w-full h-full" />
         </div>
 
         <div className="max-w-4xl mx-auto">

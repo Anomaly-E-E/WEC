@@ -169,7 +169,7 @@ export default function Home() {
                 ].map((stat, i) => (
                   <motion.div
                     key={i}
-                    whileHover={{ y: -6, borderColor: 'rgba(76,131,76,0.5)' }}
+                    whileHover={{ y: -6 }}
                     className="border-forest bg-forest-mid/40 rounded-lg p-6 text-center transition-all duration-300"
                   >
                     <p className="font-display text-sunlight text-5xl font-black mb-2">{stat.number}</p>
@@ -209,7 +209,7 @@ export default function Home() {
             ].map((level, i) => (
               <ScrollReveal key={i} delay={i * 0.15}>
                 <motion.div
-                  whileHover={{ y: -8, borderColor: 'rgba(76,131,76,0.6)' }}
+                  whileHover={{ y: -8 }}
                   className="relative border-forest bg-forest-mid/40 rounded-xl p-8 transition-all duration-300 h-full"
                 >
                   <p className="absolute top-4 right-4 font-display text-moss-dark text-8xl font-black opacity-10">
@@ -232,7 +232,7 @@ export default function Home() {
           className="hidden lg:block absolute bottom-14 left-10 w-32 h-32 opacity-90 pointer-events-none critter-bob"
           style={{ animationDuration: '6.2s', animationDelay: '1s' }}
         >
-          <ForestCritter variant="squirrel" className="w-full h-full" />
+          <ForestCritter variant="fox" className="w-full h-full" />
         </div>
 
         <div className="max-w-7xl mx-auto">
@@ -250,7 +250,7 @@ export default function Home() {
               <ScrollReveal key={comp.id} delay={i * 0.05}>
                 <Link to="/competitions">
                   <motion.div
-                    whileHover={{ y: -6, borderColor: 'rgba(76,131,76,0.5)' }}
+                    whileHover={{ y: -6 }}
                     className="border-forest bg-forest-mid/30 rounded-lg p-6 text-center transition-all duration-300 group cursor-pointer relative overflow-hidden"
                   >
                     <Icon name={comp.icon} className="w-10 h-10 mx-auto mb-3 text-leaf" />
@@ -284,30 +284,30 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <p className="font-mono text-fern text-sm tracking-[0.3em] uppercase mb-4">Compete & Earn</p>
-              <h2 className="font-display text-cream text-5xl md:text-6xl font-bold mb-4">
+              <p className="font-mono text-fern text-xs tracking-[0.3em] uppercase mb-4">Compete & Earn</p>
+              <h2 className="font-display text-cream text-4xl md:text-5xl font-bold mb-4">
                 WEC Bonus Marks
               </h2>
-              <p className="text-cream-dim text-xl">
+              <p className="text-cream-dim text-lg">
                 These courses count WEC participation toward bonus marks.
               </p>
             </div>
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {bonusMarkGroups.map((group, i) => (
                 <motion.div
                   key={i}
-                  whileHover={{ y: -6, borderColor: 'rgba(76,131,76,0.5)' }}
-                  className="border-forest bg-forest-mid/20 rounded-xl px-7 py-6 transition-all duration-300"
+                  whileHover={{ y: -6 }}
+                  className="border-forest bg-forest-mid/20 rounded-lg px-6 py-5 transition-all duration-300"
                 >
-                  <p className="font-sans text-cream font-bold text-lg mb-4">{group.discipline}</p>
-                  <div className="space-y-2.5">
+                  <p className="font-sans text-cream font-bold text-base mb-3">{group.discipline}</p>
+                  <div className="space-y-2">
                     {group.entries.map((entry) => (
                       <div key={entry.code} className="flex items-baseline justify-between gap-4">
-                        <p className="font-mono text-sunlight font-bold text-lg whitespace-nowrap">{entry.code}</p>
-                        <p className="text-cream-dim text-sm text-right">{entry.note}</p>
+                        <p className="font-mono text-sunlight font-bold text-base whitespace-nowrap">{entry.code}</p>
+                        <p className="text-cream-dim text-xs text-right">{entry.note}</p>
                       </div>
                     ))}
                   </div>
@@ -336,7 +336,7 @@ export default function Home() {
           className="hidden lg:block absolute top-14 right-12 w-28 h-28 opacity-90 pointer-events-none critter-bob"
           style={{ animationDuration: '5.8s', animationDelay: '0.6s' }}
         >
-          <ForestCritter variant="deer" className="w-full h-full" />
+          <ForestCritter variant="hedgehog" className="w-full h-full" />
         </div>
 
         <div className="max-w-4xl mx-auto relative z-10 text-center">

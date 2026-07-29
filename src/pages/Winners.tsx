@@ -85,7 +85,7 @@ export default function Winners() {
           className="hidden lg:block absolute top-12 left-12 w-28 h-28 opacity-90 pointer-events-none critter-bob"
           style={{ animationDuration: '5.7s', animationDelay: '0.4s' }}
         >
-          <ForestCritter variant="deer" className="w-full h-full" />
+          <ForestCritter variant="fox" className="w-full h-full" />
         </div>
 
         <div className="max-w-6xl mx-auto">

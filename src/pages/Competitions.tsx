@@ -18,7 +18,7 @@ export default function Competitions() {
           className="hidden lg:block absolute top-12 right-10 w-28 h-28 opacity-90 pointer-events-none critter-bob"
           style={{ animationDuration: '5.9s', animationDelay: '0.5s' }}
         >
-          <ForestCritter variant="owl" className="w-full h-full" />
+          <ForestCritter variant="squirrel" className="w-full h-full" />
         </div>
 
         <div className="max-w-6xl mx-auto">
@@ -27,7 +27,7 @@ export default function Competitions() {
               <motion.div
                 key={comp.id}
                 className="border-forest bg-forest-mid/30 rounded-xl p-8 h-full transition-all duration-300"
-                whileHover={{ y: -6, borderColor: 'rgba(76,131,76,0.5)' }}
+                whileHover={{ y: -6 }}
               >
                 <div className="flex items-center gap-6 mb-4">
                   <Icon name={comp.icon} className="w-10 h-10 text-leaf" />
