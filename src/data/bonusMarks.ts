@@ -39,7 +39,7 @@ export const bonusMarkGroups: BonusMarkGroup[] = [
     ],
   },
   {
-    discipline: 'Software Engineering',
+    discipline: 'Software & AI Engineering',
     entries: [
       { code: 'SE4450', note: 'Programming' },
       { code: 'AISE3350', note: 'Programming' },
