@@ -72,7 +72,7 @@ export default function RegistrationComingSoon() {
           <DinosaurDoodle variant={cardDinos[2].variant} className={cardDinos[2].size} />
         </div>
 
-        <h1 className="font-doodle text-cream text-5xl md:text-6xl font-bold">
+        <h1 className="font-mono text-cream text-2xl md:text-3xl font-bold tracking-wider uppercase">
           Registration Opening Soon :)
         </h1>
       </div>
