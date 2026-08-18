@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import ForestHero from '../components/ForestHero';
 import ScrollReveal from '../components/ScrollReveal';
-import ForestCritter from '../components/ForestCritter';
 
 export default function Sponsors() {
   return (
@@ -12,13 +11,6 @@ export default function Sponsors() {
       />
 
       <section className="pt-8 pb-24 px-6 relative overflow-hidden">
-        <div
-          className="hidden lg:block absolute bottom-16 left-12 w-28 h-28 opacity-90 pointer-events-none critter-bob"
-          style={{ animationDuration: '6.1s', animationDelay: '0.8s' }}
-        >
-          <ForestCritter variant="deer" className="w-full h-full" />
-        </div>
-
         <div className="max-w-5xl mx-auto">
           <ScrollReveal>
             <div className="border-forest backdrop-blur-sm bg-forest-mid/30 rounded-xl p-8 text-center">

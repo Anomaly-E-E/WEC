@@ -4,7 +4,6 @@ import { Link, useLocation } from 'react-router-dom';
 import ScrollReveal from '../components/ScrollReveal';
 import SectionDivider from '../components/SectionDivider';
 import Icon from '../components/Icon';
-import ForestCritter from '../components/ForestCritter';
 import TeamSection from '../components/TeamSection';
 import { competitions } from '../data/competitions';
 import { bonusMarkGroups } from '../data/bonusMarks';
@@ -132,13 +131,6 @@ export default function Home() {
       </section>
 
       <section className="py-24 px-6 bg-forest-dark relative overflow-hidden">
-        <div
-          className="hidden lg:block absolute top-10 right-10 w-28 h-28 opacity-90 pointer-events-none critter-bob"
-          style={{ animationDuration: '5.4s', animationDelay: '0.2s' }}
-        >
-          <ForestCritter variant="owl" className="w-full h-full" />
-        </div>
-
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16">
             <ScrollReveal>
@@ -228,13 +220,6 @@ export default function Home() {
       <SectionDivider />
 
       <section className="py-24 px-6 bg-forest-dark relative overflow-hidden">
-        <div
-          className="hidden lg:block absolute bottom-14 left-10 w-32 h-32 opacity-90 pointer-events-none critter-bob"
-          style={{ animationDuration: '6.2s', animationDelay: '1s' }}
-        >
-          <ForestCritter variant="fox" className="w-full h-full" />
-        </div>
-
         <div className="max-w-7xl mx-auto">
           <ScrollReveal>
             <div className="text-center mb-16">
@@ -330,13 +315,6 @@ export default function Home() {
           style={{ fontSize: '25rem' }}
         >
           <p className="font-display font-black text-moss-dark">WEC</p>
-        </div>
-
-        <div
-          className="hidden lg:block absolute top-14 right-12 w-28 h-28 opacity-90 pointer-events-none critter-bob"
-          style={{ animationDuration: '5.8s', animationDelay: '0.6s' }}
-        >
-          <ForestCritter variant="hedgehog" className="w-full h-full" />
         </div>
 
         <div className="max-w-4xl mx-auto relative z-10 text-center">

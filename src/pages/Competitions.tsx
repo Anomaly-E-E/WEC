@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import ForestHero from '../components/ForestHero';
 import Icon from '../components/Icon';
-import ForestCritter from '../components/ForestCritter';
 import { competitions } from '../data/competitions';
 
 export default function Competitions() {
@@ -14,13 +13,6 @@ export default function Competitions() {
       />
 
       <section className="py-24 px-6 relative overflow-hidden">
-        <div
-          className="hidden lg:block absolute top-12 right-10 w-28 h-28 opacity-90 pointer-events-none critter-bob"
-          style={{ animationDuration: '5.9s', animationDelay: '0.5s' }}
-        >
-          <ForestCritter variant="squirrel" className="w-full h-full" />
-        </div>
-
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-6">
             {competitions.map((comp) => (

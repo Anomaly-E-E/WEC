@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import ScrollReveal from './ScrollReveal';
 import Icon from './Icon';
-import ForestCritter from './ForestCritter';
 import { teamMembers, type TeamMember } from '../data/team';
 
 export default function TeamSection() {
@@ -111,13 +110,6 @@ export default function TeamSection() {
 
   return (
     <section id="team" className="py-24 px-6 bg-forest-black relative overflow-hidden">
-      <div
-        className="hidden lg:block absolute top-12 right-12 w-28 h-28 opacity-90 pointer-events-none critter-bob"
-        style={{ animationDuration: '6s', animationDelay: '0.7s' }}
-      >
-        <ForestCritter variant="rabbit" className="w-full h-full" />
-      </div>
-
       <div className="max-w-7xl mx-auto">
         <ScrollReveal>
           <div className="text-center mb-16">

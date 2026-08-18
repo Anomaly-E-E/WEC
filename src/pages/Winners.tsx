@@ -3,7 +3,6 @@ import { Link, useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import ForestHero from '../components/ForestHero';
 import ScrollReveal from '../components/ScrollReveal';
-import ForestCritter from '../components/ForestCritter';
 import { winners2024_2025, winners2023_2024, winnersOEC2024, type WinnerEntry } from '../data/winners';
 
 type WinnersTab = '2025-2026' | '2024-2025' | '2023-2024' | 'oec-2025' | 'oec-2024';
@@ -81,13 +80,6 @@ export default function Winners() {
       />
 
       <section className="py-24 px-6 relative overflow-hidden">
-        <div
-          className="hidden lg:block absolute top-12 left-12 w-28 h-28 opacity-90 pointer-events-none critter-bob"
-          style={{ animationDuration: '5.7s', animationDelay: '0.4s' }}
-        >
-          <ForestCritter variant="fox" className="w-full h-full" />
-        </div>
-
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
             <div className="flex flex-wrap justify-center gap-4 mb-16">

@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import ForestHero from '../components/ForestHero';
 import ScrollReveal from '../components/ScrollReveal';
-import ForestCritter from '../components/ForestCritter';
 
 export default function About() {
   return (
@@ -12,13 +11,6 @@ export default function About() {
       />
 
       <section className="py-24 px-6 relative overflow-hidden">
-        <div
-          className="hidden lg:block absolute top-20 right-14 w-28 h-28 opacity-90 pointer-events-none critter-bob"
-          style={{ animationDuration: '5.6s', animationDelay: '0.3s' }}
-        >
-          <ForestCritter variant="rabbit" className="w-full h-full" />
-        </div>
-
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
             <div className="mb-16">
