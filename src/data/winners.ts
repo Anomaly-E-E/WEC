@@ -4,28 +4,32 @@ export interface WinnerEntry {
   teamName: string;
   members: string[];
   note?: string;
+  photo?: string;
 }
 
 export const winners2024_2025: WinnerEntry[] = [
-  { place: '1st Place', category: 'Senior Design', teamName: 'W.E.T', members: ['Maryn Low', 'Benjamin Cavanagh', 'Trinity Lim-Huynh', 'Everett Tang'] },
-  { place: '1st Place', category: 'Junior Design', teamName: 'Glizzy Goblins', members: ['Allan Gaikwad', 'Daniel Manguply', 'Saber Mohamed', 'Nicholas Man'] },
-  { place: '1st Place', category: 'Programming', teamName: 'Free Agent 1', members: ['Adrian Starzynski', 'Khilan Desai'] },
-  { place: '1st Place', category: 'Consulting', teamName: 'OASIS Consulting', members: ['Nick Crees', 'Mike Botelho'] },
-  { place: '1st Place', category: 'Re-Engineering', teamName: 'Built Different', members: ['Dan Ndabihayimana', 'Elijah Cook'] },
-  { place: '1st Place', category: 'Bio-Engineering', teamName: 'Bio-Loop', members: ['Sneha Shah', 'Devraj Nagpal'] },
-  { place: '1st Place', category: 'Communications', teamName: 'Error 404: Name Not Found', members: ['Malak Al-Hanafi', 'Liyan Al-Jallad'] },
-  { place: '1st Place', category: 'Debate', teamName: 'Conventional Wisdom', members: ['Jeffrey Martinovic', 'Simon Hungate'] },
-  { place: '2nd Place', category: 'Senior Design', teamName: 'WTI Woebot', members: ['Andrew Wong', 'Benjamin Chapman', 'Korsyn Pranger', 'Ho (Raymond) Tang'] },
-  { place: '2nd Place', category: 'Junior Design', teamName: 'Aliengineers', members: ['Tyler Lafond', 'Ranvir Ranu', 'Ryan McCaw', 'Michael Zhang'] },
-  { place: '2nd Place', category: 'Programming', teamName: 'Minkestminker', members: ['Elbert Chao', 'Dasol Lim', 'Raymond Li', 'Sarabjot Kahlon'] },
-  { place: '2nd Place', category: 'Consulting', teamName: 'Star Power', members: ['Isak Hirsch', 'Joshua Baran', 'Sarah Wilson', 'Mariagabriela Rojas Becerra'] },
-  { place: '2nd Place', category: 'Re-Engineering', teamName: 'Wire You Laughing', members: ['Umaiza Ali', 'Omeet Kaur'] },
+  { place: '1st Place', category: 'Senior Design', teamName: 'W.E.T', members: ['Maryn Low', 'Benjamin Cavanagh', 'Trinity Lim-Huynh', 'Everett Tang'], photo: '/winners/2024-2025/1st-senior-design-wet.jpg' },
+  { place: '1st Place', category: 'Junior Design', teamName: 'Glizzy Goblins', members: ['Allan Gaikwad', 'Daniel Manguply', 'Saber Mohamed', 'Nicholas Man'], photo: '/winners/2024-2025/1st-junior-design-glizzy-goblins.jpg' },
+  { place: '1st Place', category: 'Programming', teamName: 'Free Agent 1', members: ['Adrian Starzynski', 'Khilan Desai'], photo: '/winners/2024-2025/1st-programming-free-agent-1.jpg' },
+  { place: '1st Place', category: 'Consulting', teamName: 'OASIS Consulting', members: ['Nick Crees', 'Mike Botelho'], photo: '/winners/2024-2025/1st-consulting-oasis-consulting.jpg' },
+  { place: '1st Place', category: 'Re-Engineering', teamName: 'Built Different', members: ['Dan Ndabihayimana', 'Elijah Cook'], photo: '/winners/2024-2025/1st-re-engineering-built-different.jpg' },
+  { place: '1st Place', category: 'Bio-Engineering', teamName: 'Bio-Loop', members: ['Sneha Shah', 'Devraj Nagpal'], photo: '/winners/2024-2025/1st-bio-engineering-bio-loop.jpg' },
+  { place: '1st Place', category: 'Communications', teamName: 'Error 404: Name Not Found', members: ['Malak Al-Hanafi', 'Liyan Al-Jallad'], photo: '/winners/2024-2025/1st-communications-error-404.jpg' },
+  { place: '1st Place', category: 'Debate', teamName: 'Conventional Wisdom', members: ['Jeffrey Martinovic', 'Simon Hungate'], photo: '/winners/2024-2025/1st-debate-conventional-wisdom.jpg' },
+  { place: '1st Place', category: 'Mini Design', teamName: '', members: [] },
+  { place: '2nd Place', category: 'Senior Design', teamName: 'WTI Woebot', members: ['Andrew Wong', 'Benjamin Chapman', 'Korsyn Pranger', 'Ho (Raymond) Tang'], photo: '/winners/2024-2025/2nd-senior-design-wti-woebot.jpg' },
+  { place: '2nd Place', category: 'Junior Design', teamName: 'Aliengineers', members: ['Tyler Lafond', 'Ranvir Ranu', 'Ryan McCaw', 'Michael Zhang'], photo: '/winners/2024-2025/2nd-junior-design-aliengineers.jpg' },
+  { place: '2nd Place', category: 'Programming', teamName: 'Minkestminker', members: ['Elbert Chao', 'Dasol Lim', 'Raymond Li', 'Sarabjot Kahlon'], photo: '/winners/2024-2025/2nd-programming-minkestminker.jpg' },
+  { place: '2nd Place', category: 'Consulting', teamName: 'Star Power', members: ['Isak Hirsch', 'Joshua Baran', 'Sarah Wilson', 'Mariagabriela Rojas Becerra'], photo: '/winners/2024-2025/2nd-consulting-star-power.jpg' },
+  { place: '2nd Place', category: 'Re-Engineering', teamName: 'Wire You Laughing', members: ['Umaiza Ali', 'Omeet Kaur'], photo: '/winners/2024-2025/2nd-re-engineering-wire-you-laughing.jpg' },
   { place: '2nd Place', category: 'Bio-Engineering', teamName: 'Astro-Cycle', members: ['Luka Williams', 'Sasha Williams'] },
-  { place: '2nd Place', category: 'Debate', teamName: 'Beaufort Beauties', members: ['Robert Evans', 'Michael Daiello'] },
-  { place: '3rd Place', category: 'Senior Design', teamName: 'Cool Coding Kids', members: ['Anthony Sarauz Aguilar', 'Neil Kirchberger', 'Jaxon Will', 'Joshua Camillo'] },
-  { place: '3rd Place', category: 'Junior Design', teamName: 'The Big Bang Gang', members: ['Natalie McGillicuddy', 'William Reucassel', 'Kevin McGillicuddy', 'Yasmine Movahedi'] },
-  { place: '3rd Place', category: 'Programming', teamName: 'Melissa 370', members: ['Will Seguin', 'Adam Deir', 'Talia Megidish', 'Sanjana Adiga'] },
-  { place: '3rd Place', category: 'Consulting', teamName: 'Team Awesome', members: ['Domenic Tavella', 'Eve Mulvihill', 'Jacob Isho', 'Audrey Langlois'] },
+  { place: '2nd Place', category: 'Debate', teamName: 'Beaufort Beauties', members: ['Robert Evans', 'Michael Daiello'], photo: '/winners/2024-2025/2nd-debate-beaufort-beauties.jpg' },
+  { place: '2nd Place', category: 'Mini Design', teamName: '', members: [] },
+  { place: '3rd Place', category: 'Senior Design', teamName: 'Cool Coding Kids', members: ['Anthony Sarauz Aguilar', 'Neil Kirchberger', 'Jaxon Will', 'Joshua Camillo'], photo: '/winners/2024-2025/3rd-senior-design-cool-coding-kids.jpg' },
+  { place: '3rd Place', category: 'Junior Design', teamName: 'The Big Bang Gang', members: ['Natalie McGillicuddy', 'William Reucassel', 'Kevin McGillicuddy', 'Yasmine Movahedi'], photo: '/winners/2024-2025/3rd-junior-design-big-bang-gang.jpg' },
+  { place: '3rd Place', category: 'Programming', teamName: 'Melissa 370', members: ['Will Seguin', 'Adam Deir', 'Talia Megidish', 'Sanjana Adiga'], photo: '/winners/2024-2025/3rd-programming-melissa-370.jpg' },
+  { place: '3rd Place', category: 'Consulting', teamName: 'Team Awesome', members: ['Domenic Tavella', 'Eve Mulvihill', 'Jacob Isho', 'Audrey Langlois'], photo: '/winners/2024-2025/3rd-consulting-team-awesome.jpg' },
+  { place: '3rd Place', category: 'Mini Design', teamName: '', members: [], photo: '/winners/2024-2025/3rd-mini-design.png' },
 ];
 
 export const winners2023_2024: WinnerEntry[] = [
@@ -59,7 +63,7 @@ export const winners2023_2024: WinnerEntry[] = [
 
 export const winnersOEC2024: WinnerEntry[] = [
   { place: '1st Place', category: 'Innovative Design', teamName: '', members: ['Samuel Farnum', 'Robin Cunningham'] },
-  { place: '1st Place', category: 'Programming', teamName: '', members: ['David Tam', 'Collin Town', 'Kevin Manka', 'Tsu-June Su'] },
+  { place: '1st Place', category: 'Programming', teamName: 'Tempests', members: ['David Tam', 'Collin Town', 'Kevin Manka', 'Tsu-June Su'] },
   { place: '3rd Place', category: 'Senior Design', teamName: '', members: ['Ethan Bloemert', 'Alexander Mitchell', 'Jack Chios', 'Salim Kanji'] },
   { place: '3rd Place', category: 'Communications', teamName: '', members: ['Joshua Horkits', 'Siena Ianni-Palarchio'] },
   { place: '3rd Place', category: 'Bio-Engineering', teamName: '', members: ['Mubina Merchant', 'Kheynand Rhampul'] },
