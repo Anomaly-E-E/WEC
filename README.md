@@ -60,7 +60,6 @@ src/
 The following items are marked with `TODO` comments in the code:
 
 ### Team Page
-- [ ] Add real team member photos (currently using initials)
 - [ ] Add team member email addresses
 
 ### Sponsors Page
