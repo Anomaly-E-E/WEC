@@ -12,6 +12,12 @@ Official website for the Western Engineering Competition 2026.
 
 ## Getting Started
 
+### Install
+
+```bash
+npm install
+```
+
 ### Development
 
 ```bash
