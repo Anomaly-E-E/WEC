@@ -125,7 +125,7 @@ export default function Home() {
             </Link>
             <Link
               to="/competitions"
-              className="border border-fern text-leaf px-8 py-4 rounded-full font-sans font-semibold text-lg hover:bg-fern hover:text-cream transition-colors duration-300"
+              className="border border-fern text-leaf px-8 py-4 rounded-full font-sans font-semibold text-lg hover:bg-fern hover:text-forest-black transition-colors duration-300"
             >
               Explore Events
             </Link>

@@ -69,17 +69,17 @@ export default function Nav() {
               <Link
                 key={link.to}
                 to={link.to}
-                className="font-sans font-semibold text-sm text-white hover:text-sunlight transition-colors duration-200 relative group"
+                className="font-sans font-semibold text-sm text-white hover:text-card-accent transition-colors duration-200 relative group"
               >
                 {link.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-sunlight group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-card-accent group-hover:w-full transition-all duration-300"></span>
               </Link>
             ))}
 
             <div className="relative">
               <button
                 onClick={() => setMoreDropdownOpen(!moreDropdownOpen)}
-                className="font-sans font-semibold text-sm text-white hover:text-sunlight transition-colors duration-200 flex items-center gap-1"
+                className="font-sans font-semibold text-sm text-white hover:text-card-accent transition-colors duration-200 flex items-center gap-1"
               >
                 More
                 <span className={`transform transition-transform duration-200 ${moreDropdownOpen ? 'rotate-180' : ''}`}>

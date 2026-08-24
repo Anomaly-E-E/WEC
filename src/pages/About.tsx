@@ -106,13 +106,13 @@ export default function About() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/competitions"
-                  className="bg-sunlight text-card-text px-8 py-4 rounded-full font-sans font-bold text-lg hover:scale-105 transition-transform duration-200"
+                  className="bg-sunlight text-forest-black px-8 py-4 rounded-full font-sans font-bold text-lg hover:scale-105 transition-transform duration-200"
                 >
                   View Competitions
                 </Link>
                 <Link
                   to="/register"
-                  className="border-2 border-fern text-leaf px-8 py-4 rounded-full font-sans font-bold text-lg hover:bg-fern hover:text-cream transition-colors duration-300"
+                  className="border-2 border-fern text-leaf px-8 py-4 rounded-full font-sans font-bold text-lg hover:bg-fern hover:text-forest-black transition-colors duration-300"
                 >
                   Register Now
                 </Link>

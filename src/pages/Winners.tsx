@@ -98,7 +98,7 @@ export default function Winners() {
                   onClick={() => setActiveTab(tab.id)}
                   className={`px-8 py-3 rounded-full font-sans font-semibold text-lg transition-all duration-300 ${
                     activeTab === tab.id
-                      ? 'bg-sunlight text-card-text'
+                      ? 'bg-sunlight text-forest-black'
                       : 'border border-forest text-cream hover:border-fern hover:text-fern'
                   }`}
                 >
