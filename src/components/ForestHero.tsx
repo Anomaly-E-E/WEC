@@ -21,7 +21,7 @@ export default function ForestHero({ title, subtitle, children, size = 'normal' 
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M58 0 H100 V65 C75 60, 55 45, 58 0 Z"
+          d="M58 0 H100 V65 C82 55, 65 30, 58 0 Z"
           fill="rgb(var(--banner-sage))"
         />
       </svg>

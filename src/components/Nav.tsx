@@ -46,7 +46,7 @@ export default function Nav() {
           {location.pathname === '/' && (
             <path d="M0 0 Q300 92 700 36 T1200 60 L1200 0 Z" fill="rgb(var(--banner-sage))" opacity="0.7" />
           )}
-          <path d="M0 0 Q250 68 600 28 T1200 44 L1200 0 Z" fill="rgb(var(--banner-solid))" />
+          <path d="M0 0 Q250 68 600 28 T1200 20 L1200 0 Z" fill="rgb(var(--banner-solid))" />
         </svg>
 
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
