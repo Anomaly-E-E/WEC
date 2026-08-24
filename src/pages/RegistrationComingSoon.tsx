@@ -1,4 +1,5 @@
 import DinosaurDoodle from '../components/DinosaurDoodle';
+import Icon from '../components/Icon';
 
 interface FloatingDino {
   variant: 'long-neck' | 'stego' | 'round';
@@ -75,6 +76,16 @@ export default function RegistrationComingSoon() {
         <h1 className="font-mono text-cream text-2xl md:text-3xl font-bold tracking-wider uppercase">
           Registration Opening Soon :)
         </h1>
+
+        <a
+          href="https://www.instagram.com/ues_wec/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 inline-flex items-center gap-2 text-cream-dim hover:text-sunlight transition-colors text-sm font-sans"
+        >
+          <Icon name="instagram" className="w-4 h-4" />
+          Follow us on Instagram for updates
+        </a>
       </div>
     </section>
   );
