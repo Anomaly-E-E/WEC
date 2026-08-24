@@ -67,10 +67,6 @@ export default function Home() {
           <ellipse cx="850" cy="210" rx="20" ry="50" fill="rgb(var(--moss-dark))" opacity="0.25" />
         </svg>
 
-        <div className="hidden lg:block absolute bottom-16 left-12 opacity-80 pointer-events-none">
-          <img src="/wec-robot-green.png" alt="" className="h-64 w-auto" />
-        </div>
-
         <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
