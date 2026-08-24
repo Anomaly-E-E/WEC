@@ -51,12 +51,13 @@ export default function Nav() {
       >
         {!scrolled && (
           <svg
-            className="absolute top-full left-0 right-0 w-full h-4 md:h-6 pointer-events-none"
-            viewBox="0 0 1200 40"
+            className="absolute top-full left-0 right-0 w-full h-12 md:h-20 pointer-events-none"
+            viewBox="0 0 1200 120"
             preserveAspectRatio="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path d="M0 0 Q300 32 600 12 T1200 20 L1200 0 Z" fill="rgb(var(--banner-solid))" />
+            <path d="M0 0 Q300 92 700 36 T1200 60 L1200 0 Z" fill="rgb(var(--banner-sage))" opacity="0.7" />
+            <path d="M0 0 Q250 68 600 28 T1200 44 L1200 0 Z" fill="rgb(var(--banner-solid))" />
           </svg>
         )}
 
