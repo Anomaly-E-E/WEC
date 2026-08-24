@@ -68,7 +68,7 @@ export default function Home() {
         </svg>
 
         <div className="hidden lg:block absolute bottom-16 left-12 opacity-80 pointer-events-none">
-          <img src="/wec-robot-green.png" alt="" className="h-40 w-auto" />
+          <img src="/wec-robot-green.png" alt="" className="h-64 w-auto" />
         </div>
 
         <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
