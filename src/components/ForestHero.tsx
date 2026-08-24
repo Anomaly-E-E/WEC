@@ -16,12 +16,12 @@ export default function ForestHero({ title, subtitle, children, size = 'normal' 
     >
       <svg
         className="absolute top-0 right-0 w-2/3 h-full z-[2]"
-        viewBox="0 0 800 400"
+        viewBox="0 0 100 100"
         preserveAspectRatio="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M500 0 H800 V260 C700 200, 580 140, 520 60 C480 25, 460 0, 500 0 Z"
+          d="M55 0 H100 V65 Q75 55 65 35 Q58 15 55 0 Z"
           fill="rgb(var(--banner-sage))"
         />
       </svg>
