@@ -54,7 +54,7 @@ export default function TeamSection() {
           {member.name}
         </h3>
         {member.yearDiscipline && (
-          <p className="font-mono text-[#f2ecd8]/70 text-xs whitespace-nowrap">
+          <p className="font-mono text-[#f2ecd8]/70 text-xs">
             {member.yearDiscipline}
           </p>
         )}
@@ -101,7 +101,7 @@ export default function TeamSection() {
         )}
       </div>
       {member.yearDiscipline && (
-        <p className="font-mono text-[#f2ecd8]/70 text-xs whitespace-nowrap mt-1">
+        <p className="font-mono text-[#f2ecd8]/70 text-xs mt-1">
           {member.yearDiscipline}
         </p>
       )}
