@@ -10,7 +10,7 @@ interface ForestHeroProps {
 
 export default function ForestHero({ title, subtitle, children, size = 'normal' }: ForestHeroProps) {
   return (
-    <section className="relative flex items-center justify-center overflow-hidden pt-28 pb-10">
+    <section className="relative flex items-center justify-center overflow-hidden pt-28 pb-20">
       <div
         className="absolute inset-0"
         style={{
@@ -19,6 +19,15 @@ export default function ForestHero({ title, subtitle, children, size = 'normal' 
           `,
         }}
       ></div>
+
+      <svg
+        className="absolute bottom-0 left-0 right-0 w-full h-12 md:h-16 z-[5]"
+        viewBox="0 0 1200 80"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M0 80 Q300 0 600 24 T1200 8 L1200 80 Z" fill="rgb(var(--forest-black))" />
+      </svg>
 
       <div
         className="absolute inset-0 opacity-55"

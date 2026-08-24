@@ -65,7 +65,15 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-moss-dark pt-8 text-center">
+        <div className="border-t border-moss-dark pt-8 flex flex-col items-center gap-3">
+          <a
+            href="https://www.instagram.com/ues_wec/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-sans font-bold text-sm tracking-[0.2em] text-olive hover:text-sunlight transition-colors"
+          >
+            @UES_WEC
+          </a>
           <p className="text-cream-dim text-sm">
             © 2026 Western Engineering Competition · All rights reserved
           </p>
