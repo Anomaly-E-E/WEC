@@ -108,27 +108,6 @@ export default function TeamSection() {
     </motion.div>
   );
 
-  const DeptGroup = ({ label, members }: { label: string; members: TeamMember[] }) => {
-    const gridCols =
-      members.length >= 3 ? 'grid-cols-1 sm:grid-cols-3' :
-      members.length === 2 ? 'grid-cols-1 sm:grid-cols-2' :
-      'grid-cols-1';
-
-    return (
-      <div className="flex flex-col items-center">
-        <p className="font-sans text-olive font-bold text-xs md:text-sm tracking-[0.2em] uppercase mb-1">
-          {label}
-        </p>
-        <span className="w-px h-3 bg-olive/45 mb-3" />
-        <div className={`grid ${gridCols} gap-6`}>
-          {members.map((member, i) => (
-            <MemberCard key={i} member={member} />
-          ))}
-        </div>
-      </div>
-    );
-  };
-
   return (
     <section id="team" className="py-24 px-6 bg-forest-black relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
@@ -145,32 +124,46 @@ export default function TeamSection() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <div className="flex flex-col items-center mb-8">
-            <p className="font-sans text-olive font-bold text-xs md:text-sm tracking-[0.2em] uppercase mb-1">
-              Co-Chairs
-            </p>
-            <span className="w-px h-3 bg-olive/45 mb-3" />
-            <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-              {coChairs.map((member, i) => (
-                <CoChairCard key={i} member={member} />
-              ))}
-            </div>
+          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            {coChairs.map((member, i) => (
+              <CoChairCard key={i} member={member} />
+            ))}
           </div>
         </ScrollReveal>
 
         <ScrollReveal delay={0.3}>
-          <div className="flex flex-col items-center gap-10">
-            <DeptGroup label="VP Competitions" members={vpCompetitions} />
-
-            <div className="flex flex-wrap justify-center gap-10">
-              <DeptGroup label="VP Technical" members={vpTechnical} />
-              <DeptGroup label="VP Logistics" members={vpLogistics} />
+          <div className="flex flex-col items-center gap-6">
+            <div className="w-full flex justify-center">
+              <div className="grid grid-cols-3 gap-6 max-w-3xl">
+                {vpCompetitions.map((member, i) => (
+                  <MemberCard key={i} member={member} />
+                ))}
+              </div>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-10">
-              <DeptGroup label="VP Sponsorship" members={vpSponsorship} />
-              <DeptGroup label="VP Finance" members={vpFinance} />
-              <DeptGroup label="VP Publications" members={vpPublications} />
+            <div className="w-full flex justify-center">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl">
+                {vpTechnical.map((member, i) => (
+                  <MemberCard key={i} member={member} />
+                ))}
+                {vpLogistics.map((member, i) => (
+                  <MemberCard key={i} member={member} />
+                ))}
+              </div>
+            </div>
+
+            <div className="w-full flex justify-center">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl">
+                {vpSponsorship.map((member, i) => (
+                  <MemberCard key={i} member={member} />
+                ))}
+                {vpFinance.map((member, i) => (
+                  <MemberCard key={i} member={member} />
+                ))}
+                {vpPublications.map((member, i) => (
+                  <MemberCard key={i} member={member} />
+                ))}
+              </div>
             </div>
           </div>
         </ScrollReveal>
