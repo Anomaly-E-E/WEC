@@ -5,7 +5,6 @@ import Nav from './components/Nav';
 import Footer from './components/Footer';
 import IntroOverlay from './components/IntroOverlay';
 import Home from './pages/Home';
-import { ThemeProvider } from './context/ThemeContext';
 import './styles/globals.css';
 
 const About = lazy(() => import('./pages/About'));
@@ -53,14 +52,12 @@ function App() {
   }, []);
 
   return (
-    <ThemeProvider>
-      <Router>
-        <IntroOverlay />
-        <Nav />
-        <AnimatedRoutes />
-        <Footer />
-      </Router>
-    </ThemeProvider>
+    <Router>
+      <IntroOverlay />
+      <Nav />
+      <AnimatedRoutes />
+      <Footer />
+    </Router>
   );
 }
 

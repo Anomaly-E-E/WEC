@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Icon from './Icon';
-import ThemeToggle from './ThemeToggle';
 
 export default function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -112,7 +111,6 @@ export default function Nav() {
           </div>
 
           <div className="hidden lg:flex items-center gap-3">
-            <ThemeToggle />
             <Link
               to="/register"
               className="text-white cursor-pointer px-6 py-2.5 rounded-full font-sans font-bold text-sm hover:scale-105 transition-transform duration-200 bg-cta-green"
@@ -169,8 +167,6 @@ export default function Nav() {
               >
                 Register Now
               </Link>
-
-              <ThemeToggle />
             </div>
           </motion.div>
         )}
