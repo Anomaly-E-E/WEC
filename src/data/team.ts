@@ -33,6 +33,7 @@ export const teamMembers: TeamMember[] = [
     initials: 'SM',
     yearDiscipline: '3rd Year · Mechanical',
     photo: '/team/shrey-mahida.jpg',
+    photoPosition: 'center 20%',
     linkedin: 'https://www.linkedin.com/in/shreymahida/'
   },
   {
@@ -62,6 +63,7 @@ export const teamMembers: TeamMember[] = [
     initials: 'TR',
     yearDiscipline: '3rd Year · Software + Ivey',
     photo: '/team/turner-reucassel.jpg',
+    photoPosition: 'center 25%',
     linkedin: 'https://www.linkedin.com/in/turner-reucassel-658554301/'
   },
   {
@@ -80,6 +82,7 @@ export const teamMembers: TeamMember[] = [
     initials: 'KM',
     yearDiscipline: '3rd Year · Civil + Ivey',
     photo: '/team/kevin-mcgillicuddy.jpg',
+    photoPosition: 'center 15%',
     linkedin: 'https://www.linkedin.com/in/kevinmcgillicuddy/'
   },
   {
@@ -89,6 +92,7 @@ export const teamMembers: TeamMember[] = [
     initials: 'BS',
     yearDiscipline: '4th Year · Media, Info & Technoculture',
     photo: '/team/bridget-shin.jpg',
+    photoPosition: 'center 20%',
     linkedin: 'https://www.linkedin.com/in/bridget-shin-6502722a4'
   },
   {
@@ -98,6 +102,7 @@ export const teamMembers: TeamMember[] = [
     initials: 'MA',
     yearDiscipline: '3rd Year · Mechanical',
     photo: '/team/michael-amos.jpg',
+    photoPosition: 'center 30%',
     linkedin: 'https://www.linkedin.com/in/michael-amos-50b69917b'
   },
   {
@@ -116,6 +121,7 @@ export const teamMembers: TeamMember[] = [
     initials: 'OD',
     yearDiscipline: '4th Year · Mechanical + Bio-Med',
     photo: '/team/olga-duvnjak.jpg',
+    photoPosition: 'center 30%',
     linkedin: 'https://www.linkedin.com/in/olga-duvnjak-9585801b4/'
   },
   {
