@@ -62,7 +62,7 @@ export default function IntroOverlay() {
   const [show, setShow] = useState(true);
   const [phase, setPhase] = useState<'burst' | 'return' | 'done'>('burst');
 
-  const leaves = useMemo(() => generateLeafData(60), []);
+  const leaves = useMemo(() => generateLeafData(120), []);
 
   useEffect(() => {
     const burstTimer = setTimeout(() => {
