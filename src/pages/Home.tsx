@@ -79,7 +79,8 @@ export default function Home() {
         <img
           src="/wec-robot-green.png"
           alt=""
-          className="hidden lg:block absolute bottom-8 left-8 md:left-16 h-64 w-auto z-[6] opacity-90"
+          className="hidden lg:block absolute bottom-8 left-8 md:left-16 h-64 w-auto z-[6] opacity-90 critter-bob"
+          style={{ animationDuration: '7s' }}
         />
 
         <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
