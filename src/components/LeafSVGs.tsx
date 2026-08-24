@@ -64,5 +64,3 @@ export const WillowLeaf: React.FC<LeafProps> = ({ className, fill = 'currentColo
     />
   </svg>
 );
-
-export const LEAF_SHAPES = [MapleLeaf, OakLeaf, SimpleLeaf, LilyPadLeaf, WillowLeaf];

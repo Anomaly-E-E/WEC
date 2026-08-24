@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import ForestHero from '../components/ForestHero';
@@ -64,12 +64,14 @@ function WinnersGrid({ entries }: { entries: WinnerEntry[] }) {
 export default function Winners() {
   const { year } = useParams<{ year: string }>();
   const [activeTab, setActiveTab] = useState<WinnersTab>(isWinnersTab(year) ? year : '2025-2026');
+  const [prevYear, setPrevYear] = useState(year);
 
-  useEffect(() => {
+  if (year !== prevYear) {
+    setPrevYear(year);
     if (isWinnersTab(year)) {
       setActiveTab(year);
     }
-  }, [year]);
+  }
 
   const tabs: { id: WinnersTab; label: string }[] = [
     { id: '2025-2026', label: '2025–2026 Winners' },

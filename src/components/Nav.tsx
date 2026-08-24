@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Icon from './Icon';
@@ -8,11 +8,13 @@ export default function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [moreDropdownOpen, setMoreDropdownOpen] = useState(false);
   const location = useLocation();
+  const [prevLocation, setPrevLocation] = useState(location);
 
-  useEffect(() => {
+  if (location !== prevLocation) {
+    setPrevLocation(location);
     setMobileOpen(false);
     setMoreDropdownOpen(false);
-  }, [location]);
+  }
 
   const navLinks = [
     { to: '/', label: 'Home' },

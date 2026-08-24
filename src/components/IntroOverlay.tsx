@@ -1,6 +1,8 @@
 import { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { LEAF_SHAPES } from './LeafSVGs';
+import { MapleLeaf, OakLeaf, SimpleLeaf, LilyPadLeaf, WillowLeaf } from './LeafSVGs';
+
+const LEAF_SHAPES = [MapleLeaf, OakLeaf, SimpleLeaf, LilyPadLeaf, WillowLeaf];
 
 interface LeafData {
   id: number;
@@ -13,6 +15,7 @@ interface LeafData {
   color: string;
   ShapeComponent: React.FC<{ className?: string; fill?: string }>;
   scale: number;
+  burstOpacity: number;
 }
 
 const LEAF_COLORS = [
@@ -40,6 +43,7 @@ const generateLeafData = (count: number): LeafData[] => {
     const color = LEAF_COLORS[Math.floor(Math.random() * LEAF_COLORS.length)];
     const ShapeComponent = LEAF_SHAPES[Math.floor(Math.random() * LEAF_SHAPES.length)];
     const scale = 0.6 + Math.random() * 0.8;
+    const burstOpacity = 0.6 + Math.random() * 0.3;
 
     leaves.push({
       id: i,
@@ -52,6 +56,7 @@ const generateLeafData = (count: number): LeafData[] => {
       color,
       ShapeComponent,
       scale,
+      burstOpacity,
     });
   }
 
@@ -115,7 +120,7 @@ export default function IntroOverlay() {
                       x: `${endX}vw`,
                       y: `${endY}vh`,
                       scale: leaf.scale,
-                      opacity: 0.6 + Math.random() * 0.3,
+                      opacity: leaf.burstOpacity,
                       rotate: leaf.rotation,
                     }
                   : phase === 'return'
