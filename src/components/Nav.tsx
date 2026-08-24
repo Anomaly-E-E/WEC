@@ -45,11 +45,11 @@ export default function Nav() {
       <motion.nav
         initial={{ y: 0 }}
         className={`fixed top-0 left-0 right-0 z-[9000] transition-all duration-300 ${
-          scrolled ? 'backdrop-forest border-b border-forest' : 'bg-transparent'
+          scrolled ? 'backdrop-forest border-b border-forest' : 'bg-gradient-to-b from-black/55 via-black/20 to-transparent'
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link to="/" className="font-display italic text-sunlight text-2xl md:text-3xl font-black relative">
+          <Link to="/" className={`font-display italic text-2xl md:text-3xl font-black relative transition-colors duration-200 ${scrolled ? 'text-sunlight' : 'text-white'}`}>
             <span className="relative">
               WEC
             </span>
@@ -60,7 +60,7 @@ export default function Nav() {
               <Link
                 key={link.to}
                 to={link.to}
-                className="font-sans font-semibold text-sm text-cream hover:text-sunlight transition-colors duration-200 relative group"
+                className={`font-sans font-semibold text-sm hover:text-sunlight transition-colors duration-200 relative group ${scrolled ? 'text-cream' : 'text-white'}`}
               >
                 {link.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-sunlight group-hover:w-full transition-all duration-300"></span>
@@ -70,7 +70,7 @@ export default function Nav() {
             <div className="relative">
               <button
                 onClick={() => setMoreDropdownOpen(!moreDropdownOpen)}
-                className="font-sans font-semibold text-sm text-cream hover:text-sunlight transition-colors duration-200 flex items-center gap-1"
+                className={`font-sans font-semibold text-sm hover:text-sunlight transition-colors duration-200 flex items-center gap-1 ${scrolled ? 'text-cream' : 'text-white'}`}
               >
                 More
                 <span className={`transform transition-transform duration-200 ${moreDropdownOpen ? 'rotate-180' : ''}`}>
@@ -115,7 +115,7 @@ export default function Nav() {
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden text-sunlight"
+            className={`lg:hidden transition-colors duration-200 ${scrolled ? 'text-sunlight' : 'text-white'}`}
             aria-label="Toggle mobile menu"
           >
             {mobileOpen ? <Icon name="close" className="w-7 h-7" /> : <Icon name="menu" className="w-7 h-7" />}
