@@ -14,7 +14,7 @@
   --moss: 46 96 58;
   --fern: 61 122 69;
   --leaf: 32 128 55;
-  --sunlight: 54 150 24;
+  --sunlight: 27 87 33;
   --cta-green: 40 120 26;
   --gold: 145 105 8;
   --bark: 58 34 16;
@@ -29,9 +29,9 @@
   --hero-overlay-2: rgba(240, 228, 196, 0.88);
   --hero-glow-1: rgba(232, 220, 182, 0.55);
   --hero-glow-2: rgba(32, 128, 55, 0.18);
-  --banner-1: #f8f1dc;
-  --banner-2: #e8dcb6;
-  --banner-3: #f4ecd4;
+  --banner-1: #eef3e4;
+  --banner-2: #d6e6c4;
+  --banner-3: #eaf1e0;
   --banner-glow-1: rgba(232, 220, 182, 0.6);
   --banner-glow-2: rgba(32, 128, 55, 0.15);
   --ambient-glow: rgba(32, 128, 55, 0.12);

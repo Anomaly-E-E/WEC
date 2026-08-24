@@ -20,24 +20,31 @@ function WinnerCard({ entry }: { entry: WinnerEntry }) {
     : 'text-gold';
 
   return (
-    <div className="border-forest bg-forest-mid/30 rounded-lg p-5">
-      <p className={`font-mono text-xs uppercase tracking-wider font-bold mb-1 ${placeColor}`}>
-        {entry.place}
-      </p>
-      <p className="font-mono text-fern text-xs uppercase tracking-wider mb-3">
-        {entry.category}
-      </p>
-      {entry.teamName ? (
-        <>
+    <div className="border-forest bg-forest-mid/30 rounded-lg overflow-hidden">
+      {entry.photo && (
+        <img
+          src={entry.photo}
+          alt={entry.teamName || `${entry.category} ${entry.place}`}
+          className="w-full h-40 object-cover"
+        />
+      )}
+      <div className="p-5">
+        <p className={`font-mono text-xs uppercase tracking-wider font-bold mb-1 ${placeColor}`}>
+          {entry.place}
+        </p>
+        <p className="font-mono text-fern text-xs uppercase tracking-wider mb-3">
+          {entry.category}
+        </p>
+        {entry.teamName && (
           <h4 className="font-sans text-cream font-bold text-lg mb-1">{entry.teamName}</h4>
+        )}
+        {entry.members.length > 0 && (
           <p className="text-cream-dim text-sm">{entry.members.join(', ')}</p>
-        </>
-      ) : (
-        <p className="text-cream-dim text-sm">{entry.members.join(', ')}</p>
-      )}
-      {entry.note && (
-        <p className="text-cream-dim text-xs mt-2 italic">{entry.note}</p>
-      )}
+        )}
+        {entry.note && (
+          <p className="text-cream-dim text-xs mt-2 italic">{entry.note}</p>
+        )}
+      </div>
     </div>
   );
 }
@@ -89,7 +96,7 @@ export default function Winners() {
                   onClick={() => setActiveTab(tab.id)}
                   className={`px-8 py-3 rounded-full font-sans font-semibold text-lg transition-all duration-300 ${
                     activeTab === tab.id
-                      ? 'bg-sunlight text-cream'
+                      ? 'bg-sunlight text-[#f2ecd8]'
                       : 'border border-forest text-cream hover:border-fern hover:text-fern'
                   }`}
                 >
