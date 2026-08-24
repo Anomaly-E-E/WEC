@@ -311,10 +311,10 @@ export default function Home() {
 
       <section className="py-32 px-6 bg-forest-dark relative overflow-hidden">
         <div
-          className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none"
-          style={{ fontSize: '25rem' }}
+          className="absolute inset-0 flex items-center justify-center opacity-[0.13] pointer-events-none"
+          style={{ fontSize: 'clamp(6rem, 18vw, 16rem)' }}
         >
-          <p className="font-display font-black text-moss-dark">WEC</p>
+          <p className="font-display font-black text-stencil whitespace-nowrap">WEC 2026</p>
         </div>
 
         <div className="max-w-4xl mx-auto relative z-10 text-center">

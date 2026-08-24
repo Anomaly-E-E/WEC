@@ -17,6 +17,7 @@
   --sunlight: 27 87 33;
   --cta-green: 40 120 26;
   --gold: 145 105 8;
+  --olive: 74 106 47;
   --bark: 58 34 16;
   --bark-light: 92 61 30;
   --cream: 24 24 22;
@@ -49,6 +50,7 @@
   --sunlight: 200 232 122;
   --cta-green: 168 210 98;
   --gold: 212 168 50;
+  --olive: 154 186 106;
   --bark: 58 34 16;
   --bark-light: 92 61 30;
   --cream: 240 234 214;
@@ -120,6 +122,11 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.text-stencil {
+  color: transparent;
+  -webkit-text-stroke: 2px rgb(var(--sunlight));
 }
 
 .border-forest {
