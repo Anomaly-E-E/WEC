@@ -29,7 +29,7 @@ export default function ForestHero({ title, subtitle, children, size = 'normal' 
       <img
         src="/wec-robot-green.png"
         alt=""
-        className="hidden md:block absolute top-6 right-8 md:right-16 h-16 md:h-20 w-auto z-[6] opacity-90 critter-bob"
+        className="hidden md:block absolute top-32 md:top-40 right-8 md:right-16 h-16 md:h-20 w-auto z-[6] opacity-90 critter-bob"
         style={{ filter: 'brightness(0) invert(1)', animationDuration: '6s' }}
       />
 

@@ -43,7 +43,9 @@ export default function Nav() {
           preserveAspectRatio="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M0 0 Q300 92 700 36 T1200 60 L1200 0 Z" fill="rgb(var(--banner-sage))" opacity="0.7" />
+          {location.pathname === '/' && (
+            <path d="M0 0 Q300 92 700 36 T1200 60 L1200 0 Z" fill="rgb(var(--banner-sage))" opacity="0.7" />
+          )}
           <path d="M0 0 Q250 68 600 28 T1200 44 L1200 0 Z" fill="rgb(var(--banner-solid))" />
         </svg>
 
