@@ -61,7 +61,13 @@ export default function Nav() {
         )}
 
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link to="/" className={`font-display italic text-2xl md:text-3xl font-black relative transition-colors duration-200 ${scrolled ? 'text-sunlight' : 'text-white'}`}>
+          <Link to="/" className={`flex items-center gap-2 font-display italic text-2xl md:text-3xl font-black relative transition-colors duration-200 ${scrolled ? 'text-sunlight' : 'text-white'}`}>
+            <img
+              src="/wec-robot-green.png"
+              alt=""
+              className="h-6 md:h-7 w-auto not-italic"
+              style={scrolled ? undefined : { filter: 'brightness(0) invert(1)' }}
+            />
             <span className="relative">
               WEC
             </span>

@@ -76,6 +76,12 @@ export default function Home() {
           <path d="M0 80 Q300 0 600 24 T1200 8 L1200 80 Z" fill="rgb(var(--forest-dark))" />
         </svg>
 
+        <img
+          src="/wec-robot-green.png"
+          alt=""
+          className="hidden lg:block absolute bottom-8 left-8 md:left-16 h-64 w-auto z-[6] opacity-90"
+        />
+
         <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
           <motion.h1
             initial={{ opacity: 0, y: 40 }}

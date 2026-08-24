@@ -7,7 +7,10 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div>
-            <h3 className="font-display italic text-sunlight text-3xl font-black mb-4">WEC</h3>
+            <div className="flex items-center gap-2 mb-4">
+              <img src="/wec-robot-green.png" alt="" className="h-8 w-auto" />
+              <h3 className="font-display italic text-sunlight text-3xl font-black">WEC</h3>
+            </div>
             <p className="text-cream-dim text-sm leading-relaxed">
               Western Engineering Competition<br />
               London, Ontario<br />
