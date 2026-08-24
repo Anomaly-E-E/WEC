@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import { motion } from 'framer-motion';
+import WaveDivider from './WaveDivider';
 
 interface ForestHeroProps {
   title: string;
@@ -33,14 +34,7 @@ export default function ForestHero({ title, subtitle, children, size = 'normal' 
         style={{ filter: 'brightness(0) invert(1)', animationDuration: '6s' }}
       />
 
-      <svg
-        className="absolute bottom-0 left-0 right-0 w-full h-12 md:h-16 z-[5]"
-        viewBox="0 0 1200 80"
-        preserveAspectRatio="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="M0 80 Q300 0 600 24 T1200 8 L1200 80 Z" fill="rgb(var(--forest-black))" />
-      </svg>
+      <WaveDivider fill="rgb(var(--forest-black))" />
 
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
         <motion.p
