@@ -119,7 +119,7 @@ export default function TeamSection() {
         <p className="font-sans text-olive font-bold text-xs md:text-sm tracking-[0.2em] uppercase mb-1">
           {label}
         </p>
-        <span className="w-px h-6 bg-olive/45 mb-6" />
+        <span className="w-px h-3 bg-olive/45 mb-3" />
         <div className={`grid ${gridCols} gap-6`}>
           {members.map((member, i) => (
             <MemberCard key={i} member={member} />
@@ -149,7 +149,7 @@ export default function TeamSection() {
             <p className="font-sans text-olive font-bold text-xs md:text-sm tracking-[0.2em] uppercase mb-1">
               Co-Chairs
             </p>
-            <span className="w-px h-6 bg-olive/45 mb-6" />
+            <span className="w-px h-3 bg-olive/45 mb-3" />
             <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
               {coChairs.map((member, i) => (
                 <CoChairCard key={i} member={member} />
