@@ -4,6 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import ScrollReveal from '../components/ScrollReveal';
 import SectionDivider from '../components/SectionDivider';
 import Icon from '../components/Icon';
+import RobotIcon from '../components/RobotIcon';
 import TeamSection from '../components/TeamSection';
 import { competitions } from '../data/competitions';
 import { bonusMarkGroups } from '../data/bonusMarks';
@@ -66,6 +67,10 @@ export default function Home() {
           <ellipse cx="500" cy="180" rx="30" ry="80" fill="rgb(var(--moss-dark))" opacity="0.25" />
           <ellipse cx="850" cy="210" rx="20" ry="50" fill="rgb(var(--moss-dark))" opacity="0.25" />
         </svg>
+
+        <div className="hidden lg:block absolute bottom-16 left-12 opacity-80 pointer-events-none text-sunlight">
+          <RobotIcon className="h-40 w-auto" />
+        </div>
 
         <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
           <motion.h1
