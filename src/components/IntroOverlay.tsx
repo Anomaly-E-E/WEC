@@ -11,7 +11,6 @@ interface LeafData {
   rotation: number;
   delay: number;
   duration: number;
-  wobbleDuration: number;
   color: string;
   ShapeComponent: React.FC<{ className?: string; fill?: string }>;
   scale: number;
@@ -39,7 +38,6 @@ const generateLeafData = (count: number): LeafData[] => {
     const rotation = (Math.random() - 0.5) * 360;
     const delay = Math.random() * 350;
     const duration = 700 + Math.random() * 400;
-    const wobbleDuration = 3 + Math.random() * 2;
     const color = LEAF_COLORS[Math.floor(Math.random() * LEAF_COLORS.length)];
     const ShapeComponent = LEAF_SHAPES[Math.floor(Math.random() * LEAF_SHAPES.length)];
     const scale = 0.6 + Math.random() * 0.8;
@@ -52,7 +50,6 @@ const generateLeafData = (count: number): LeafData[] => {
       rotation,
       delay,
       duration,
-      wobbleDuration,
       color,
       ShapeComponent,
       scale,
@@ -146,12 +143,7 @@ export default function IntroOverlay() {
                 height: '40px',
               }}
             >
-              <div
-                className="leaf-wobble"
-                style={{ animationDuration: `${leaf.wobbleDuration}s` }}
-              >
-                <leaf.ShapeComponent fill={leaf.color} className="w-full h-full" />
-              </div>
+              <leaf.ShapeComponent fill={leaf.color} className="w-full h-full" />
             </motion.div>
           );
         })}

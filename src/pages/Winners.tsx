@@ -25,6 +25,7 @@ function WinnerCard({ entry }: { entry: WinnerEntry }) {
         <img
           src={entry.photo}
           alt={entry.teamName || `${entry.category} ${entry.place}`}
+          loading="lazy"
           className="w-full h-40 object-cover"
         />
       )}

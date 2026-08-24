@@ -37,7 +37,7 @@
   --forest-black: 6 13 7;
   --forest-dark: 12 21 13;
   --forest-mid: 22 38 23;
-  --moss-dark: 32 54 34;
+  --moss-dark: 36 61 38;
   --moss: 70 122 74;
   --fern: 96 158 88;
   --leaf: 118 196 108;
@@ -90,7 +90,6 @@ body::after {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
   background-size: 200px 200px;
   background-repeat: repeat;
-  will-change: transform;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -150,19 +149,6 @@ a {
 
 button {
   font-family: 'Syne', sans-serif;
-}
-
-@keyframes leaf-wobble {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(3deg); }
-  75% { transform: rotate(-3deg); }
-  100% { transform: rotate(0deg); }
-}
-
-.leaf-wobble {
-  animation-name: leaf-wobble;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
 }
 
 ::selection {

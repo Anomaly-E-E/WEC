@@ -24,14 +24,6 @@ const pageDinos: FloatingDino[] = [
   { variant: 'round', color: 'text-fern', size: 'w-9 h-9', top: '5%', left: '48%', duration: 3.5, delay: 1.4 },
   { variant: 'stego', color: 'text-leaf', size: 'w-8 h-8', top: '92%', left: '46%', duration: 3.7, delay: 0.8 },
   { variant: 'round', color: 'text-sunlight', size: 'w-10 h-10', top: '20%', left: '35%', duration: 3.6, delay: 0.4 },
-  { variant: 'stego', color: 'text-fern', size: 'w-9 h-9', top: '4%', left: '70%', duration: 4.0, delay: 1.0 },
-  { variant: 'long-neck', color: 'text-moss', size: 'w-12 h-12', top: '12%', left: '55%', duration: 3.3, delay: 1.7 },
-  { variant: 'round', color: 'text-leaf', size: 'w-8 h-8', top: '45%', left: '22%', duration: 3.9, delay: 0.2 },
-  { variant: 'stego', color: 'text-sunlight', size: 'w-11 h-11', top: '65%', left: '35%', duration: 3.5, delay: 1.2 },
-  { variant: 'long-neck', color: 'text-fern', size: 'w-10 h-10', top: '75%', left: '60%', duration: 4.3, delay: 0.6 },
-  { variant: 'round', color: 'text-moss', size: 'w-9 h-9', top: '25%', left: '92%', duration: 3.7, delay: 1.5 },
-  { variant: 'stego', color: 'text-leaf', size: 'w-8 h-8', top: '55%', left: '65%', duration: 3.4, delay: 0.9 },
-  { variant: 'long-neck', color: 'text-sunlight', size: 'w-9 h-9', top: '85%', left: '30%', duration: 4.1, delay: 1.8 },
 ];
 
 const cardDinos: FloatingDino[] = [

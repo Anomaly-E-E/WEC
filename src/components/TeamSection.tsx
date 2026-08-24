@@ -22,6 +22,7 @@ export default function TeamSection() {
           <img
             src={member.photo}
             alt={member.name}
+            loading="lazy"
             className="w-full h-full object-cover"
             style={member.photoPosition ? { objectPosition: member.photoPosition } : undefined}
           />
@@ -71,6 +72,9 @@ export default function TeamSection() {
         <img
           src={member.photo}
           alt={member.name}
+          width={96}
+          height={96}
+          loading="lazy"
           className="w-24 h-24 mx-auto mb-4 rounded-full object-cover"
           style={member.photoPosition ? { objectPosition: member.photoPosition } : undefined}
         />
