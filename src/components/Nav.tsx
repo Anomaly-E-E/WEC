@@ -115,8 +115,7 @@ export default function Nav() {
             <ThemeToggle />
             <Link
               to="/register"
-              className="text-white cursor-pointer px-6 py-2.5 rounded-full font-sans font-bold text-sm hover:scale-105 transition-transform duration-200"
-              style={{ backgroundColor: 'rgb(var(--cta-green))' }}
+              className="text-white cursor-pointer px-6 py-2.5 rounded-full font-sans font-bold text-sm hover:scale-105 transition-transform duration-200 bg-cta-green"
             >
               Register Now
             </Link>
@@ -166,8 +165,7 @@ export default function Nav() {
 
               <Link
                 to="/register"
-                className="text-white cursor-pointer px-8 py-3 rounded-full font-sans font-bold text-lg mt-4"
-                style={{ backgroundColor: 'rgb(var(--cta-green))' }}
+                className="text-white cursor-pointer px-8 py-3 rounded-full font-sans font-bold text-lg mt-4 bg-cta-green"
               >
                 Register Now
               </Link>

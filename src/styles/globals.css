@@ -9,7 +9,6 @@
   --forest-black: 248 241 220;
   --forest-dark: 240 228 196;
   --forest-mid: 253 248 236;
-  --forest-canopy: 232 220 182;
   --moss-dark: 30 58 40;
   --moss: 46 96 58;
   --fern: 61 122 69;
@@ -18,11 +17,8 @@
   --cta-green: 40 120 26;
   --gold: 145 105 8;
   --olive: 74 106 47;
-  --bark: 58 34 16;
-  --bark-light: 92 61 30;
   --cream: 24 24 22;
   --cream-dim: rgba(24, 24, 22, 0.68);
-  --fog: rgba(54, 150, 24, 0.06);
   --border-forest-rgba: rgba(46, 96, 58, 0.22);
   --backdrop-forest-rgba: rgba(248, 241, 220, 0.85);
   --glow-green-rgba: rgba(46, 96, 58, 0.15);
@@ -33,13 +29,14 @@
   --banner-solid: 74 106 47;
   --banner-sage: 122 150 82;
   --ambient-glow: rgba(32, 128, 55, 0.12);
+  --card-text: 242 236 216;
+  --card-accent: 200 232 122;
 }
 
 [data-theme='dark'] {
   --forest-black: 6 13 7;
   --forest-dark: 8 15 9;
   --forest-mid: 15 28 16;
-  --forest-canopy: 21 40 23;
   --moss-dark: 36 61 38;
   --moss: 61 107 66;
   --fern: 90 140 82;
@@ -48,11 +45,8 @@
   --cta-green: 168 210 98;
   --gold: 212 168 50;
   --olive: 154 186 106;
-  --bark: 58 34 16;
-  --bark-light: 92 61 30;
   --cream: 240 234 214;
   --cream-dim: rgba(240, 234, 214, 0.6);
-  --fog: rgba(200, 232, 122, 0.06);
   --border-forest-rgba: rgba(90, 140, 82, 0.15);
   --backdrop-forest-rgba: rgba(8, 15, 9, 0.85);
   --glow-green-rgba: rgba(90, 140, 82, 0.2);
@@ -63,6 +57,8 @@
   --banner-solid: 40 51 22;
   --banner-sage: 92 112 55;
   --ambient-glow: rgba(61, 107, 66, 0.15);
+  --card-text: 242 236 216;
+  --card-accent: 200 232 122;
 }
 
 * {

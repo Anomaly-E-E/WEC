@@ -27,7 +27,7 @@ export default function TeamSection() {
           />
         ) : (
           <div className="w-full h-full bg-gradient-to-br from-moss to-fern flex items-center justify-center py-10">
-            <span className="font-display text-[#f2ecd8] text-5xl font-bold">
+            <span className="font-display text-card-text text-5xl font-bold">
               {member.initials}
             </span>
           </div>
@@ -35,7 +35,7 @@ export default function TeamSection() {
       </div>
       <div className="w-3/5 p-6 flex flex-col justify-center">
         <div className="flex items-center gap-2 mb-2">
-          <p className="font-mono text-[#c8e87a] text-xs tracking-wider uppercase">
+          <p className="font-mono text-card-accent text-xs tracking-wider uppercase">
             {member.role}
           </p>
           {member.linkedin && (
@@ -44,17 +44,17 @@ export default function TeamSection() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`${member.name} on LinkedIn`}
-              className="text-[#f2ecd8]/60 hover:text-[#c8e87a] transition-colors flex items-center"
+              className="text-card-text/60 hover:text-card-accent transition-colors flex items-center"
             >
               <Icon name="linkedin" className="w-5 h-5" />
             </a>
           )}
         </div>
-        <h3 className="font-display text-[#f2ecd8] font-bold text-2xl mb-2">
+        <h3 className="font-display text-card-text font-bold text-2xl mb-2">
           {member.name}
         </h3>
         {member.yearDiscipline && (
-          <p className="font-mono text-[#f2ecd8]/70 text-xs">
+          <p className="font-mono text-card-text/70 text-xs">
             {member.yearDiscipline}
           </p>
         )}
@@ -76,16 +76,16 @@ export default function TeamSection() {
         />
       ) : (
         <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-to-br from-moss to-fern flex items-center justify-center">
-          <span className="font-display text-[#f2ecd8] text-2xl font-bold">
+          <span className="font-display text-card-text text-2xl font-bold">
             {member.initials}
           </span>
         </div>
       )}
-      <h3 className="font-sans text-[#f2ecd8] font-bold text-lg mb-1">
+      <h3 className="font-sans text-card-text font-bold text-lg mb-1">
         {member.name}
       </h3>
       <div className="flex items-center justify-center gap-1.5">
-        <p className="font-mono text-[#c8e87a] text-xs tracking-wider uppercase">
+        <p className="font-mono text-card-accent text-xs tracking-wider uppercase">
           {member.role}
         </p>
         {member.linkedin && (
@@ -94,14 +94,14 @@ export default function TeamSection() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`${member.name} on LinkedIn`}
-            className="text-[#f2ecd8]/60 hover:text-[#c8e87a] transition-colors flex items-center"
+            className="text-card-text/60 hover:text-card-accent transition-colors flex items-center"
           >
             <Icon name="linkedin" className="w-5 h-5" />
           </a>
         )}
       </div>
       {member.yearDiscipline && (
-        <p className="font-mono text-[#f2ecd8]/70 text-xs mt-1">
+        <p className="font-mono text-card-text/70 text-xs mt-1">
           {member.yearDiscipline}
         </p>
       )}

@@ -119,8 +119,7 @@ export default function Home() {
           >
             <Link
               to="/register"
-              className="text-white cursor-pointer px-8 py-4 rounded-full font-sans font-bold text-lg hover:scale-105 transition-transform duration-200"
-              style={{ backgroundColor: 'rgb(var(--cta-green))' }}
+              className="text-white cursor-pointer px-8 py-4 rounded-full font-sans font-bold text-lg hover:scale-105 transition-transform duration-200 bg-cta-green"
             >
               Register Now
             </Link>
@@ -347,8 +346,7 @@ export default function Home() {
             <div className="flex justify-center">
               <Link
                 to="/register"
-                className="text-white cursor-pointer px-10 py-5 rounded-full font-sans font-bold text-xl hover:scale-105 transition-transform duration-200 inline-block"
-                style={{ backgroundColor: 'rgb(var(--cta-green))' }}
+                className="text-white cursor-pointer px-10 py-5 rounded-full font-sans font-bold text-xl hover:scale-105 transition-transform duration-200 inline-block bg-cta-green"
               >
                 Participant Registration
               </Link>

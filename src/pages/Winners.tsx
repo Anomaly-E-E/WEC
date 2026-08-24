@@ -98,7 +98,7 @@ export default function Winners() {
                   onClick={() => setActiveTab(tab.id)}
                   className={`px-8 py-3 rounded-full font-sans font-semibold text-lg transition-all duration-300 ${
                     activeTab === tab.id
-                      ? 'bg-sunlight text-[#f2ecd8]'
+                      ? 'bg-sunlight text-card-text'
                       : 'border border-forest text-cream hover:border-fern hover:text-fern'
                   }`}
                 >
@@ -126,8 +126,7 @@ export default function Winners() {
                   </p>
                   <Link
                     to="/register"
-                    className="inline-block text-white cursor-pointer px-8 py-3 rounded-full font-sans font-bold hover:scale-105 transition-transform duration-200"
-                    style={{ backgroundColor: 'rgb(var(--cta-green))' }}
+                    className="inline-block text-white cursor-pointer px-8 py-3 rounded-full font-sans font-bold hover:scale-105 transition-transform duration-200 bg-cta-green"
                   >
                     Register for WEC 2026
                   </Link>
