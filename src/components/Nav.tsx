@@ -3,7 +3,6 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Icon from './Icon';
 import ThemeToggle from './ThemeToggle';
-import RobotIcon from './RobotIcon';
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -51,7 +50,7 @@ export default function Nav() {
       >
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 font-display italic text-sunlight text-2xl md:text-3xl font-black relative">
-            <RobotIcon className="h-7 md:h-8 w-auto not-italic" />
+            <img src="/wec-robot-green.png" alt="" className="h-7 md:h-8 w-auto not-italic" />
             <span className="relative">
               WEC
             </span>
