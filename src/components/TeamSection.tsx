@@ -146,7 +146,10 @@ export default function TeamSection() {
                 {vpTechnical.map((member, i) => (
                   <MemberCard key={i} member={member} />
                 ))}
-                {vpLogistics.map((member, i) => (
+                {vpFinance.map((member, i) => (
+                  <MemberCard key={i} member={member} />
+                ))}
+                {vpPublications.map((member, i) => (
                   <MemberCard key={i} member={member} />
                 ))}
               </div>
@@ -157,10 +160,7 @@ export default function TeamSection() {
                 {vpSponsorship.map((member, i) => (
                   <MemberCard key={i} member={member} />
                 ))}
-                {vpFinance.map((member, i) => (
-                  <MemberCard key={i} member={member} />
-                ))}
-                {vpPublications.map((member, i) => (
+                {vpLogistics.map((member, i) => (
                   <MemberCard key={i} member={member} />
                 ))}
               </div>
