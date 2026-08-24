@@ -45,9 +45,21 @@ export default function Nav() {
       <motion.nav
         initial={{ y: 0 }}
         className={`fixed top-0 left-0 right-0 z-[9000] transition-all duration-300 ${
-          scrolled ? 'backdrop-forest border-b border-forest' : 'bg-gradient-to-b from-black/55 via-black/20 to-transparent'
+          scrolled ? 'backdrop-forest border-b border-forest' : ''
         }`}
+        style={scrolled ? undefined : { background: 'rgb(var(--banner-solid))' }}
       >
+        {!scrolled && (
+          <svg
+            className="absolute top-full left-0 right-0 w-full h-4 md:h-6 pointer-events-none"
+            viewBox="0 0 1200 40"
+            preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M0 0 Q300 32 600 12 T1200 20 L1200 0 Z" fill="rgb(var(--banner-solid))" />
+          </svg>
+        )}
+
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link to="/" className={`font-display italic text-2xl md:text-3xl font-black relative transition-colors duration-200 ${scrolled ? 'text-sunlight' : 'text-white'}`}>
             <span className="relative">
