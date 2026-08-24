@@ -5,19 +5,9 @@ import Icon from './Icon';
 import ThemeToggle from './ThemeToggle';
 
 export default function Nav() {
-  const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [moreDropdownOpen, setMoreDropdownOpen] = useState(false);
   const location = useLocation();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 80);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   useEffect(() => {
     setMobileOpen(false);
@@ -44,30 +34,26 @@ export default function Nav() {
     <>
       <motion.nav
         initial={{ y: 0 }}
-        className={`fixed top-0 left-0 right-0 z-[9000] transition-all duration-300 ${
-          scrolled ? 'backdrop-forest border-b border-forest' : ''
-        }`}
-        style={scrolled ? undefined : { background: 'rgb(var(--banner-solid))' }}
+        className="fixed top-0 left-0 right-0 z-[9000]"
+        style={{ background: 'rgb(var(--banner-solid))' }}
       >
-        {!scrolled && (
-          <svg
-            className="absolute top-full left-0 right-0 w-full h-12 md:h-20 pointer-events-none"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M0 0 Q300 92 700 36 T1200 60 L1200 0 Z" fill="rgb(var(--banner-sage))" opacity="0.7" />
-            <path d="M0 0 Q250 68 600 28 T1200 44 L1200 0 Z" fill="rgb(var(--banner-solid))" />
-          </svg>
-        )}
+        <svg
+          className="absolute top-full left-0 right-0 w-full h-12 md:h-20 pointer-events-none"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M0 0 Q300 92 700 36 T1200 60 L1200 0 Z" fill="rgb(var(--banner-sage))" opacity="0.7" />
+          <path d="M0 0 Q250 68 600 28 T1200 44 L1200 0 Z" fill="rgb(var(--banner-solid))" />
+        </svg>
 
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link to="/" className={`flex items-center gap-2 font-display italic text-2xl md:text-3xl font-black relative transition-colors duration-200 ${scrolled ? 'text-sunlight' : 'text-white'}`}>
+          <Link to="/" className="flex items-center gap-2 font-display italic text-2xl md:text-3xl font-black relative text-white">
             <img
               src="/wec-robot-green.png"
               alt=""
               className="h-6 md:h-7 w-auto not-italic"
-              style={scrolled ? undefined : { filter: 'brightness(0) invert(1)' }}
+              style={{ filter: 'brightness(0) invert(1)' }}
             />
             <span className="relative">
               WEC
@@ -79,7 +65,7 @@ export default function Nav() {
               <Link
                 key={link.to}
                 to={link.to}
-                className={`font-sans font-semibold text-sm hover:text-sunlight transition-colors duration-200 relative group ${scrolled ? 'text-cream' : 'text-white'}`}
+                className="font-sans font-semibold text-sm text-white hover:text-sunlight transition-colors duration-200 relative group"
               >
                 {link.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-sunlight group-hover:w-full transition-all duration-300"></span>
@@ -89,7 +75,7 @@ export default function Nav() {
             <div className="relative">
               <button
                 onClick={() => setMoreDropdownOpen(!moreDropdownOpen)}
-                className={`font-sans font-semibold text-sm hover:text-sunlight transition-colors duration-200 flex items-center gap-1 ${scrolled ? 'text-cream' : 'text-white'}`}
+                className="font-sans font-semibold text-sm text-white hover:text-sunlight transition-colors duration-200 flex items-center gap-1"
               >
                 More
                 <span className={`transform transition-transform duration-200 ${moreDropdownOpen ? 'rotate-180' : ''}`}>
@@ -134,7 +120,7 @@ export default function Nav() {
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className={`lg:hidden transition-colors duration-200 ${scrolled ? 'text-sunlight' : 'text-white'}`}
+            className="lg:hidden text-white"
             aria-label="Toggle mobile menu"
           >
             {mobileOpen ? <Icon name="close" className="w-7 h-7" /> : <Icon name="menu" className="w-7 h-7" />}
