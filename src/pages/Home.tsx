@@ -67,6 +67,21 @@ export default function Home() {
           <ellipse cx="850" cy="210" rx="20" ry="50" fill="rgb(var(--moss-dark))" opacity="0.25" />
         </svg>
 
+        <svg
+          className="absolute bottom-0 left-0 right-0 w-full h-12 md:h-16 z-[5]"
+          viewBox="0 0 1200 80"
+          preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M0 80 Q300 0 600 24 T1200 8 L1200 80 Z" fill="rgb(var(--forest-dark))" />
+        </svg>
+
+        <img
+          src="/wec-robot-green.png"
+          alt=""
+          className="hidden md:block absolute top-28 right-8 md:right-16 h-20 md:h-24 w-auto z-[6] opacity-90"
+        />
+
         <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
