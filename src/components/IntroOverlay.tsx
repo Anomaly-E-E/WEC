@@ -69,15 +69,15 @@ export default function IntroOverlay() {
   useEffect(() => {
     const burstTimer = setTimeout(() => {
       setPhase('return');
-    }, 1800);
+    }, 1500);
 
     const returnTimer = setTimeout(() => {
       setPhase('done');
-    }, 3400);
+    }, 2300);
 
     const hideTimer = setTimeout(() => {
       setShow(false);
-    }, 3800);
+    }, 2700);
 
     return () => {
       clearTimeout(burstTimer);
@@ -133,7 +133,7 @@ export default function IntroOverlay() {
               transition={{
                 delay: phase === 'burst' ? leaf.delay / 1000 : 0,
                 duration: phase === 'burst' ? leaf.duration / 1000 : 0.8,
-                ease: phase === 'burst' ? [0.25, 0.46, 0.45, 0.94] : [0.4, 0, 0.2, 1],
+                ease: [0.22, 1, 0.36, 1],
               }}
               className="absolute"
               style={{
