@@ -53,8 +53,15 @@ export default function Sponsors() {
 
               <div className="text-center text-cream-dim">
                 <p className="text-sm">
-                  Interested in sponsoring WEC 2026? Contact us at{' '}
-                  <span className="text-sunlight">[sponsorship@wec.ca]</span>
+                  Interested in sponsoring WEC 2026? Contact us on{' '}
+                  <a
+                    href="https://www.instagram.com/ues_wec/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sunlight hover:underline"
+                  >
+                    Instagram
+                  </a>
                 </p>
               </div>
             </div>
