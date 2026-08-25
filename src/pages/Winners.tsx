@@ -5,10 +5,10 @@ import ForestHero from '../components/ForestHero';
 import ScrollReveal from '../components/ScrollReveal';
 import { winners2024_2025, winners2023_2024, winnersOEC2024, type WinnerEntry } from '../data/winners';
 
-type WinnersTab = '2025-2026' | '2024-2025' | '2023-2024' | 'oec-2025' | 'oec-2024';
+type WinnersTab = '2025-2026' | '2024-2025' | '2023-2024' | 'oec-2024';
 
 const isWinnersTab = (value: string | undefined): value is WinnersTab =>
-  value === '2025-2026' || value === '2024-2025' || value === '2023-2024' || value === 'oec-2025' || value === 'oec-2024';
+  value === '2025-2026' || value === '2024-2025' || value === '2023-2024' || value === 'oec-2024';
 
 function WinnerCard({ entry }: { entry: WinnerEntry }) {
   const placeColor = entry.place.startsWith('1st')
@@ -78,7 +78,6 @@ export default function Winners() {
     { id: '2025-2026', label: '2025–2026 Winners' },
     { id: '2024-2025', label: '2024–2025 Winners' },
     { id: '2023-2024', label: '2023–2024 Winners' },
-    { id: 'oec-2025', label: 'OEC 2025 Winners' },
     { id: 'oec-2024', label: 'OEC 2024 Winners' },
   ];
 
@@ -150,19 +149,6 @@ export default function Winners() {
                   WEC 2023–2024 Winners
                 </h3>
                 <WinnersGrid entries={winners2023_2024} />
-              </div>
-            )}
-
-            {activeTab === 'oec-2025' && (
-              <div className="text-center">
-                <div className="border-forest backdrop-blur-sm bg-forest-mid/30 rounded-xl p-16">
-                  <h2 className="font-display text-cream text-3xl font-bold mb-4">
-                    OEC 2025 Results
-                  </h2>
-                  <p className="text-cream-dim text-lg">
-                    Results will be added once the competition concludes.
-                  </p>
-                </div>
               </div>
             )}
 

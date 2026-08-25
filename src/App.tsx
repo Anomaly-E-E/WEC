@@ -12,6 +12,7 @@ const Competitions = lazy(() => import('./pages/Competitions'));
 const Sponsors = lazy(() => import('./pages/Sponsors'));
 const Winners = lazy(() => import('./pages/Winners'));
 const RegistrationComingSoon = lazy(() => import('./pages/RegistrationComingSoon'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -32,6 +33,7 @@ function AnimatedRoutes() {
           <Route path="/sponsors" element={<Sponsors />} />
           <Route path="/winners/:year" element={<Winners />} />
           <Route path="/register" element={<RegistrationComingSoon />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
     </AnimatePresence>

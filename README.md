@@ -42,9 +42,9 @@ npm run preview
 
 ```
 src/
-├── components/        # Reusable components (Nav, Footer, IntroOverlay, etc.)
-├── pages/            # Page components (Home, Competitions, Team, etc.)
-├── data/             # Data files (competitions, team, bonus marks)
+├── components/        # Reusable components (Nav, Footer, IntroOverlay, TeamSection, etc.)
+├── pages/            # Page components (Home, About, Competitions, Sponsors, Winners, etc.)
+├── data/             # Data files (competitions, team, winners, bonus marks)
 ├── styles/           # Global CSS and design system
 └── App.tsx           # Main app with routing
 ```
@@ -56,24 +56,17 @@ src/
 - ✅ Fully responsive (mobile, tablet, desktop)
 - ✅ Smooth scroll animations and page transitions
 - ✅ 10 competition categories with expandable details
-- ✅ Team page with executive structure
-- ✅ Registration integration with Microsoft Forms
+- ✅ Team section with executive structure
+- ✅ Registration coming-soon page
 - ✅ Bonus marks course listing
 - ✅ Multi-level navigation with dropdown
 
 ## TODO Items
 
-The following items are marked with `TODO` comments in the code:
-
-### Team Page
-- [ ] Add team member email addresses
-
 ### Sponsors Page
 - [ ] Add confirmed sponsor logos
 
 ### Winners Pages
-- [ ] Add complete 2024-2025 winners data (currently only Consulting)
-- [ ] Add OEC 2025 results when available
 - [ ] Add 2025-2026 results after competition
 
 ## Design System
