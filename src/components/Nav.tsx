@@ -120,7 +120,7 @@ export default function Nav() {
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden text-white"
+            className="lg:hidden text-white p-2 -mr-2"
             aria-label="Toggle mobile menu"
           >
             {mobileOpen ? <Icon name="close" className="w-7 h-7" /> : <Icon name="menu" className="w-7 h-7" />}
@@ -135,9 +135,9 @@ export default function Nav() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-[8999] bg-forest-dark lg:hidden pt-20"
+            className="fixed inset-0 z-[8999] bg-forest-dark lg:hidden overflow-y-auto"
           >
-            <div className="flex flex-col items-center justify-center gap-8 h-full">
+            <div className="flex flex-col items-center gap-6 min-h-full py-28 px-6">
               {navLinks.map((link) => (
                 <Link
                   key={link.to}

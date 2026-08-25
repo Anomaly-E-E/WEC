@@ -15,9 +15,9 @@ export default function TeamSection() {
   const CoChairCard = ({ member }: { member: TeamMember }) => (
     <motion.div
       whileHover={{ y: -6 }}
-      className="border-forest bg-moss-dark rounded-xl overflow-hidden transition-all duration-300 flex"
+      className="border-forest bg-moss-dark rounded-xl overflow-hidden transition-all duration-300 flex flex-col sm:flex-row"
     >
-      <div className="w-2/5 flex-shrink-0">
+      <div className="w-full h-56 sm:h-auto sm:w-2/5 flex-shrink-0">
         {member.photo ? (
           <img
             src={member.photo}
@@ -34,7 +34,7 @@ export default function TeamSection() {
           </div>
         )}
       </div>
-      <div className="w-3/5 p-6 flex flex-col justify-center">
+      <div className="w-full sm:w-3/5 p-6 flex flex-col justify-center">
         <div className="flex items-center gap-2 mb-2">
           <p className="font-mono text-card-accent text-xs tracking-wider uppercase">
             {member.role}
@@ -138,7 +138,7 @@ export default function TeamSection() {
         <ScrollReveal delay={0.3}>
           <div className="flex flex-col items-center gap-6">
             <div className="w-full flex justify-center">
-              <div className="grid grid-cols-3 gap-6 max-w-3xl">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl">
                 {vpCompetitions.map((member, i) => (
                   <MemberCard key={i} member={member} />
                 ))}
