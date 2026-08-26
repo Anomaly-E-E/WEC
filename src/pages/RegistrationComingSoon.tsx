@@ -45,7 +45,7 @@ export default function RegistrationComingSoon() {
         </div>
       ))}
 
-      <div className="relative z-10 border-forest bg-forest-mid/30 rounded-2xl p-12 md:p-16 max-w-xl text-center">
+      <div className="relative z-10 border-forest bg-forest-mid/30 rounded-2xl p-8 sm:p-12 md:p-16 max-w-xl text-center">
         <div
           className={`absolute -top-4 -right-4 dino-float ${cardDinos[0].color}`}
           style={{ animationDuration: `${cardDinos[0].duration}s`, animationDelay: `${cardDinos[0].delay}s` }}
@@ -65,7 +65,7 @@ export default function RegistrationComingSoon() {
           <DinosaurDoodle variant={cardDinos[2].variant} className={cardDinos[2].size} />
         </div>
 
-        <h1 className="font-mono text-cream text-2xl md:text-3xl font-bold tracking-wider uppercase">
+        <h1 className="font-mono text-cream text-xl sm:text-2xl md:text-3xl font-bold tracking-wide sm:tracking-wider uppercase">
           Registration Opening Soon :)
         </h1>
 

@@ -157,13 +157,13 @@ export default function IntroOverlay() {
           transition={{ delay: 0.6, duration: 0.5 }}
           className="relative z-10 text-center px-6"
         >
-          <h1 className="font-display italic text-sunlight text-7xl md:text-9xl font-black mb-4">
+          <h1 className="font-display italic text-sunlight text-6xl sm:text-7xl md:text-9xl font-black mb-3 md:mb-4">
             WEC
           </h1>
-          <p className="font-mono text-fern text-xs md:text-sm tracking-[0.3em] uppercase mb-2">
+          <p className="font-mono text-fern text-xs md:text-sm tracking-[0.15em] sm:tracking-[0.3em] uppercase mb-2 px-4">
             Western Engineering Competition
           </p>
-          <p className="font-sans font-bold text-cream-dim text-xl md:text-2xl">
+          <p className="font-sans font-bold text-cream-dim text-lg sm:text-xl md:text-2xl">
             2026
           </p>
         </motion.div>

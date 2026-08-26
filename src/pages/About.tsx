@@ -10,14 +10,14 @@ export default function About() {
         subtitle="Western's Premier Engineering Competition"
       />
 
-      <section className="py-24 px-6 relative overflow-hidden">
+      <section className="py-16 md:py-24 px-6 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
-            <div className="mb-16">
-              <h2 className="font-display text-cream text-4xl font-bold mb-6">
+            <div className="mb-10 md:mb-16">
+              <h2 className="font-display text-cream text-3xl sm:text-4xl font-bold mb-5 md:mb-6">
                 What is WEC?
               </h2>
-              <div className="text-cream-dim text-lg leading-relaxed space-y-4">
+              <div className="text-cream-dim text-base sm:text-lg leading-relaxed space-y-4">
                 <p>
                   The Western Engineering Competition (WEC) is an annual event that brings together engineering students from all disciplines to compete in design, technical, and communication challenges.
                 </p>
@@ -29,13 +29,13 @@ export default function About() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
-            <div className="mb-16">
-              <h2 className="font-display text-cream text-4xl font-bold mb-6">
+            <div className="mb-10 md:mb-16">
+              <h2 className="font-display text-cream text-3xl sm:text-4xl font-bold mb-5 md:mb-6">
                 The Competition Pathway
               </h2>
-              <div className="space-y-8">
-                <div className="border-forest bg-forest-mid/30 rounded-lg p-8">
-                  <h3 className="font-sans text-sunlight text-2xl font-bold mb-3">
+              <div className="space-y-5 md:space-y-8">
+                <div className="border-forest bg-forest-mid/30 rounded-lg p-5 sm:p-8">
+                  <h3 className="font-sans text-sunlight text-xl sm:text-2xl font-bold mb-3">
                     WEC → Western Engineering Competition
                   </h3>
                   <p className="text-cream-dim leading-relaxed">
@@ -43,8 +43,8 @@ export default function About() {
                   </p>
                 </div>
 
-                <div className="border-forest bg-forest-mid/30 rounded-lg p-8">
-                  <h3 className="font-sans text-sunlight text-2xl font-bold mb-3">
+                <div className="border-forest bg-forest-mid/30 rounded-lg p-5 sm:p-8">
+                  <h3 className="font-sans text-sunlight text-xl sm:text-2xl font-bold mb-3">
                     OEC → Ontario Engineering Competition
                   </h3>
                   <p className="text-cream-dim leading-relaxed">
@@ -56,11 +56,11 @@ export default function About() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.3}>
-            <div className="mb-16">
-              <h2 className="font-display text-cream text-4xl font-bold mb-6">
+            <div className="mb-10 md:mb-16">
+              <h2 className="font-display text-cream text-3xl sm:text-4xl font-bold mb-5 md:mb-6">
                 Why Compete?
               </h2>
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
                 {[
                   {
                     title: 'Skill Development',
@@ -81,9 +81,9 @@ export default function About() {
                 ].map((benefit, i) => (
                   <div
                     key={i}
-                    className="border-forest backdrop-blur-sm bg-forest-mid/20 rounded-lg p-6"
+                    className="border-forest backdrop-blur-sm bg-forest-mid/20 rounded-lg p-5 sm:p-6"
                   >
-                    <h3 className="font-sans text-leaf text-xl font-bold mb-3">
+                    <h3 className="font-sans text-leaf text-lg sm:text-xl font-bold mb-2 sm:mb-3">
                       {benefit.title}
                     </h3>
                     <p className="text-cream-dim">
@@ -96,23 +96,23 @@ export default function About() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.4}>
-            <div className="text-center border-forest backdrop-blur-sm bg-forest-mid/30 rounded-xl p-12">
-              <h2 className="font-display text-cream text-3xl font-bold mb-6">
+            <div className="text-center border-forest backdrop-blur-sm bg-forest-mid/30 rounded-xl p-8 sm:p-12">
+              <h2 className="font-display text-cream text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">
                 Ready to Get Started?
               </h2>
-              <p className="text-cream-dim text-lg mb-8">
+              <p className="text-cream-dim text-base sm:text-lg mb-6 sm:mb-8">
                 Explore our competitions and register for WEC 2026
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-3.5 sm:gap-4 justify-center">
                 <Link
                   to="/competitions"
-                  className="bg-sunlight text-forest-black px-8 py-4 rounded-full font-sans font-bold text-lg hover:scale-105 transition-transform duration-200"
+                  className="bg-sunlight text-forest-black w-full sm:w-auto text-center px-8 py-4 rounded-full font-sans font-bold text-lg hover:scale-105 transition-transform duration-200"
                 >
                   View Competitions
                 </Link>
                 <Link
                   to="/register"
-                  className="border-2 border-fern text-leaf px-8 py-4 rounded-full font-sans font-bold text-lg hover:bg-fern hover:text-forest-black transition-colors duration-300"
+                  className="border-2 border-fern text-leaf w-full sm:w-auto text-center px-8 py-4 rounded-full font-sans font-bold text-lg hover:bg-fern hover:text-forest-black transition-colors duration-300"
                 >
                   Register Now
                 </Link>

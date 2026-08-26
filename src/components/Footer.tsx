@@ -3,9 +3,9 @@ import Icon from './Icon';
 
 export default function Footer() {
   return (
-    <footer className="bg-forest-dark border-t border-forest mt-24">
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+    <footer className="bg-forest-dark border-t border-forest mt-16 md:mt-24">
+      <div className="max-w-7xl mx-auto px-6 py-12 md:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-9 md:gap-12 mb-9 md:mb-12">
           <div>
             <div className="flex items-center gap-2 mb-4">
               <img src="/wec-robot-green.png" alt="" className="h-8 w-auto" />

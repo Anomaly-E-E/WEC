@@ -15,9 +15,9 @@ export default function TeamSection() {
   const CoChairCard = ({ member }: { member: TeamMember }) => (
     <motion.div
       whileHover={{ y: -6 }}
-      className="border-forest bg-moss-dark rounded-xl overflow-hidden transition-all duration-300 flex flex-col sm:flex-row"
+      className="border-forest bg-moss-dark rounded-xl overflow-hidden transition-all duration-300 flex flex-col md:flex-row"
     >
-      <div className="w-full h-56 sm:h-auto sm:w-2/5 flex-shrink-0">
+      <div className="w-full h-48 sm:h-56 md:h-auto md:w-2/5 flex-shrink-0">
         {member.photo ? (
           <img
             src={member.photo}
@@ -34,7 +34,7 @@ export default function TeamSection() {
           </div>
         )}
       </div>
-      <div className="w-full sm:w-3/5 p-6 flex flex-col justify-center">
+      <div className="w-full md:w-3/5 p-5 sm:p-6 flex flex-col justify-center">
         <div className="flex items-center gap-2 mb-2">
           <p className="font-mono text-card-accent text-xs tracking-wider uppercase">
             {member.role}
@@ -51,7 +51,7 @@ export default function TeamSection() {
             </a>
           )}
         </div>
-        <h3 className="font-display text-card-text font-bold text-2xl mb-2">
+        <h3 className="font-display text-card-text font-bold text-xl sm:text-2xl mb-2">
           {member.name}
         </h3>
         {member.yearDiscipline && (
@@ -66,7 +66,7 @@ export default function TeamSection() {
   const MemberCard = ({ member }: { member: TeamMember }) => (
     <motion.div
       whileHover={{ y: -6 }}
-      className="border-forest bg-moss-dark rounded-xl p-6 text-center transition-all duration-300"
+      className="border-forest bg-moss-dark rounded-xl p-5 md:p-6 flex flex-row items-center gap-4 text-left md:block md:text-center transition-all duration-300"
     >
       {member.photo ? (
         <img
@@ -75,60 +75,62 @@ export default function TeamSection() {
           width={96}
           height={96}
           loading="lazy"
-          className="w-24 h-24 mx-auto mb-4 rounded-full object-cover"
+          className="w-20 h-20 md:w-24 md:h-24 md:mx-auto md:mb-4 rounded-full object-cover flex-shrink-0"
           style={member.photoPosition ? { objectPosition: member.photoPosition } : undefined}
         />
       ) : (
-        <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-to-br from-moss to-fern flex items-center justify-center">
-          <span className="font-display text-card-text text-2xl font-bold">
+        <div className="w-20 h-20 md:w-24 md:h-24 md:mx-auto md:mb-4 rounded-full bg-gradient-to-br from-moss to-fern flex items-center justify-center flex-shrink-0">
+          <span className="font-display text-card-text text-xl md:text-2xl font-bold">
             {member.initials}
           </span>
         </div>
       )}
-      <h3 className="font-sans text-card-text font-bold text-lg mb-1">
-        {member.name}
-      </h3>
-      <div className="flex items-center justify-center gap-1.5">
-        <p className="font-mono text-card-accent text-xs tracking-wider uppercase">
-          {member.role}
-        </p>
-        {member.linkedin && (
-          <a
-            href={member.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`${member.name} on LinkedIn`}
-            className="text-card-text/60 hover:text-card-accent transition-colors flex items-center"
-          >
-            <Icon name="linkedin" className="w-5 h-5" />
-          </a>
+      <div className="min-w-0 flex-1 md:flex-none">
+        <h3 className="font-sans text-card-text font-bold text-lg mb-1">
+          {member.name}
+        </h3>
+        <div className="flex items-center gap-1.5 md:justify-center">
+          <p className="font-mono text-card-accent text-xs tracking-wider uppercase">
+            {member.role}
+          </p>
+          {member.linkedin && (
+            <a
+              href={member.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${member.name} on LinkedIn`}
+              className="text-card-text/60 hover:text-card-accent transition-colors flex items-center"
+            >
+              <Icon name="linkedin" className="w-5 h-5" />
+            </a>
+          )}
+        </div>
+        {member.yearDiscipline && (
+          <p className="font-mono text-card-text/70 text-xs mt-1">
+            {member.yearDiscipline}
+          </p>
         )}
       </div>
-      {member.yearDiscipline && (
-        <p className="font-mono text-card-text/70 text-xs mt-1">
-          {member.yearDiscipline}
-        </p>
-      )}
     </motion.div>
   );
 
   return (
-    <section id="team" className="py-24 px-6 bg-forest-black relative overflow-hidden">
+    <section id="team" className="py-16 md:py-24 px-6 bg-forest-black relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <ScrollReveal>
-          <div className="text-center mb-16">
-            <p className="font-mono text-fern text-xs tracking-[0.3em] uppercase mb-4">The People Behind WEC</p>
-            <h2 className="font-display text-cream text-4xl md:text-5xl font-bold mb-4">
+          <div className="text-center mb-10 md:mb-16">
+            <p className="font-mono text-fern text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-4">The People Behind WEC</p>
+            <h2 className="font-display text-cream text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
               Meet the Team
             </h2>
-            <p className="text-cream-dim text-lg max-w-2xl mx-auto">
+            <p className="text-cream-dim text-base sm:text-lg max-w-2xl mx-auto">
               The WEC 2026 organizing team is dedicated to delivering an exceptional competition experience for all participants.
             </p>
           </div>
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 mb-8">
             {coChairs.map((member, i) => (
               <CoChairCard key={i} member={member} />
             ))}
@@ -136,9 +138,9 @@ export default function TeamSection() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.3}>
-          <div className="flex flex-col items-center gap-6">
+          <div className="flex flex-col items-center gap-5 md:gap-6">
             <div className="w-full flex justify-center">
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 max-w-3xl w-full md:w-auto">
                 {vpCompetitions.map((member, i) => (
                   <MemberCard key={i} member={member} />
                 ))}
@@ -146,7 +148,7 @@ export default function TeamSection() {
             </div>
 
             <div className="w-full flex justify-center">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-6 max-w-4xl w-full md:w-auto">
                 {vpTechnical.map((member, i) => (
                   <MemberCard key={i} member={member} />
                 ))}
@@ -160,7 +162,7 @@ export default function TeamSection() {
             </div>
 
             <div className="w-full flex justify-center">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-6 max-w-4xl w-full md:w-auto">
                 {vpSponsorship.map((member, i) => (
                   <MemberCard key={i} member={member} />
                 ))}

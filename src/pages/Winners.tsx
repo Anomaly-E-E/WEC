@@ -88,15 +88,15 @@ export default function Winners() {
         subtitle="Celebrating Excellence"
       />
 
-      <section className="py-24 px-6 relative overflow-hidden">
+      <section className="py-16 md:py-24 px-6 relative overflow-hidden">
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
-            <div className="flex flex-wrap justify-center gap-4 mb-16">
+            <div className="flex flex-wrap justify-center gap-2.5 sm:gap-4 mb-10 md:mb-16">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`px-8 py-3 rounded-full font-sans font-semibold text-lg transition-all duration-300 ${
+                  className={`inline-flex items-center justify-center min-h-[44px] px-4 py-2 sm:px-8 sm:py-3 rounded-full font-sans font-semibold text-sm sm:text-lg transition-all duration-300 ${
                     activeTab === tab.id
                       ? 'bg-sunlight text-forest-black'
                       : 'border border-forest text-cream hover:border-fern hover:text-fern'
@@ -117,11 +117,11 @@ export default function Winners() {
           >
             {activeTab === '2025-2026' && (
               <div className="text-center">
-                <div className="border-forest backdrop-blur-sm bg-forest-mid/30 rounded-xl p-16">
-                  <h2 className="font-display text-cream text-3xl font-bold mb-4">
+                <div className="border-forest backdrop-blur-sm bg-forest-mid/30 rounded-xl p-8 sm:p-12 md:p-16">
+                  <h2 className="font-display text-cream text-2xl sm:text-3xl font-bold mb-4">
                     WEC 2026 Coming Soon
                   </h2>
-                  <p className="text-cream-dim text-lg mb-8">
+                  <p className="text-cream-dim text-base sm:text-lg mb-8">
                     Winners will be announced after the competition on November 21–23, 2026.
                   </p>
                   <Link
@@ -136,7 +136,7 @@ export default function Winners() {
 
             {activeTab === '2024-2025' && (
               <div>
-                <h3 className="font-display text-sunlight text-2xl font-bold mb-8 text-center">
+                <h3 className="font-display text-sunlight text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-center">
                   WEC 2024–2025 Winners
                 </h3>
                 <WinnersGrid entries={winners2024_2025} />
@@ -145,7 +145,7 @@ export default function Winners() {
 
             {activeTab === '2023-2024' && (
               <div>
-                <h3 className="font-display text-sunlight text-2xl font-bold mb-8 text-center">
+                <h3 className="font-display text-sunlight text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-center">
                   WEC 2023–2024 Winners
                 </h3>
                 <WinnersGrid entries={winners2023_2024} />
@@ -154,10 +154,10 @@ export default function Winners() {
 
             {activeTab === 'oec-2024' && (
               <div>
-                <h3 className="font-display text-sunlight text-2xl font-bold mb-2 text-center">
+                <h3 className="font-display text-sunlight text-xl sm:text-2xl font-bold mb-2 text-center">
                   Ontario Engineering Competition 2024
                 </h3>
-                <p className="font-mono text-fern text-xs tracking-wider uppercase text-center mb-8">
+                <p className="font-mono text-fern text-xs tracking-wider uppercase text-center mb-6 sm:mb-8">
                   Western Engineering Winners
                 </p>
                 <WinnersGrid entries={winnersOEC2024} />

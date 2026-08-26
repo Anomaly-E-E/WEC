@@ -12,7 +12,7 @@ interface ForestHeroProps {
 export default function ForestHero({ title, subtitle, children, size = 'normal' }: ForestHeroProps) {
   return (
     <section
-      className="relative flex items-center justify-center overflow-hidden pt-28 pb-20"
+      className="relative flex items-center justify-center overflow-hidden pt-24 pb-14 md:pt-28 md:pb-20"
       style={{ background: 'rgb(var(--banner-solid))' }}
     >
       <svg
@@ -41,7 +41,7 @@ export default function ForestHero({ title, subtitle, children, size = 'normal' 
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="font-sans font-extrabold text-2xl md:text-3xl uppercase tracking-[0.15em] mb-2 text-stencil-badge"
+          className="font-sans font-extrabold text-xl sm:text-2xl md:text-3xl uppercase tracking-[0.1em] sm:tracking-[0.15em] mb-2 text-stencil-badge"
         >
           WEC 2026
         </motion.p>
@@ -51,8 +51,8 @@ export default function ForestHero({ title, subtitle, children, size = 'normal' 
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className={`font-display font-black text-white ${
-            size === 'large' ? 'text-6xl md:text-8xl' : 'text-5xl md:text-7xl'
-          } mb-4`}
+            size === 'large' ? 'text-5xl sm:text-6xl md:text-8xl' : 'text-4xl sm:text-5xl md:text-7xl'
+          } mb-3 md:mb-4 leading-[1.1] md:leading-none`}
         >
           {title}
         </motion.h1>
@@ -62,7 +62,7 @@ export default function ForestHero({ title, subtitle, children, size = 'normal' 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="font-sans font-bold text-white/90 text-sm md:text-base tracking-[0.15em] uppercase"
+            className="font-sans font-bold text-white/90 text-xs sm:text-sm md:text-base tracking-[0.08em] sm:tracking-[0.15em] uppercase px-2"
           >
             {subtitle}
           </motion.p>

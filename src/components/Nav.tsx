@@ -137,24 +137,24 @@ export default function Nav() {
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-[8999] bg-forest-dark lg:hidden overflow-y-auto"
           >
-            <div className="flex flex-col items-center gap-6 min-h-full py-28 px-6">
+            <div className="flex flex-col items-center gap-4 min-h-full py-24 px-6">
               {navLinks.map((link) => (
                 <Link
                   key={link.to}
                   to={link.to}
-                  className="font-sans font-bold text-3xl text-cream hover:text-sunlight transition-colors duration-200"
+                  className="font-sans font-bold text-2xl sm:text-3xl text-cream hover:text-sunlight transition-colors duration-200 py-1"
                 >
                   {link.label}
                 </Link>
               ))}
 
-              <div className="border-t border-moss-dark w-3/4 my-4"></div>
+              <div className="border-t border-moss-dark w-3/4 my-3"></div>
 
               {moreLinks.map((link) => (
                 <Link
                   key={link.to}
                   to={link.to}
-                  className="font-sans font-semibold text-xl text-cream hover:text-sunlight transition-colors duration-200"
+                  className="font-sans font-semibold text-lg text-cream-dim hover:text-sunlight transition-colors duration-200 py-1"
                 >
                   {link.label}
                 </Link>
@@ -162,7 +162,7 @@ export default function Nav() {
 
               <Link
                 to="/register"
-                className="text-white cursor-pointer px-8 py-3 rounded-full font-sans font-bold text-lg mt-4 bg-cta-green"
+                className="text-white cursor-pointer w-full max-w-xs text-center px-8 py-3.5 rounded-full font-sans font-bold text-lg mt-4 bg-cta-green"
               >
                 Register Now
               </Link>
