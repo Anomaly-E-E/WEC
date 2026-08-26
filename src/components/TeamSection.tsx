@@ -123,6 +123,10 @@ export default function TeamSection() {
   const supportRowMain = supportRow.slice(0, -1);
   const supportRowLast = supportRow[supportRow.length - 1];
 
+  const desktopRowA = [arshan, ...vpPublications].filter(Boolean) as TeamMember[];
+  const desktopRowB = [turner, ...vpFinance, vpCompetitions[0]].filter(Boolean) as TeamMember[];
+  const desktopRowC = [...vpCompetitions.slice(1), ...vpSponsorship, ...vpLogistics];
+
   return (
     <section id="team" className="py-16 md:py-24 px-6 bg-forest-black relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
@@ -146,14 +150,15 @@ export default function TeamSection() {
           </div>
         </ScrollReveal>
 
-        <ScrollReveal delay={0.3}>
-          <div className="flex flex-col items-center gap-3 md:gap-6">
+        {/* Mobile layout — kept exactly as-is */}
+        <ScrollReveal delay={0.3} className="md:hidden">
+          <div className="flex flex-col items-center gap-3">
             <div className="w-full flex justify-center">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 max-w-4xl w-full md:w-auto">
+              <div className="grid grid-cols-2 gap-3 max-w-4xl w-full">
                 {leadRow.map((member, i) => {
                   const mobileOrder = ['order-3', 'order-1', 'order-4', 'order-2'][i];
                   return (
-                    <div key={i} className={`${mobileOrder} md:order-none`}>
+                    <div key={i} className={mobileOrder}>
                       <MemberCard member={member} />
                     </div>
                   );
@@ -162,7 +167,7 @@ export default function TeamSection() {
             </div>
 
             <div className="w-full flex justify-center">
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6 max-w-3xl w-full md:w-auto">
+              <div className="grid grid-cols-2 gap-3 max-w-3xl w-full">
                 {supportRowMain.map((member, i) => (
                   <MemberCard key={i} member={member} />
                 ))}
@@ -171,11 +176,40 @@ export default function TeamSection() {
 
             {supportRowLast && (
               <div className="w-full flex justify-center">
-                <div className="w-[calc(50%-0.375rem)] md:w-60">
+                <div className="w-[calc(50%-0.375rem)]">
                   <MemberCard member={supportRowLast} />
                 </div>
               </div>
             )}
+          </div>
+        </ScrollReveal>
+
+        {/* Desktop layout — Arshan+Bridget, then Turner+Kevin+1 VP Competitions, then the rest */}
+        <ScrollReveal delay={0.3} className="hidden md:block">
+          <div className="flex flex-col items-center gap-6">
+            <div className="w-full flex justify-center">
+              <div className="grid grid-cols-2 gap-6 max-w-lg w-auto">
+                {desktopRowA.map((member, i) => (
+                  <MemberCard key={i} member={member} />
+                ))}
+              </div>
+            </div>
+
+            <div className="w-full flex justify-center">
+              <div className="grid grid-cols-3 gap-6 max-w-3xl w-auto">
+                {desktopRowB.map((member, i) => (
+                  <MemberCard key={i} member={member} />
+                ))}
+              </div>
+            </div>
+
+            <div className="w-full flex justify-center">
+              <div className="grid grid-cols-6 gap-6 max-w-6xl w-auto">
+                {desktopRowC.map((member, i) => (
+                  <MemberCard key={i} member={member} />
+                ))}
+              </div>
+            </div>
           </div>
         </ScrollReveal>
       </div>
