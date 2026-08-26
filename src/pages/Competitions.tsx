@@ -1,10 +1,21 @@
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import ForestHero from '../components/ForestHero';
 import Icon from '../components/Icon';
 import { competitions } from '../data/competitions';
 
 export default function Competitions() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      setTimeout(() => {
+        document.getElementById(location.hash.slice(1))?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    }
+  }, [location]);
+
   return (
     <div className="min-h-screen">
       <ForestHero
@@ -18,7 +29,8 @@ export default function Competitions() {
             {competitions.map((comp) => (
               <motion.div
                 key={comp.id}
-                className="border-forest bg-forest-mid/30 rounded-xl p-5 sm:p-8 h-full transition-all duration-300"
+                id={comp.id}
+                className="border-forest bg-forest-mid/30 rounded-xl p-5 sm:p-8 h-full scroll-mt-24 transition-all duration-300"
                 whileHover={{ y: -6 }}
               >
                 <div className="flex items-center gap-4 sm:gap-6 mb-4">

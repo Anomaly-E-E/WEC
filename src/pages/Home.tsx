@@ -88,7 +88,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="font-display font-black text-4xl sm:text-5xl md:text-8xl lg:text-9xl text-cream mb-4 md:mb-6 leading-[1.1] md:leading-none"
+            className="font-display font-black text-5xl sm:text-6xl md:text-8xl lg:text-9xl text-cream mb-4 md:mb-6 leading-[1.1] md:leading-none"
           >
             Grow <span className="italic text-sunlight">Beyond</span> the Forest
           </motion.h1>
@@ -106,7 +106,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-cream-dim text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-9 md:mb-12 leading-relaxed"
+            className="text-cream-dim text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-5 md:mb-12 leading-relaxed"
           >
             Compete in 10 engineering challenges. Win your way from WEC to OEC. One weekend to prove your skills.
           </motion.p>
@@ -248,7 +248,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
             {competitions.map((comp, i) => (
               <ScrollReveal key={comp.id} delay={i * 0.05}>
-                <Link to="/competitions">
+                <Link to={`/competitions#${comp.id}`}>
                   <motion.div
                     whileHover={{ y: -6 }}
                     className="border-forest bg-forest-mid/30 rounded-lg p-4 sm:p-6 text-center transition-all duration-300 group cursor-pointer relative overflow-hidden"

@@ -38,7 +38,7 @@ export default function Nav() {
         style={{ background: 'rgb(var(--banner-solid))' }}
       >
         <svg
-          className="absolute top-full left-0 right-0 w-full h-12 md:h-20 pointer-events-none"
+          className="absolute top-full left-0 right-0 w-full h-8 md:h-20 pointer-events-none"
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
           xmlns="http://www.w3.org/2000/svg"

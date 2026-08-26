@@ -118,6 +118,11 @@ export default function TeamSection() {
   const vpFinance = teamMembers.filter(m => m.department === 'Finance');
   const vpPublications = teamMembers.filter(m => m.department === 'Publications');
 
+  const leadRow = [turner, arshan, ...vpFinance, ...vpPublications].filter(Boolean) as TeamMember[];
+  const supportRow = [...vpCompetitions, ...vpSponsorship, ...vpLogistics];
+  const supportRowMain = supportRow.slice(0, -1);
+  const supportRowLast = supportRow[supportRow.length - 1];
+
   return (
     <section id="team" className="py-16 md:py-24 px-6 bg-forest-black relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
@@ -144,36 +149,28 @@ export default function TeamSection() {
         <ScrollReveal delay={0.3}>
           <div className="flex flex-col items-center gap-3 md:gap-6">
             <div className="w-full flex justify-center">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 max-w-4xl w-full md:w-auto">
+                {leadRow.map((member, i) => (
+                  <MemberCard key={i} member={member} />
+                ))}
+              </div>
+            </div>
+
+            <div className="w-full flex justify-center">
               <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6 max-w-3xl w-full md:w-auto">
-                {arshan && <MemberCard member={arshan} />}
-                {vpFinance.map((member, i) => (
-                  <MemberCard key={i} member={member} />
-                ))}
-                {vpPublications.map((member, i) => (
+                {supportRowMain.map((member, i) => (
                   <MemberCard key={i} member={member} />
                 ))}
               </div>
             </div>
 
-            <div className="w-full flex justify-center">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 max-w-4xl w-full md:w-auto">
-                {turner && <MemberCard member={turner} />}
-                {vpCompetitions.map((member, i) => (
-                  <MemberCard key={i} member={member} />
-                ))}
+            {supportRowLast && (
+              <div className="w-full flex justify-center">
+                <div className="w-[calc(50%-0.375rem)] md:w-60">
+                  <MemberCard member={supportRowLast} />
+                </div>
               </div>
-            </div>
-
-            <div className="w-full flex justify-center">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 max-w-4xl w-full md:w-auto">
-                {vpSponsorship.map((member, i) => (
-                  <MemberCard key={i} member={member} />
-                ))}
-                {vpLogistics.map((member, i) => (
-                  <MemberCard key={i} member={member} />
-                ))}
-              </div>
-            </div>
+            )}
           </div>
         </ScrollReveal>
       </div>
