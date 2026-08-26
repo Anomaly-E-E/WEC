@@ -22,16 +22,23 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[92vh] md:min-h-screen flex items-center justify-center overflow-hidden">
         <div
-          className="absolute inset-0 bg-center bg-no-repeat bg-[length:260%] sm:bg-[length:200%] md:bg-[length:140%]"
+          className="absolute inset-0 bg-center bg-cover bg-no-repeat"
           style={{
             backgroundImage: `url('/aceb_banner1.jpg')`,
           }}
         ></div>
 
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 md:hidden"
+          style={{
+            background: `linear-gradient(180deg, var(--hero-overlay-1) 0%, var(--hero-overlay-2) 45%, var(--hero-overlay-1) 100%)`,
+          }}
+        ></div>
+
+        <div
+          className="absolute inset-0 hidden md:block"
           style={{
             background: `linear-gradient(160deg, var(--hero-overlay-1) 0%, var(--hero-overlay-2) 50%, var(--hero-overlay-1) 100%)`,
           }}

@@ -16,6 +16,7 @@ export const teamMembers: TeamMember[] = [
     initials: 'YM',
     yearDiscipline: '3rd Year · Civil',
     photo: '/team/yasi-movahedi.jpg',
+    photoPosition: 'center 15%',
     linkedin: 'https://www.linkedin.com/in/yasi-movahedi-b45a89291/'
   },
   {
@@ -24,6 +25,7 @@ export const teamMembers: TeamMember[] = [
     initials: 'NM',
     yearDiscipline: '3rd Year · Mechanical + Ivey',
     photo: '/team/natalie-mcgillicuddy.jpg',
+    photoPosition: 'center 12%',
     linkedin: 'https://www.linkedin.com/in/natalie-mcgillicuddy/'
   },
   {

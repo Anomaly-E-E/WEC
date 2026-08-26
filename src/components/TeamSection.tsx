@@ -3,21 +3,13 @@ import ScrollReveal from './ScrollReveal';
 import Icon from './Icon';
 import { teamMembers, type TeamMember } from '../data/team';
 
-export default function TeamSection() {
-  const coChairs = teamMembers.filter(m => m.role === 'Co-Chair');
-  const vpCompetitions = teamMembers.filter(m => m.department === 'Competitions');
-  const vpTechnical = teamMembers.filter(m => m.department === 'Technical');
-  const vpLogistics = teamMembers.filter(m => m.department === 'Logistics');
-  const vpSponsorship = teamMembers.filter(m => m.department === 'Sponsorship');
-  const vpFinance = teamMembers.filter(m => m.department === 'Finance');
-  const vpPublications = teamMembers.filter(m => m.department === 'Publications');
-
-  const CoChairCard = ({ member }: { member: TeamMember }) => (
+function CoChairCard({ member }: { member: TeamMember }) {
+  return (
     <motion.div
       whileHover={{ y: -6 }}
       className="border-forest bg-moss-dark rounded-xl overflow-hidden transition-all duration-300 flex flex-col md:flex-row"
     >
-      <div className="w-full h-24 sm:h-32 md:h-auto md:w-2/5 flex-shrink-0">
+      <div className="w-full h-32 sm:h-40 md:h-auto md:w-2/5 flex-shrink-0">
         {member.photo ? (
           <img
             src={member.photo}
@@ -62,8 +54,10 @@ export default function TeamSection() {
       </div>
     </motion.div>
   );
+}
 
-  const MemberCard = ({ member }: { member: TeamMember }) => (
+function MemberCard({ member }: { member: TeamMember }) {
+  return (
     <motion.div
       whileHover={{ y: -6 }}
       className="border-forest bg-moss-dark rounded-xl p-3 md:p-6 flex flex-col items-center text-center md:block transition-all duration-300"
@@ -111,6 +105,18 @@ export default function TeamSection() {
       )}
     </motion.div>
   );
+}
+
+export default function TeamSection() {
+  const coChairs = teamMembers.filter(m => m.role === 'Co-Chair');
+  const vpCompetitions = teamMembers.filter(m => m.department === 'Competitions');
+  const vpTechnical = teamMembers.filter(m => m.department === 'Technical');
+  const turner = vpTechnical.find(m => m.name === 'Turner Reucassel');
+  const arshan = vpTechnical.find(m => m.name === 'Arshan Shareef');
+  const vpLogistics = teamMembers.filter(m => m.department === 'Logistics');
+  const vpSponsorship = teamMembers.filter(m => m.department === 'Sponsorship');
+  const vpFinance = teamMembers.filter(m => m.department === 'Finance');
+  const vpPublications = teamMembers.filter(m => m.department === 'Publications');
 
   return (
     <section id="team" className="py-16 md:py-24 px-6 bg-forest-black relative overflow-hidden">
@@ -139,7 +145,11 @@ export default function TeamSection() {
           <div className="flex flex-col items-center gap-3 md:gap-6">
             <div className="w-full flex justify-center">
               <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6 max-w-3xl w-full md:w-auto">
-                {vpCompetitions.map((member, i) => (
+                {arshan && <MemberCard member={arshan} />}
+                {vpFinance.map((member, i) => (
+                  <MemberCard key={i} member={member} />
+                ))}
+                {vpPublications.map((member, i) => (
                   <MemberCard key={i} member={member} />
                 ))}
               </div>
@@ -147,13 +157,8 @@ export default function TeamSection() {
 
             <div className="w-full flex justify-center">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 max-w-4xl w-full md:w-auto">
-                {vpTechnical.map((member, i) => (
-                  <MemberCard key={i} member={member} />
-                ))}
-                {vpFinance.map((member, i) => (
-                  <MemberCard key={i} member={member} />
-                ))}
-                {vpPublications.map((member, i) => (
+                {turner && <MemberCard member={turner} />}
+                {vpCompetitions.map((member, i) => (
                   <MemberCard key={i} member={member} />
                 ))}
               </div>
