@@ -17,7 +17,7 @@ export default function TeamSection() {
       whileHover={{ y: -6 }}
       className="border-forest bg-moss-dark rounded-xl overflow-hidden transition-all duration-300 flex flex-col md:flex-row"
     >
-      <div className="w-full h-48 sm:h-56 md:h-auto md:w-2/5 flex-shrink-0">
+      <div className="w-full h-24 sm:h-32 md:h-auto md:w-2/5 flex-shrink-0">
         {member.photo ? (
           <img
             src={member.photo}
@@ -27,16 +27,16 @@ export default function TeamSection() {
             style={member.photoPosition ? { objectPosition: member.photoPosition } : undefined}
           />
         ) : (
-          <div className="w-full h-full bg-gradient-to-br from-moss to-fern flex items-center justify-center py-10">
-            <span className="font-display text-card-text text-5xl font-bold">
+          <div className="w-full h-full bg-gradient-to-br from-moss to-fern flex items-center justify-center py-4 md:py-10">
+            <span className="font-display text-card-text text-2xl md:text-5xl font-bold">
               {member.initials}
             </span>
           </div>
         )}
       </div>
-      <div className="w-full md:w-3/5 p-5 sm:p-6 flex flex-col justify-center">
-        <div className="flex items-center gap-2 mb-2">
-          <p className="font-mono text-card-accent text-xs tracking-wider uppercase">
+      <div className="w-full md:w-3/5 p-3 sm:p-4 md:p-6 flex flex-col justify-center items-center md:items-start text-center md:text-left">
+        <div className="flex items-center gap-1.5 md:gap-2 mb-1 md:mb-2">
+          <p className="font-mono text-card-accent text-[10px] md:text-xs tracking-wider uppercase">
             {member.role}
           </p>
           {member.linkedin && (
@@ -47,15 +47,15 @@ export default function TeamSection() {
               aria-label={`${member.name} on LinkedIn`}
               className="text-card-text/60 hover:text-card-accent transition-colors flex items-center"
             >
-              <Icon name="linkedin" className="w-5 h-5" />
+              <Icon name="linkedin" className="w-3.5 h-3.5 md:w-5 md:h-5" />
             </a>
           )}
         </div>
-        <h3 className="font-display text-card-text font-bold text-xl sm:text-2xl mb-2">
+        <h3 className="font-display text-card-text font-bold text-sm sm:text-base md:text-2xl mb-0.5 md:mb-2 leading-tight">
           {member.name}
         </h3>
         {member.yearDiscipline && (
-          <p className="font-mono text-card-text/70 text-xs">
+          <p className="font-mono text-card-text/70 text-[10px] md:text-xs">
             {member.yearDiscipline}
           </p>
         )}
@@ -66,7 +66,7 @@ export default function TeamSection() {
   const MemberCard = ({ member }: { member: TeamMember }) => (
     <motion.div
       whileHover={{ y: -6 }}
-      className="border-forest bg-moss-dark rounded-xl p-5 md:p-6 flex flex-row items-center gap-4 text-left md:block md:text-center transition-all duration-300"
+      className="border-forest bg-moss-dark rounded-xl p-3 md:p-6 flex flex-col items-center text-center md:block transition-all duration-300"
     >
       {member.photo ? (
         <img
@@ -75,42 +75,40 @@ export default function TeamSection() {
           width={96}
           height={96}
           loading="lazy"
-          className="w-20 h-20 md:w-24 md:h-24 md:mx-auto md:mb-4 rounded-full object-cover flex-shrink-0"
+          className="w-14 h-14 md:w-24 md:h-24 mx-auto mb-2 md:mb-4 rounded-full object-cover flex-shrink-0"
           style={member.photoPosition ? { objectPosition: member.photoPosition } : undefined}
         />
       ) : (
-        <div className="w-20 h-20 md:w-24 md:h-24 md:mx-auto md:mb-4 rounded-full bg-gradient-to-br from-moss to-fern flex items-center justify-center flex-shrink-0">
-          <span className="font-display text-card-text text-xl md:text-2xl font-bold">
+        <div className="w-14 h-14 md:w-24 md:h-24 mx-auto mb-2 md:mb-4 rounded-full bg-gradient-to-br from-moss to-fern flex items-center justify-center flex-shrink-0">
+          <span className="font-display text-card-text text-base md:text-2xl font-bold">
             {member.initials}
           </span>
         </div>
       )}
-      <div className="min-w-0 flex-1 md:flex-none">
-        <h3 className="font-sans text-card-text font-bold text-lg mb-1">
-          {member.name}
-        </h3>
-        <div className="flex items-center gap-1.5 md:justify-center">
-          <p className="font-mono text-card-accent text-xs tracking-wider uppercase">
-            {member.role}
-          </p>
-          {member.linkedin && (
-            <a
-              href={member.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`${member.name} on LinkedIn`}
-              className="text-card-text/60 hover:text-card-accent transition-colors flex items-center"
-            >
-              <Icon name="linkedin" className="w-5 h-5" />
-            </a>
-          )}
-        </div>
-        {member.yearDiscipline && (
-          <p className="font-mono text-card-text/70 text-xs mt-1">
-            {member.yearDiscipline}
-          </p>
+      <h3 className="font-sans text-card-text font-bold text-xs sm:text-sm md:text-lg mb-0.5 md:mb-1 leading-tight">
+        {member.name}
+      </h3>
+      <div className="flex items-center justify-center gap-1 md:gap-1.5">
+        <p className="font-mono text-card-accent text-[9px] sm:text-[10px] md:text-xs tracking-wider uppercase">
+          {member.role}
+        </p>
+        {member.linkedin && (
+          <a
+            href={member.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${member.name} on LinkedIn`}
+            className="text-card-text/60 hover:text-card-accent transition-colors flex items-center"
+          >
+            <Icon name="linkedin" className="w-3 h-3 md:w-5 md:h-5" />
+          </a>
         )}
       </div>
+      {member.yearDiscipline && (
+        <p className="font-mono text-card-text/70 text-[9px] sm:text-[10px] md:text-xs mt-0.5 md:mt-1">
+          {member.yearDiscipline}
+        </p>
+      )}
     </motion.div>
   );
 
@@ -130,7 +128,7 @@ export default function TeamSection() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 mb-8">
+          <div className="max-w-4xl mx-auto grid grid-cols-2 gap-3 md:gap-6 mb-8">
             {coChairs.map((member, i) => (
               <CoChairCard key={i} member={member} />
             ))}
@@ -138,9 +136,9 @@ export default function TeamSection() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.3}>
-          <div className="flex flex-col items-center gap-5 md:gap-6">
+          <div className="flex flex-col items-center gap-3 md:gap-6">
             <div className="w-full flex justify-center">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 max-w-3xl w-full md:w-auto">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6 max-w-3xl w-full md:w-auto">
                 {vpCompetitions.map((member, i) => (
                   <MemberCard key={i} member={member} />
                 ))}
@@ -148,7 +146,7 @@ export default function TeamSection() {
             </div>
 
             <div className="w-full flex justify-center">
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-6 max-w-4xl w-full md:w-auto">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 max-w-4xl w-full md:w-auto">
                 {vpTechnical.map((member, i) => (
                   <MemberCard key={i} member={member} />
                 ))}
@@ -162,7 +160,7 @@ export default function TeamSection() {
             </div>
 
             <div className="w-full flex justify-center">
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-6 max-w-4xl w-full md:w-auto">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 max-w-4xl w-full md:w-auto">
                 {vpSponsorship.map((member, i) => (
                   <MemberCard key={i} member={member} />
                 ))}
