@@ -150,9 +150,14 @@ export default function TeamSection() {
           <div className="flex flex-col items-center gap-3 md:gap-6">
             <div className="w-full flex justify-center">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 max-w-4xl w-full md:w-auto">
-                {leadRow.map((member, i) => (
-                  <MemberCard key={i} member={member} />
-                ))}
+                {leadRow.map((member, i) => {
+                  const mobileOrder = ['order-3', 'order-1', 'order-4', 'order-2'][i];
+                  return (
+                    <div key={i} className={`${mobileOrder} md:order-none`}>
+                      <MemberCard member={member} />
+                    </div>
+                  );
+                })}
               </div>
             </div>
 
