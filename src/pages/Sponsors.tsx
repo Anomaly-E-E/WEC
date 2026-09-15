@@ -6,15 +6,15 @@ import { sponsors } from '../data/sponsors';
 const tiers = ['Diamond', 'Platinum', 'Silver', 'Supporter'] as const;
 
 const tierCardHeight: Record<(typeof tiers)[number], string> = {
-  Diamond: 'h-32 sm:h-40',
-  Platinum: 'h-28 sm:h-36',
-  Silver: 'h-24 sm:h-28',
-  Supporter: 'h-20 sm:h-24'
+  Diamond: 'h-36 sm:h-44',
+  Platinum: 'h-32 sm:h-40',
+  Silver: 'h-28 sm:h-32',
+  Supporter: 'h-24 sm:h-28'
 };
 
 const tierGridCols: Record<(typeof tiers)[number], string> = {
-  Diamond: 'grid-cols-1 max-w-sm mx-auto',
-  Platinum: 'grid-cols-1 max-w-sm mx-auto',
+  Diamond: 'grid-cols-1 max-w-md mx-auto',
+  Platinum: 'grid-cols-1 max-w-md mx-auto',
   Silver: 'grid-cols-1 max-w-sm mx-auto',
   Supporter: 'grid-cols-2 max-w-xl mx-auto'
 };
@@ -49,8 +49,8 @@ export default function Sponsors() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.4}>
-            <div className="mt-14 md:mt-20">
-              <h3 className="font-display text-leaf text-2xl sm:text-3xl font-bold text-center mb-8 md:mb-12">
+            <div className="mt-10 md:mt-14">
+              <h3 className="font-display text-leaf text-2xl sm:text-3xl font-bold text-center mb-6 md:mb-8">
                 Our Partners
               </h3>
 
@@ -59,8 +59,8 @@ export default function Sponsors() {
                 if (tierSponsors.length === 0) return null;
 
                 return (
-                  <div key={tier} className="mb-10 md:mb-12">
-                    <p className="font-display text-sunlight text-sm sm:text-base font-bold uppercase tracking-widest text-center mb-4 sm:mb-6">
+                  <div key={tier} className="mb-8 md:mb-10">
+                    <p className="font-display text-sunlight text-sm sm:text-base font-bold uppercase tracking-widest text-center mb-3 sm:mb-4">
                       {tier}
                     </p>
                     <div className={`grid ${tierGridCols[tier]} gap-4 sm:gap-6`}>
@@ -68,7 +68,7 @@ export default function Sponsors() {
                         <motion.div
                           key={sponsor.name}
                           whileHover={{ y: -6 }}
-                          className={`border-forest bg-cream rounded-xl ${tierCardHeight[tier]} flex items-center justify-center px-6 sm:px-8 py-4 transition-all duration-300`}
+                          className={`border-forest bg-white rounded-xl ${tierCardHeight[tier]} flex items-center justify-center px-8 sm:px-10 py-5 transition-all duration-300`}
                         >
                           <img
                             src={sponsor.logo}
