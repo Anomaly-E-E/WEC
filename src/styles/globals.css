@@ -21,8 +21,8 @@
   --border-forest-rgba: rgba(46, 96, 58, 0.22);
   --backdrop-forest-rgba: rgba(248, 241, 220, 0.85);
   --glow-green-rgba: rgba(46, 96, 58, 0.15);
-  --hero-overlay-1: rgba(222, 237, 212, 0.82);
-  --hero-overlay-2: rgba(208, 229, 196, 0.88);
+  --hero-overlay-1: rgba(248, 241, 220, 0.82);
+  --hero-overlay-2: rgba(240, 228, 196, 0.88);
   --hero-glow-1: rgba(232, 220, 182, 0.55);
   --hero-glow-2: rgba(32, 128, 55, 0.18);
   --banner-solid: 74 106 47;
