@@ -99,7 +99,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="font-mono text-fern text-xs md:text-sm tracking-[0.12em] sm:tracking-[0.25em] uppercase mb-6 md:mb-8 px-2"
           >
-            Western Engineering Competition · Nov 21–23, 2026 · London, Ontario
+            Western Engineering Competition · Nov 27–29, 2026 · London, Ontario
           </motion.p>
 
           <motion.p
@@ -139,7 +139,7 @@ export default function Home() {
           className="hidden lg:block absolute bottom-8 right-8 backdrop-forest border-forest rounded-xl p-6 text-center"
         >
           <p className="font-mono text-sunlight text-4xl font-bold mb-1">NOV</p>
-          <p className="font-display text-cream text-5xl font-black mb-1">21–23</p>
+          <p className="font-display text-cream text-5xl font-black mb-1">27–29</p>
           <p className="font-sans text-fern text-xl font-semibold">2026</p>
           <p className="font-mono text-cream-dim text-xs tracking-wider mt-2">LONDON, ON</p>
         </motion.div>

@@ -1,6 +1,23 @@
 import { motion } from 'framer-motion';
 import ForestHero from '../components/ForestHero';
 import ScrollReveal from '../components/ScrollReveal';
+import { sponsors } from '../data/sponsors';
+
+const tiers = ['Diamond', 'Platinum', 'Silver', 'Supporter'] as const;
+
+const tierCardHeight: Record<(typeof tiers)[number], string> = {
+  Diamond: 'h-32 sm:h-40',
+  Platinum: 'h-28 sm:h-36',
+  Silver: 'h-24 sm:h-28',
+  Supporter: 'h-20 sm:h-24'
+};
+
+const tierGridCols: Record<(typeof tiers)[number], string> = {
+  Diamond: 'grid-cols-1 max-w-sm mx-auto',
+  Platinum: 'grid-cols-1 max-w-sm mx-auto',
+  Silver: 'grid-cols-1 max-w-sm mx-auto',
+  Supporter: 'grid-cols-2 max-w-xl mx-auto'
+};
 
 export default function Sponsors() {
   return (
@@ -21,7 +38,7 @@ export default function Sponsors() {
                 Partner with WEC 2026 to connect with the next generation of engineers. Download our sponsorship package to learn about opportunities and benefits.
               </p>
               <a
-                href="https://www.westernengineeringcompetition.ca/_files/ugd/a0d860_61bcb40f0b2e4e8789b565b7b3da607c.pdf"
+                href="/wec-sponsorship-package.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block w-full sm:w-auto bg-sunlight text-forest-black px-6 sm:px-10 py-4 rounded-full font-sans font-bold text-base sm:text-lg hover:scale-105 transition-transform duration-200"
@@ -31,25 +48,39 @@ export default function Sponsors() {
             </div>
           </ScrollReveal>
 
-          {/* TODO: Swap placeholder cards for confirmed sponsor logos */}
           <ScrollReveal delay={0.4}>
             <div className="mt-14 md:mt-20">
               <h3 className="font-display text-leaf text-2xl sm:text-3xl font-bold text-center mb-8 md:mb-12">
                 Our Partners
               </h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mb-10 md:mb-12">
-                {['Company One', 'Company Two', 'Company Three', 'Company Four', 'Company Five', 'Company Six'].map((name) => (
-                  <motion.div
-                    key={name}
-                    whileHover={{ y: -6 }}
-                    className="border-forest bg-forest-mid/30 rounded-xl h-24 sm:h-28 flex items-center justify-center px-3 transition-all duration-300"
-                  >
-                    <span className="font-display text-cream-dim text-base sm:text-xl font-bold text-center">
-                      {name}
-                    </span>
-                  </motion.div>
-                ))}
-              </div>
+
+              {tiers.map((tier) => {
+                const tierSponsors = sponsors.filter((sponsor) => sponsor.tier === tier);
+                if (tierSponsors.length === 0) return null;
+
+                return (
+                  <div key={tier} className="mb-10 md:mb-12">
+                    <p className="font-display text-sunlight text-sm sm:text-base font-bold uppercase tracking-widest text-center mb-4 sm:mb-6">
+                      {tier}
+                    </p>
+                    <div className={`grid ${tierGridCols[tier]} gap-4 sm:gap-6`}>
+                      {tierSponsors.map((sponsor) => (
+                        <motion.div
+                          key={sponsor.name}
+                          whileHover={{ y: -6 }}
+                          className={`border-forest bg-cream rounded-xl ${tierCardHeight[tier]} flex items-center justify-center px-6 sm:px-8 py-4 transition-all duration-300`}
+                        >
+                          <img
+                            src={sponsor.logo}
+                            alt={sponsor.name}
+                            className="max-h-full max-w-full object-contain"
+                          />
+                        </motion.div>
+                      ))}
+                    </div>
+                  </div>
+                );
+              })}
 
               <div className="text-center text-cream-dim">
                 <p className="text-sm">

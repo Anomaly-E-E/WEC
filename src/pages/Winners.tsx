@@ -122,7 +122,7 @@ export default function Winners() {
                     WEC 2026 Coming Soon
                   </h2>
                   <p className="text-cream-dim text-base sm:text-lg mb-8">
-                    Winners will be announced after the competition on November 21–23, 2026.
+                    Winners will be announced after the competition on November 27–29, 2026.
                   </p>
                   <Link
                     to="/register"
