@@ -3,18 +3,18 @@ import ForestHero from '../components/ForestHero';
 import ScrollReveal from '../components/ScrollReveal';
 import { sponsors } from '../data/sponsors';
 
-const tiers = ['Diamond', 'Platinum', 'Silver', 'Supporter'] as const;
+const tiers = ['Platinum', 'Diamond', 'Silver', 'Supporter'] as const;
 
 const tierCardHeight: Record<(typeof tiers)[number], string> = {
-  Diamond: 'h-36 sm:h-44',
-  Platinum: 'h-32 sm:h-40',
+  Platinum: 'h-36 sm:h-44',
+  Diamond: 'h-32 sm:h-40',
   Silver: 'h-28 sm:h-32',
   Supporter: 'h-24 sm:h-28'
 };
 
 const tierGridCols: Record<(typeof tiers)[number], string> = {
-  Diamond: 'grid-cols-1 max-w-md mx-auto',
   Platinum: 'grid-cols-1 max-w-md mx-auto',
+  Diamond: 'grid-cols-1 max-w-md mx-auto',
   Silver: 'grid-cols-1 max-w-sm mx-auto',
   Supporter: 'grid-cols-2 max-w-xl mx-auto'
 };
