@@ -60,7 +60,7 @@ function MemberCard({ member }: { member: TeamMember }) {
   return (
     <motion.div
       whileHover={{ y: -6 }}
-      className="border-forest bg-moss-dark rounded-xl p-3 md:p-6 flex flex-col items-center text-center md:block transition-all duration-300"
+      className="border-forest bg-moss-dark rounded-xl p-3 md:p-6 flex flex-col items-center justify-center text-center h-full transition-all duration-300"
     >
       {member.photo ? (
         <img
