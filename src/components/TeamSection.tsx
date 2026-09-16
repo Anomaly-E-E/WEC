@@ -69,11 +69,11 @@ function MemberCard({ member }: { member: TeamMember }) {
           width={96}
           height={96}
           loading="lazy"
-          className="w-14 h-14 md:w-24 md:h-24 mx-auto mb-2 md:mb-4 rounded-full object-cover flex-shrink-0"
+          className="w-16 h-16 md:w-28 md:h-28 mx-auto mb-2 md:mb-4 rounded-full object-cover flex-shrink-0"
           style={member.photoPosition ? { objectPosition: member.photoPosition } : undefined}
         />
       ) : (
-        <div className="w-14 h-14 md:w-24 md:h-24 mx-auto mb-2 md:mb-4 rounded-full bg-gradient-to-br from-moss to-fern flex items-center justify-center flex-shrink-0">
+        <div className="w-16 h-16 md:w-28 md:h-28 mx-auto mb-2 md:mb-4 rounded-full bg-gradient-to-br from-moss to-fern flex items-center justify-center flex-shrink-0">
           <span className="font-display text-card-text text-base md:text-2xl font-bold">
             {member.initials}
           </span>
