@@ -75,7 +75,6 @@ export const teamMembers: TeamMember[] = [
     initials: 'AS',
     yearDiscipline: '3rd Year · Software',
     photo: '/team/arshan-shareef.jpg',
-    photoPosition: 'center 10%',
     linkedin: 'https://www.linkedin.com/in/arshan-shareef-mohammed-4ab94b330/?skipRedirect=true'
   },
   {
