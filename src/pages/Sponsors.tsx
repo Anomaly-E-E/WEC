@@ -63,26 +63,26 @@ export default function Sponsors() {
                 );
               })}
 
-              <div className="text-center text-cream-dim">
-                <p className="text-sm mb-4">
+              <div className="text-center text-cream-dim pt-6">
+                <p className="text-xl sm:text-2xl font-semibold text-cream mb-8">
                   Interested in sponsoring WEC 2026? Contact:
                 </p>
-                <div className="flex flex-col sm:flex-row justify-center gap-6 sm:gap-12 text-sm">
+                <div className="flex flex-col sm:flex-row justify-center gap-10 sm:gap-20">
                   <div>
-                    <p className="text-cream font-semibold">Michael Amos</p>
-                    <a href="mailto:mamos5@uwo.ca" className="block text-sunlight hover:underline">
+                    <p className="text-cream text-lg sm:text-xl font-bold mb-1">Michael Amos</p>
+                    <a href="mailto:mamos5@uwo.ca" className="block text-base sm:text-lg text-sunlight hover:underline">
                       mamos5@uwo.ca
                     </a>
-                    <a href="tel:+16475446795" className="block text-sunlight hover:underline">
+                    <a href="tel:+16475446795" className="block text-base sm:text-lg text-sunlight hover:underline">
                       647-544-6795
                     </a>
                   </div>
                   <div>
-                    <p className="text-cream font-semibold">King Zhang</p>
-                    <a href="mailto:kzhan567@uwo.ca" className="block text-sunlight hover:underline">
+                    <p className="text-cream text-lg sm:text-xl font-bold mb-1">King Zhang</p>
+                    <a href="mailto:kzhan567@uwo.ca" className="block text-base sm:text-lg text-sunlight hover:underline">
                       kzhan567@uwo.ca
                     </a>
-                    <a href="tel:+16472010843" className="block text-sunlight hover:underline">
+                    <a href="tel:+16472010843" className="block text-base sm:text-lg text-sunlight hover:underline">
                       647-201-0843
                     </a>
                   </div>
