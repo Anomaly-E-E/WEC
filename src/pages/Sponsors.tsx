@@ -64,17 +64,29 @@ export default function Sponsors() {
               })}
 
               <div className="text-center text-cream-dim">
-                <p className="text-sm">
-                  Interested in sponsoring WEC 2026? Contact us on{' '}
-                  <a
-                    href="https://www.instagram.com/ues_wec/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sunlight hover:underline"
-                  >
-                    Instagram
-                  </a>
+                <p className="text-sm mb-4">
+                  Interested in sponsoring WEC 2026? Contact:
                 </p>
+                <div className="flex flex-col sm:flex-row justify-center gap-6 sm:gap-12 text-sm">
+                  <div>
+                    <p className="text-cream font-semibold">Michael Amos</p>
+                    <a href="mailto:mamos5@uwo.ca" className="block text-sunlight hover:underline">
+                      mamos5@uwo.ca
+                    </a>
+                    <a href="tel:+16475446795" className="block text-sunlight hover:underline">
+                      647-544-6795
+                    </a>
+                  </div>
+                  <div>
+                    <p className="text-cream font-semibold">King Zhang</p>
+                    <a href="mailto:kzhan567@uwo.ca" className="block text-sunlight hover:underline">
+                      kzhan567@uwo.ca
+                    </a>
+                    <a href="tel:+16472010843" className="block text-sunlight hover:underline">
+                      647-201-0843
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </ScrollReveal>

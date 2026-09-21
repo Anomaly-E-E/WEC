@@ -35,6 +35,11 @@ export const bonusMarkGroups: BonusMarkGroup[] = [
       { code: 'MME2259', note: 'Junior or Senior Design' },
       { code: 'MME3380', note: 'Any Competition (Besides Junior)' },
       { code: 'MME4499', note: 'Any Competition (Besides Junior)' },
+    ],
+  },
+  {
+    discipline: 'Mechatronics Engineering',
+    entries: [
       { code: 'MSE2202', note: 'Junior or Senior Design' },
     ],
   },
