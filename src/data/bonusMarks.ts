@@ -20,7 +20,7 @@ export const bonusMarkGroups: BonusMarkGroup[] = [
     entries: [
       { code: 'IE2298', note: 'Any Competition' },
       { code: 'IE4499', note: 'Any Competition (Besides Junior)' },
-      { code: 'IE4100G', note: 'Any Competition (Third or Fourth Year, Not in IE4499)' },
+      { code: 'IE4100G', note: 'Any Competition' },
     ],
   },
   {
