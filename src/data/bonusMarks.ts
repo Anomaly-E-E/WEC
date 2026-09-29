@@ -18,8 +18,8 @@ export const bonusMarkGroups: BonusMarkGroup[] = [
   {
     discipline: 'Integrated Engineering',
     entries: [
-      { code: 'IE2298', note: 'Any Competition (Second Year Only)' },
-      { code: 'IE4499', note: 'Any Competition (Besides Junior, Fourth Year Only)' },
+      { code: 'IE2298', note: 'Any Competition' },
+      { code: 'IE4499', note: 'Any Competition (Besides Junior)' },
       { code: 'IE4100G', note: 'Any Competition (Third or Fourth Year, Not in IE4499)' },
     ],
   },
