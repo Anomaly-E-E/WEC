@@ -18,8 +18,9 @@ export const bonusMarkGroups: BonusMarkGroup[] = [
   {
     discipline: 'Integrated Engineering',
     entries: [
-      { code: 'IE2298', note: 'Any Competition' },
-      { code: 'IE4499', note: 'Any Competition (Besides Junior)' },
+      { code: 'IE2298', note: 'Any Competition (Second Year Only)' },
+      { code: 'IE4499', note: 'Any Competition (Besides Junior, Fourth Year Only)' },
+      { code: 'IE4100G', note: 'Any Competition (Third or Fourth Year, Not in IE4499)' },
     ],
   },
   {
@@ -32,9 +33,9 @@ export const bonusMarkGroups: BonusMarkGroup[] = [
   {
     discipline: 'Mechanical Engineering',
     entries: [
-      { code: 'MME2259', note: 'Junior or Senior Design' },
-      { code: 'MME3380', note: 'Any Competition (Besides Junior)' },
-      { code: 'MME4499', note: 'Any Competition (Besides Junior)' },
+      { code: 'MME2259', note: 'Junior & Senior Design' },
+      { code: 'MME3380', note: 'Junior & Senior Design' },
+      { code: 'MME4499', note: 'Innovative & Senior Design' },
     ],
   },
   {
