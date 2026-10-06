@@ -15,7 +15,7 @@ const tierCardHeight: Record<(typeof tiers)[number], string> = {
 const tierGridCols: Record<(typeof tiers)[number], string> = {
   Platinum: 'grid-cols-1 max-w-xl mx-auto',
   Diamond: 'grid-cols-1 max-w-xl mx-auto',
-  Silver: 'grid-cols-1 max-w-lg mx-auto',
+  Silver: 'grid-cols-2 max-w-2xl mx-auto',
   Supporter: 'grid-cols-2 max-w-2xl mx-auto'
 };
 

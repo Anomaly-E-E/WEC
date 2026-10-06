@@ -21,6 +21,11 @@ export const sponsors: Sponsor[] = [
     logo: '/sponsors/rocket-lite.png'
   },
   {
+    name: 'Magna',
+    tier: 'Silver',
+    logo: '/sponsors/magna-logo.webp'
+  },
+  {
     name: 'MTE',
     tier: 'Supporter',
     logo: '/sponsors/mte.png'
