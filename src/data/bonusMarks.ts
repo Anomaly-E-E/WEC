@@ -52,14 +52,6 @@ export const bonusMarkGroups: BonusMarkGroup[] = [
     ],
   },
   {
-    discipline: 'Biomedical Engineering',
-    entries: [
-      { code: 'BME3201', note: 'Bio-Engineering' },
-      { code: 'BME3301', note: 'Bio-Engineering' },
-      { code: 'BME3303', note: 'Bio-Engineering' },
-    ],
-  },
-  {
     discipline: 'Chemical Engineering',
     entries: [
       { code: 'CBE2220', note: 'Chemical' },
