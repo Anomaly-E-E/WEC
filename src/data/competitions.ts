@@ -191,7 +191,7 @@ export const competitions: Competition[] = [
     teaser: 'High school engineering design challenge',
     description: 'Mini Design introduces high school students to engineering design competitions. This category provides a supportive environment for younger students to experience hands-on engineering challenges and develop foundational problem-solving skills.',
     eligibility: 'Open to students currently in Grade 11 or Grade 12',
-    teamSize: '3-4 students per team',
+    teamSize: '2-4 students per team',
     judgingCriteria: [
       'Creativity and enthusiasm',
       'Basic engineering principles application',
