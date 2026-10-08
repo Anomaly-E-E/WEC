@@ -108,7 +108,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-cream-dim text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-5 md:mb-12 leading-relaxed"
           >
-            Compete in 10 engineering challenges. Win your way from WEC to OEC. One weekend to prove your skills.
+            Compete in 11 engineering challenges. Win your way from WEC to OEC. One weekend to prove your skills.
           </motion.p>
 
           <motion.div
@@ -169,7 +169,7 @@ export default function Home() {
             <ScrollReveal delay={0.2}>
               <div className="grid grid-cols-2 gap-3.5 sm:gap-4">
                 {[
-                  { number: '10', label: 'Competition Categories' },
+                  { number: '11', label: 'Competition Categories' },
                   { number: '40+', label: 'Years of WEC' },
                   { number: '2', label: 'Levels (WEC→OEC)' },
                   { number: '1', label: 'Weekend to Prove It' }
@@ -240,7 +240,7 @@ export default function Home() {
             <div className="text-center mb-10 md:mb-16">
               <p className="font-mono text-fern text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-4">Choose Your Challenge</p>
               <h2 className="font-display text-cream text-3xl sm:text-4xl md:text-6xl font-bold">
-                10 Ways to Prove Yourself
+                11 Ways to Prove Yourself
               </h2>
             </div>
           </ScrollReveal>

@@ -20,7 +20,7 @@ export default function Competitions() {
     <div className="min-h-screen">
       <ForestHero
         title="The Competitions"
-        subtitle="10 challenges · 1 weekend · Infinite possibilities"
+        subtitle="11 challenges · 1 weekend · Infinite possibilities"
       />
 
       <section className="py-16 md:py-24 px-6 relative overflow-hidden">

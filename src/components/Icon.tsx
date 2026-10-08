@@ -11,6 +11,7 @@ export type IconName =
   | 'chat'
   | 'chart'
   | 'cap'
+  | 'refresh'
   | 'instagram'
   | 'facebook'
   | 'linkedin'
@@ -99,6 +100,14 @@ const paths: Record<IconName, ReactNode> = {
       <path d="M12 4L2.5 9l9.5 5 9.5-5-9.5-5z" />
       <path d="M6.2 11.5V16c0 1.6 2.8 3 5.8 3s5.8-1.4 5.8-3v-4.5" />
       <path d="M21.5 9v6" />
+    </>
+  ),
+  refresh: (
+    <>
+      <path d="M20 11a8 8 0 0 0-14.5-4.5L4 8" />
+      <path d="M4 4v4h4" />
+      <path d="M4 13a8 8 0 0 0 14.5 4.5L20 16" />
+      <path d="M20 20v-4h-4" />
     </>
   ),
   instagram: (

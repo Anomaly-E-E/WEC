@@ -82,6 +82,23 @@ export const competitions: Competition[] = [
     ]
   },
   {
+    id: 're-engineering',
+    name: 'Re-Engineering',
+    icon: 'refresh',
+    tag: 'All Years',
+    teaser: 'Redesign an existing product for a new purpose',
+    description: 'Re-Engineering challenges teams to take an existing product or technology and redesign it for a new purpose or environment. Teams build a prototype, write a report, and present their redesign to a panel of judges, showing how their changes work, why they are feasible, and how they could be used in the real world.',
+    eligibility: 'Open to all engineering students',
+    teamSize: '2 students per team',
+    judgingCriteria: [
+      'Functionality of proposed changes',
+      'Environmental, social and economic feasibility',
+      'Technical feasibility',
+      'Real-world applicability',
+      'Report and presentation quality'
+    ]
+  },
+  {
     id: 'civil-design',
     name: 'Civil Design',
     icon: 'column',
