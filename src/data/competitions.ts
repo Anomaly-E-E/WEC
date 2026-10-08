@@ -55,7 +55,7 @@ export const competitions: Competition[] = [
     teaser: 'Algorithmic problem-solving and software development',
     description: 'The Programming competition challenges students to solve complex algorithmic problems and develop working software solutions under time pressure. Teams must demonstrate strong coding skills, debugging abilities, and software engineering best practices.',
     eligibility: 'Open to all engineering students',
-    teamSize: '2 students per team',
+    teamSize: '4 students per team',
     judgingCriteria: [
       'Correctness and efficiency of algorithms',
       'Code quality and documentation',
@@ -72,7 +72,7 @@ export const competitions: Competition[] = [
     teaser: 'Push the boundaries of creativity and invention',
     description: 'Innovative Design challenges teams to develop completely original solutions to open-ended problems. This competition emphasizes creativity, out-of-the-box thinking, and the ability to develop novel approaches that haven\'t been tried before.',
     eligibility: 'Open to all engineering students',
-    teamSize: '4 students per team',
+    teamSize: '6 students per team',
     judgingCriteria: [
       'Novelty and originality of concept',
       'Creative problem-solving approach',
@@ -140,7 +140,7 @@ export const competitions: Competition[] = [
     teaser: 'Medical devices and biomedical innovation',
     description: 'Bio-Engineering challenges teams to develop solutions at the intersection of engineering and medicine. Projects may involve medical device design, biomaterials, tissue engineering, or healthcare technology while considering biocompatibility, safety, and regulatory requirements.',
     eligibility: 'Open to Biomedical Engineering students and related programs',
-    teamSize: '4 students per team',
+    teamSize: '2 students per team',
     judgingCriteria: [
       'Medical and clinical relevance',
       'Biocompatibility and safety considerations',
