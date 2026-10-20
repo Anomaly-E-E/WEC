@@ -1,5 +1,8 @@
+import { useEffect } from 'react';
 import DinosaurDoodle from '../components/DinosaurDoodle';
 import Icon from '../components/Icon';
+
+const REGISTRATION_FORM_URL = 'https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=TaaTrQ2tzU6y_eU84VllvmKnzfHC2fNCuclRaaxuidJUNUJCUldPUjVGTFBVSElIM1QwUzJIR0I1WC4u';
 
 interface FloatingDino {
   variant: 'long-neck' | 'stego' | 'round';
@@ -32,7 +35,11 @@ const cardDinos: FloatingDino[] = [
   { variant: 'long-neck', color: 'text-leaf', size: 'w-6 h-6', top: '', left: '', duration: 3.6, delay: 0.7 },
 ];
 
-export default function RegistrationComingSoon() {
+export default function Register() {
+  useEffect(() => {
+    window.location.replace(REGISTRATION_FORM_URL);
+  }, []);
+
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-6 py-24 bg-forest-black">
       {pageDinos.map((dino, index) => (
@@ -66,14 +73,21 @@ export default function RegistrationComingSoon() {
         </div>
 
         <h1 className="font-mono text-cream text-xl sm:text-2xl md:text-3xl font-bold tracking-wide sm:tracking-wider uppercase">
-          Registration Opening Soon :)
+          Taking you to registration...
         </h1>
+
+        <a
+          href={REGISTRATION_FORM_URL}
+          className="mt-8 inline-block text-white cursor-pointer px-8 py-3 rounded-full font-sans font-bold hover:scale-105 transition-transform duration-200 bg-cta-green"
+        >
+          Open Registration Form
+        </a>
 
         <a
           href="https://www.instagram.com/ues_wec/"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-6 inline-flex items-center gap-2 text-cream-dim hover:text-sunlight transition-colors text-sm font-sans"
+          className="mt-6 flex items-center justify-center gap-2 text-cream-dim hover:text-sunlight transition-colors text-sm font-sans"
         >
           <Icon name="instagram" className="w-4 h-4" />
           Follow us on Instagram for updates

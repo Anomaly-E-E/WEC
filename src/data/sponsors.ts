@@ -16,9 +16,9 @@ export const sponsors: Sponsor[] = [
     logo: '/sponsors/cornerstone.png'
   },
   {
-    name: 'Rocket Lite',
+    name: 'Alberici',
     tier: 'Silver',
-    logo: '/sponsors/rocket-lite.png'
+    logo: '/sponsors/Alberici.png'
   },
   {
     name: 'Magna',
