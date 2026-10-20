@@ -18,24 +18,24 @@ export const bonusMarkGroups: BonusMarkGroup[] = [
   {
     discipline: 'Integrated Engineering',
     entries: [
-      { code: 'IE2298', note: 'Any Competition' },
-      { code: 'IE4499', note: 'Any Competition (Besides Junior)' },
-      { code: 'IE4100G', note: 'Any Competition' },
+      { code: 'IE2298', note: 'Any competition' },
+      { code: 'IE4499', note: 'Any competition except Junior Design' },
+      { code: 'IE4100G', note: 'Any competition' },
     ],
   },
   {
     discipline: 'Electrical Engineering',
     entries: [
-      { code: 'ELI4100', note: 'Any Competition (Besides Junior)' },
-      { code: 'ECE3399', note: 'Senior Design (Besides Junior)' },
+      { code: 'ELI4100', note: 'Any competition except Junior Design' },
+      { code: 'ECE3399', note: 'Senior Design' },
     ],
   },
   {
     discipline: 'Mechanical Engineering',
     entries: [
-      { code: 'MME2259', note: 'Junior & Senior Design' },
-      { code: 'MME3380', note: 'Junior & Senior Design' },
-      { code: 'MME4499', note: 'Innovative & Senior Design' },
+      { code: 'MME2259', note: 'Junior or Senior Design' },
+      { code: 'MME3380', note: 'Junior or Senior Design' },
+      { code: 'MME4499', note: 'Senior Design' },
     ],
   },
   {
@@ -54,16 +54,16 @@ export const bonusMarkGroups: BonusMarkGroup[] = [
   {
     discipline: 'Chemical Engineering',
     entries: [
-      { code: 'CBE2220', note: 'Chemical' },
-      { code: 'CBE3307', note: 'Chemical' },
+      { code: 'CEB2221', note: 'Chemical Design' },
+      { code: 'CEB3307', note: 'Chemical Design' },
     ],
   },
   {
     discipline: 'Civil Engineering',
     entries: [
-      { code: 'CCE2202', note: 'Civil' },
-      { code: 'CCE3369', note: 'Civil' },
-      { code: 'CCE4441', note: 'Civil' },
+      { code: 'CCE2202', note: 'Civil Design' },
+      { code: 'CCE3369', note: 'Civil Design' },
+      { code: 'CCE4441', note: 'Civil Design' },
     ],
   },
 ];

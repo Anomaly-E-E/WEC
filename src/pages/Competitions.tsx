@@ -20,7 +20,7 @@ export default function Competitions() {
     <div className="min-h-screen">
       <ForestHero
         title="The Competitions"
-        subtitle="11 challenges · 1 weekend · Infinite possibilities"
+        subtitle="10 challenges · 1 weekend · Infinite possibilities"
       />
 
       <section className="py-16 md:py-24 px-6 relative overflow-hidden">
@@ -49,20 +49,11 @@ export default function Competitions() {
                   {comp.description}
                 </p>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5 sm:mb-6">
-                  <div>
-                    <h4 className="font-sans text-sunlight font-semibold text-xs uppercase tracking-wider mb-1">
-                      Eligibility
-                    </h4>
-                    <p className="text-cream-dim text-sm">{comp.eligibility}</p>
-                  </div>
-
-                  <div>
-                    <h4 className="font-sans text-sunlight font-semibold text-xs uppercase tracking-wider mb-1">
-                      Team Size
-                    </h4>
-                    <p className="text-cream-dim text-sm">{comp.teamSize}</p>
-                  </div>
+                <div className="mb-5 sm:mb-6">
+                  <h4 className="font-sans text-sunlight font-semibold text-xs uppercase tracking-wider mb-1">
+                    Eligibility
+                  </h4>
+                  <p className="text-cream-dim text-sm">{comp.eligibility}</p>
                 </div>
 
                 <div>
